@@ -1,6 +1,6 @@
 package com.indra.models;
 
-public class LoginPageModel {
+public class LoginPortalCRMModel {
     String user;
     String password;
 

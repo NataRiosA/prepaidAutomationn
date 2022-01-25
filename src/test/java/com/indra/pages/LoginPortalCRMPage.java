@@ -7,8 +7,8 @@ import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.WebDriver;
 
 @DefaultUrl("http://10.69.60.77:8180/tigo-pos-web/index.jsp")
-public class LoginPage extends PageObject {
-    public LoginPage(WebDriver driver) {
+public class LoginPortalCRMPage extends PageObject {
+    public LoginPortalCRMPage(WebDriver driver) {
         super(driver);
     }
 
