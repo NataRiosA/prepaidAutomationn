@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Sanity limpieza y aprovisionamiento de recursos" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-25T18:11:18" hostname="22LAP5CG0525FBR" time="49.349">
+  <properties/>
+  <testcase name="se quiere ingresar a la plataforma epos" classname="Sanity limpieza y aprovisionamiento de recursos" time="49.349"/>
+  <system-out><![CDATA[13:11:20.471 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+13:11:20.471 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
+13:11:35.906 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Opening darkroom
+13:11:35.908 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line starting up
+13:11:36.286 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\52894120ba38502a515de20a97262ef94f3d610cebe5d979f9558a097fff0f7d.png
+13:11:36.290 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-2579971231044540585
+13:11:36.290 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\52894120ba38502a515de20a97262ef94f3d610cebe5d979f9558a097fff0f7d.png
+13:11:40.573 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\cc3bfa45a7cda3b2cc37ebe68e07208330c4a3b17d800fbb606b5053bbef26e0.png
+13:11:40.577 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-7998898813381703
+13:11:40.577 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\cc3bfa45a7cda3b2cc37ebe68e07208330c4a3b17d800fbb606b5053bbef26e0.png
+13:12:01.862 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\8e8e39642800a6945ddbd5216a32cb5701a4c60169122734a0a9edfa35e1581f.png
+13:12:01.865 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-1779378577977886406
+13:12:01.865 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\8e8e39642800a6945ddbd5216a32cb5701a4c60169122734a0a9edfa35e1581f.png
+13:12:08.323 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[92m
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+TEST PASSED: se quiere ingresar a la plataforma epos
+----------------------------------------------------------------------------?[0m
+]]></system-out>
+  <system-err><![CDATA[ene 25, 2022 1:11:19 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+ene 25, 2022 1:11:19 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+1643134281955	geckodriver	INFO	Listening on 127.0.0.1:16850
+1643134282368	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\nriosa\\AppData\\Local\\Temp\\rust_mozprofileacCnyd"
+1643134284011	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1643134284092	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1643134284092	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1643134284093	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1643134284093	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1643134288530	Marionette	INFO	Listening on port 62964
+1643134288810	Marionette	WARN	TLS certificate errors will be ignored for this session
+ene 25, 2022 1:11:28 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+1643134322140	Marionette	INFO	Stopped listening on port 62964
+Extension error: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: moz-extension://935c1006-8c9a-4941-aa9f-d947ed97754b/main.js :: connect :: line 12066"  data: no] undefined 12066
+[[Exception stack
+connect@moz-extension://935c1006-8c9a-4941-aa9f-d947ed97754b/main.js:12066:23
+onPortDisconnected@moz-extension://935c1006-8c9a-4941-aa9f-d947ed97754b/main.js:20316:30
+makeConnection/channel<@moz-extension://935c1006-8c9a-4941-aa9f-d947ed97754b/main.js:20289:136
+handleDisconnect@moz-extension://935c1006-8c9a-4941-aa9f-d947ed97754b/main.js:12172:14
+connect/</<@moz-extension://935c1006-8c9a-4941-aa9f-d947ed97754b/main.js:12052:63
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:606:13
+addListener/asyncWithoutClone/<@resource://gre/modules/ExtensionCommon.jsm:2443:39
+]]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+]]></system-err>
+</testsuite>

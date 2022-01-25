@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.indra.runners.SanityRunners" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="22LAP5CG0525FBR" time="0.0">
+  <properties/>
+  <system-out><![CDATA[13:11:17.600 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - LOADING LOCAL PROPERTIES FROM C:\PrepaidAutomation\serenity.properties 
+13:11:17.818 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - LOADING LOCAL PROPERTIES FROM C:\PrepaidAutomation\serenity.properties 
+13:11:17.821 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - LOADING LOCAL PROPERTIES FROM C:\PrepaidAutomation\serenity.properties 
+13:11:17.849 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.driver=firefox
+13:11:17.850 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.console.colors=true
+13:11:17.850 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.gecko.driver=src/test/resources/drivers/geckodriver.exe
+13:11:17.850 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.base.url=http://10.69.60.77:8180/tigo-pos-web/index.jsp
+13:11:17.851 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.project.name=servicios Rest_Assured
+13:11:17.851 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.wait.for.timeout=6000
+13:11:17.851 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.use.unique.browser=true
+13:11:17.852 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.timeouts.implicitlywait=20000
+13:11:17.852 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.browser.maximized=true
+13:11:17.853 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - firefox.capability.marionette=true
+13:11:18.529 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - LOADING LOCAL PROPERTIES FROM C:\PrepaidAutomation\serenity.properties 
+13:11:18.667 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - LOADING LOCAL PROPERTIES FROM C:\PrepaidAutomation\serenity.properties 
+13:11:18.669 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - LOADING LOCAL PROPERTIES FROM C:\PrepaidAutomation\serenity.properties 
+13:11:18.671 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.driver=firefox
+13:11:18.672 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.console.colors=true
+13:11:18.672 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.gecko.driver=src/test/resources/drivers/geckodriver.exe
+13:11:18.672 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.base.url=http://10.69.60.77:8180/tigo-pos-web/index.jsp
+13:11:18.672 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.project.name=servicios Rest_Assured
+13:11:18.673 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.wait.for.timeout=6000
+13:11:18.673 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.use.unique.browser=true
+13:11:18.673 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.timeouts.implicitlywait=20000
+13:11:18.674 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.browser.maximized=true
+13:11:18.674 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - firefox.capability.marionette=true
+13:11:18.688 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[96m
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Rocket Chat at https://serenity-bdd.rocket.chat      
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+ Learn Serenity BDD online at http://serenity-dojo.com                               
+-------------------------------------------------------------------------------------
+?[0m
+13:11:18.698 [Test worker] DEBUG net.thucydides.core.steps.StepEventBus - Test suite started for story net.thucydides.core.model.Story@6fe68030
+13:11:18.702 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - Test Suite Started: Sanity limpieza y aprovisionamiento de recursos
+13:11:18.798 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+                                                                  
+
+TEST STARTED: se quiere ingresar a la plataforma epos
+-------------------------------------------------------------------(sanity-limpieza-y-aprovisionamiento-de-recursos;se-quiere-ingresar-a-la-plataforma-epos)
+13:11:18.942 [Test worker] DEBUG net.thucydides.core.requirements.model.cucumber.CucumberParser - Found no Cucumber 4.2.6 class cucumber.runtime.model.FeatureLoader try Cucumber 4.2.0 
+13:11:18.942 [Test worker] DEBUG net.thucydides.core.requirements.model.cucumber.CucumberParser - Found no Cucumber 4.2.0 class cucumber.runtime.model.FeatureLoader try Cucumber 2.x.x 
+13:12:08.334 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Reporting formats: [JSON, HTML]
+13:12:08.473 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Reporting formats: [JSON, HTML]
+13:12:08.499 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Generating reports for 1 test outcomes using: net.thucydides.core.reports.json.JSONTestOutcomeReporter@6c66cd90
+13:12:08.503 [pool-1-thread-1] DEBUG net.thucydides.core.reports.ReportService - Processing test outcome Sanity limpieza y aprovisionamiento de recursos:se quiere ingresar a la plataforma epos
+13:12:08.503 [pool-1-thread-1] DEBUG net.thucydides.core.reports.ReportService - net.thucydides.core.reports.json.JSONTestOutcomeReporter@6c66cd90: Generating report for test outcome: Sanity limpieza y aprovisionamiento de recursos:se quiere ingresar a la plataforma epos
+13:12:08.510 [pool-1-thread-1] DEBUG net.thucydides.core.reports.json.JSONTestOutcomeReporter - Generating JSON report for se quiere ingresar a la plataforma epos to file C:\PrepaidAutomation\target\site\serenity\dd8d8ded9644b52fbc86dae313c60166d8b4c2b2da549354520470c10795b41b.json (using temp file C:\PrepaidAutomation\target\site\serenity\dd8d8ded9644b52fbc86dae313c60166d8b4c2b2da549354520470c10795b41b.json0db5b1a6-1eff-4e89-8d47-f1e9ce9a9bbc)
+13:12:08.584 [pool-1-thread-1] DEBUG net.thucydides.core.reports.ReportService - Processing test outcome Sanity limpieza y aprovisionamiento de recursos:se quiere ingresar a la plataforma epos done
+13:12:08.584 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Shutting down executor service
+13:12:08.585 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Reports generated in: 84 ms
+13:12:08.585 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Generating reports for 1 test outcomes using: net.thucydides.core.reports.html.HtmlAcceptanceTestReporter@6698b000
+13:12:08.586 [pool-2-thread-1] DEBUG net.thucydides.core.reports.ReportService - Processing test outcome Sanity limpieza y aprovisionamiento de recursos:se quiere ingresar a la plataforma epos
+13:12:08.586 [pool-2-thread-1] DEBUG net.thucydides.core.reports.ReportService - net.thucydides.core.reports.html.HtmlAcceptanceTestReporter@6698b000: Generating report for test outcome: Sanity limpieza y aprovisionamiento de recursos:se quiere ingresar a la plataforma epos
+13:12:08.587 [pool-2-thread-1] DEBUG net.thucydides.core.reports.html.HtmlAcceptanceTestReporter - GENERATE TEST OUTCOME REPORT FOR se quiere ingresar a la plataforma epos in dd8d8ded9644b52fbc86dae313c60166d8b4c2b2da549354520470c10795b41b
+13:12:08.618 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.model.cucumber.CucumberParser - Found no Cucumber 4.2.6 class cucumber.runtime.model.FeatureLoader try Cucumber 4.2.0 
+13:12:08.619 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.model.cucumber.CucumberParser - Found no Cucumber 4.2.0 class cucumber.runtime.model.FeatureLoader try Cucumber 2.x.x 
+13:12:08.623 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.RequirementsTagProvider -  found:[Requirement{name='Sanity limpieza y aprovisionamiento de recursos', type='feature' parent = 'null', cardNumber='null'}]
+13:12:08.635 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.BaseRequirementsService - Requirement found for test outcome se quiere ingresar a la plataforma epos-[]: Optional[Requirement{name='Sanity limpieza y aprovisionamiento de recursos', type='feature' parent = 'null', cardNumber='null'}]
+13:12:08.641 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.BaseRequirementsService - Requirement found for test outcome se quiere ingresar a la plataforma epos-[]: Optional[Requirement{name='Sanity limpieza y aprovisionamiento de recursos', type='feature' parent = 'null', cardNumber='null'}]
+13:12:08.836 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.BaseRequirementsService - Requirement found for test outcome se quiere ingresar a la plataforma epos-[]: Optional[Requirement{name='Sanity limpieza y aprovisionamiento de recursos', type='feature' parent = 'null', cardNumber='null'}]
+13:12:08.838 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.BaseRequirementsService - Requirement found for test outcome se quiere ingresar a la plataforma epos-[]: Optional[Requirement{name='Sanity limpieza y aprovisionamiento de recursos', type='feature' parent = 'null', cardNumber='null'}]
+13:12:09.010 [pool-2-thread-1] DEBUG net.thucydides.core.reports.html.HtmlAcceptanceTestReporter - Generating report in dd8d8ded9644b52fbc86dae313c60166d8b4c2b2da549354520470c10795b41b_screenshots.html
+13:12:09.551 [pool-2-thread-1] DEBUG net.thucydides.core.reports.html.HtmlAcceptanceTestReporter - Generated report dd8d8ded9644b52fbc86dae313c60166d8b4c2b2da549354520470c10795b41b_screenshots.html in 541 ms
+13:12:09.553 [pool-2-thread-1] DEBUG net.thucydides.core.reports.html.HtmlAcceptanceTestReporter - GENERATING HTML REPORT FOR Sanity limpieza y aprovisionamiento de recursos:se quiere ingresar a la plataforma epos in dd8d8ded9644b52fbc86dae313c60166d8b4c2b2da549354520470c10795b41b.html in directory C:\PrepaidAutomation\target\site\serenity  
+13:12:09.557 [pool-2-thread-1] DEBUG net.thucydides.core.reports.html.HtmlAcceptanceTestReporter - Generating report in dd8d8ded9644b52fbc86dae313c60166d8b4c2b2da549354520470c10795b41b.html
+13:12:09.722 [pool-2-thread-1] DEBUG net.thucydides.core.reports.html.HtmlAcceptanceTestReporter - Generated report dd8d8ded9644b52fbc86dae313c60166d8b4c2b2da549354520470c10795b41b.html in 165 ms
+13:12:09.722 [pool-2-thread-1] DEBUG net.thucydides.core.reports.ReportService - Processing test outcome Sanity limpieza y aprovisionamiento de recursos:se quiere ingresar a la plataforma epos done
+13:12:09.722 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Shutting down executor service
+13:12:09.723 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Reports generated in: 1138 ms
+13:12:10.119 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Closing darkroom
+13:12:10.119 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line shutting down
+
+1 Scenarios (?[32m1 passed?[0m)
+4 Steps (?[32m4 passed?[0m)
+0m50,065s
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
