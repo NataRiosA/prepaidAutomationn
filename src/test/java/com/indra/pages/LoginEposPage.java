@@ -21,10 +21,10 @@ public class LoginEposPage extends PageObject {
     @FindBy(className = "boton1")
     WebElementFacade btnLogin;
 
-    @FindBy(className = "formMenu:j_id11_span")
+    @FindBy(xpath = "//span[contains(@id,'formMenu:j_id11_span')]")
     WebElementFacade clickLeave;
 
-    @FindBy(className = "formMenu:j_id12:anchor")
+    @FindBy(xpath = "//span[contains(@id,'formMenu:j_id12:anchor')]")
     WebElementFacade btnLeave;
 
     public WebElementFacade getUser() {
