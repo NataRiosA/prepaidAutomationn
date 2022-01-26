@@ -41,7 +41,7 @@ public class PrepaidActivationPage extends PageObject{
     @FindBy(xpath = "//div[contains(@id,'ActivacionesForm:idTipoDocItem0')]")
     WebElementFacade documentType;
 
-    @FindBy(xpath = "//div[contains(@id,'ActivacionesForm:idTipoDocItem0')]")
+    @FindBy(xpath = "//input[contains(@id,'ActivacionesForm:cedulaCliente')]")
     WebElementFacade documentCC;
 
     @FindBy(xpath = "//input[contains(@id,'ActivacionesForm:idExpedicion')]")

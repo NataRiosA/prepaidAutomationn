@@ -14,10 +14,18 @@ public class LoginEposPage extends PageObject {
 
     @FindBy(id = "filtro1")
     WebElementFacade user;
+
     @FindBy(id = "filtro2")
     WebElementFacade password;
+
     @FindBy(className = "boton1")
     WebElementFacade btnLogin;
+
+    @FindBy(className = "formMenu:j_id11_span")
+    WebElementFacade clickLeave;
+
+    @FindBy(className = "formMenu:j_id12:anchor")
+    WebElementFacade btnLeave;
 
     public WebElementFacade getUser() {
         return user;
@@ -29,5 +37,13 @@ public class LoginEposPage extends PageObject {
 
     public WebElementFacade getBtnLogin() {
         return btnLogin;
+    }
+
+    public WebElementFacade getClickLeave() {
+        return clickLeave;
+    }
+
+    public WebElementFacade getBtnLeave() {
+        return btnLeave;
     }
 }

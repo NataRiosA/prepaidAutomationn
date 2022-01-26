@@ -26,4 +26,8 @@ public class LoginEposPageAction extends LoginEposPage {
         getBtnLogin().click();
     }
 
+    public void leave(){
+        getClickLeave().click();
+        getBtnLeave().click();
+    }
 }
