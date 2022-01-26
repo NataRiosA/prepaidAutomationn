@@ -36,6 +36,8 @@ public class DataExcel {
     }
 
     public String getUrlCRM() {
+        fileXLSX.readFileExcel();
+        urlCRM = fileXLSX.excelArray.get(1).get(1);
         return urlCRM;
     }
 

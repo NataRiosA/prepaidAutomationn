@@ -35,13 +35,13 @@
 </td>
 <td>
 <div class="infoBox" id="ignored">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>ignored</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.152s</div>
+<div class="counter">20.785s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox skipped" id="successRate">
-<div class="percent">-</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -66,6 +66,9 @@
 <li>
 <a href="#tab1">Standard output</a>
 </li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -78,26 +81,63 @@
 </tr>
 </thead>
 <tr>
-<td class="skipped">se requiere realizar una activacion de una linea en prepago</td>
-<td class="skipped">-</td>
-<td class="skipped">ignored</td>
+<td class="success">se requiere realizar una activacion de una linea en prepago</td>
+<td class="success">20.785s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>16:31:21.631 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[96mTEST PENDING?[0m
-16:31:21.653 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[96m
-          __  _____ _____ ____ _____   ____  _____ _   _ ____ ___ _   _  ____ 
- _       / / |_   _| ____/ ___|_   _| |  _ \| ____| \ | |  _ \_ _| \ | |/ ___|
-(_)____ / /    | | |  _| \___ \ | |   | |_) |  _| |  \| | | | | ||  \| | |  _ 
- |_____/ /     | | | |___ ___) || |   |  __/| |___| |\  | |_| | || |\  | |_| |
-(_)   /_/      |_| |_____|____/ |_|   |_|   |_____|_| \_|____/___|_| \_|\____|
-                                                                                
+<pre>09:25:57.794 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+09:25:57.794 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
+09:26:09.924 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Opening darkroom
+09:26:09.927 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line starting up
+09:26:10.223 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\6a49cd90ddbe7930541c42e06289f35caf44060d5afbc342a39e87b1c797d531.png
+09:26:10.226 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-236545324607393486
+09:26:10.227 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\6a49cd90ddbe7930541c42e06289f35caf44060d5afbc342a39e87b1c797d531.png
+09:26:10.415 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\6a49cd90ddbe7930541c42e06289f35caf44060d5afbc342a39e87b1c797d531.png
+09:26:10.595 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\6a49cd90ddbe7930541c42e06289f35caf44060d5afbc342a39e87b1c797d531.png
+09:26:16.491 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[92m
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
 
-TEST PENDING: se requiere realizar una activacion de una linea en prepago
----------------------------------------------------------------------------------?[0m
+TEST PASSED: se requiere realizar una activacion de una linea en prepago
+----------------------------------------------------------------------------?[0m
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>ene 26, 2022 9:25:56 AM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+ene 26, 2022 9:25:56 AM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+1643207159138	geckodriver	INFO	Listening on 127.0.0.1:45098
+1643207159659	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;--marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\nriosa\\AppData\\Local\\Temp\\rust_mozprofileAZx8Rj&quot;
+1643207161487	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1643207161548	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1643207161549	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1643207161549	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1643207161549	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1643207166090	Marionette	INFO	Listening on port 52523
+1643207166133	Marionette	WARN	TLS certificate errors will be ignored for this session
+ene 26, 2022 9:26:06 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+1643207170911	Marionette	INFO	Stopped listening on port 52523
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
 </pre>
 </span>
 </div>
@@ -109,7 +149,7 @@ TEST PENDING: se requiere realizar una activacion de una linea en prepago
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at 25/01/2022 04:31:23 PM</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at 26/01/2022 09:26:19 AM</p>
 </div>
 </div>
 </body>

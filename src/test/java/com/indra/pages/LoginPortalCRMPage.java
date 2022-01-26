@@ -6,17 +6,17 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.WebDriver;
 
-@DefaultUrl("http://10.69.60.77:8180/tigo-pos-web/index.jsp")
+@DefaultUrl("http://10.69.60.85:8280/portal/login?initialURI=%2Fportal%")
 public class LoginPortalCRMPage extends PageObject {
     public LoginPortalCRMPage(WebDriver driver) {
         super(driver);
     }
 
-    @FindBy(id = "filtro1")
+    @FindBy(id = "username")
     WebElementFacade user;
-    @FindBy(id = "filtro2")
+    @FindBy(id = "password")
     WebElementFacade password;
-    @FindBy(className = "boton1")
+    @FindBy(xpath = "/html/body/div[1]/div[2]/form/div[3]/input[2]")
     WebElementFacade btnLogin;
 
     public WebElementFacade getUser() {

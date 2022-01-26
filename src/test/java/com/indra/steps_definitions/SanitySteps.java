@@ -3,6 +3,7 @@ package com.indra.steps_definitions;
 import com.indra.actions.*;
 import com.indra.models.DataExcel;
 import com.indra.models.LoginEposModel;
+import com.indra.models.LoginPortalCRMModel;
 import com.indra.pages.LoginEposPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -25,6 +26,7 @@ public class SanitySteps{
     LoginEposPageAction loginPageAction = new LoginEposPageAction(driver);
     MerchandiseEntryAction merchandiseEntryAction = new MerchandiseEntryAction(driver);
     InventoryAllocationAction inventoryAllocationAction = new InventoryAllocationAction(driver);
+    LoginPortalCRMAction loginPortalCRMAction = new LoginPortalCRMAction(driver);
 
 //-----------<Primer escenario>----------------
     @Given("^Se ejecutan procedimientos en bd y soapUi$")
@@ -79,7 +81,9 @@ public class SanitySteps{
     //-----------<Cuarto escenario>----------------
 
     @Given("^Se ingresa al portal CRM para activacion prepago$")
-    public void seIngresaAlPortalCRMParaActivacionPrepago() {
+    public void seIngresaAlPortalCRMParaActivacionPrepago(List<LoginPortalCRMModel> loginPortalCRMModels) {
+        driver.get(dataExcel.getUrlCRM());
+        loginPortalCRMAction.clickOnLogin(loginPortalCRMModels.get(0));
     }
 
     @When("^Se hace activacion de una linea en prepago$")

@@ -33,7 +33,7 @@ Feature: Sanity limpieza y aprovisionamiento de recursos
   Scenario: se requiere realizar una activacion de una linea en prepago
     Given Se ingresa al portal CRM para activacion prepago
       | user       | password   |
-      | CQ10960370 | Tigo.2018* |
+      | CQ10960370 | Tigo.2022* |
     When Se hace activacion de una linea en prepago
     Then Se deberia ver en pantalla unica la linea activa en prepago
 
