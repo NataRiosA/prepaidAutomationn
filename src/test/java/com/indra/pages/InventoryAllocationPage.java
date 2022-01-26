@@ -49,6 +49,13 @@ public class InventoryAllocationPage extends PageObject {
     @FindBy(id = "formUpload:upload:file")
     WebElement btnCargarArchivo;
 
+    @FindBy(xpath = "//*[@id='formUpload:j_id_jsp_1482417417_216']")
+    WebElementFacade btnAccept;
+
+    @FindBy(id = "form1:j_id_jsp_1482417417_167")
+    WebElementFacade btnAcceptInventory;
+
+
     public WebElement getBtnCargarArchivo() {
         return btnCargarArchivo;
     }
@@ -99,5 +106,13 @@ public class InventoryAllocationPage extends PageObject {
 
     public WebElementFacade getSubInventoryAllocation() {
         return subInventoryAllocation;
+    }
+
+    public WebElementFacade getBtnAccept() {
+        return btnAccept;
+    }
+
+    public WebElementFacade getBtnAcceptInventory(){
+        return btnAcceptInventory;
     }
 }

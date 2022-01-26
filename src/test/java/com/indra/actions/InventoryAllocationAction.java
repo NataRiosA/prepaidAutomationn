@@ -37,7 +37,6 @@ public class InventoryAllocationAction extends InventoryAllocationPage {
         click_addProducts();
         selectArt();
         bulkLoad();
-        Thread.sleep(5000);
     }
 
     public void seller() throws InterruptedException {
@@ -72,15 +71,14 @@ public class InventoryAllocationAction extends InventoryAllocationPage {
         getTableCargaMasiva().waitUntilPresent();
 
         MatcherAssert.assertThat("esta presente la carga masiva",
-                getTableCargaMasiva().isPresent(),Matchers.is(true));
-
+                getTableCargaMasiva().isPresent(), Matchers.is(true));
         getBtnCargaMasiva().click();
         Thread.sleep(1000);
-        System.out.println(getBtnCargarArchivo().isDisplayed());
-
-        getBtnCargarArchivo().sendKeys("D:\\Documents\\Doc 1.pdf");
-
+        WebElement we = getDriver().findElement(By.id("formUpload:upload:file"));
+        we.sendKeys("C:\\Users\\nriosa\\Desktop\\Inventario.csv");
+        Thread.sleep(2000);
+        getBtnAccept().click();
+        getBtnAcceptInventory().click();
     }
-
 
 }

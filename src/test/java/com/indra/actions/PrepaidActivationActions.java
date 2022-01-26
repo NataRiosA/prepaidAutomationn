@@ -27,7 +27,6 @@ public class PrepaidActivationActions extends PrepaidActivationPage {
         enter(prepaid.getVendor()).into(getVendor());
         enter(prepaid.getDocumentCC()).into(getDocumentCC());
         enter(prepaid.getDocumentExpedicion()).into(getDocumentExpedicion());
-
     }
 
     public void clickOnLogin(PrepaidActivationModels prepaid){

@@ -1,6 +1,7 @@
 package com.indra.actions;
 
 import com.indra.models.WindexModel;
+import org.openqa.selenium.WebDriver;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -67,6 +68,7 @@ public class InventoryActivationAction extends ReadFileXLSX{
 
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
+        Thread.sleep(2000);
     }
 
     public static void write(String texto) {
