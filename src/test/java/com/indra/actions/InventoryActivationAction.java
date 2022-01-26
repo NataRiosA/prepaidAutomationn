@@ -1,22 +1,34 @@
 package com.indra.actions;
 
+import com.indra.models.WindexModel;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 public class InventoryActivationAction extends ReadFileXLSX{
 
-    public void excecuteActivation() throws IOException, InterruptedException, AWTException {
-        // mapear elementos desde el archivo excel
-        excecuteStepsActivation("C:\\Program Files (x86)\\Winwap Technologies\\WinWAP for Windows 4.2\\WinWAP4.exe"
-                ,"CQ10960370","Tigo.2018*");
+    public String resultExecuteActivation(int resultActivation)  {
+        if(resultActivation==1){
+            return "Activacion de Invetario Finalizada";
+        }
+        return "Activacion Fallida";
     }
 
-    public  void excecuteStepsActivation(String rutaPrograma, String user, String password)
+    public int executeStepsActivation(WindexModel windexModel)
             throws InterruptedException, IOException, AWTException {
-        Robot robot=new Robot();
-        Process proceso = Runtime.getRuntime().exec(rutaPrograma);
+
+        Process proceso = Runtime.getRuntime().exec(windexModel.getRutaWinWap());
         Thread.sleep(2000);
+        confirmInventory(windexModel.getUser(),windexModel.getPassword());
+        proceso.destroy();
+        proceso.waitFor();
+        return proceso.exitValue();
+    }
+
+    public void confirmInventory(String user, String password) throws AWTException, InterruptedException {
+        Robot robot=new Robot();
+
         for (int i = 0; i<3; i++){
             robot.keyPress(KeyEvent.VK_TAB);
             robot.keyRelease(KeyEvent.VK_TAB);
@@ -55,15 +67,7 @@ public class InventoryActivationAction extends ReadFileXLSX{
 
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
-
-        proceso.destroy();
-
-        proceso.waitFor();
-
-        System.out.println("Activacion de Invetario Finalizada");
     }
-
-
 
     public static void write(String texto) {
         try {

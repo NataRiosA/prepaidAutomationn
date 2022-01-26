@@ -3,15 +3,22 @@ package com.indra.steps_definitions;
 import com.indra.actions.*;
 import com.indra.models.DataExcel;
 import com.indra.models.LoginEposModel;
+import com.indra.models.WindexModel;
 import com.indra.pages.LoginEposPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Managed;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
 
+import java.awt.*;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
+
+import static org.hamcrest.MatcherAssert.*;
 
 public class SanitySteps{
     @Managed
@@ -25,7 +32,8 @@ public class SanitySteps{
     LoginEposPageAction loginPageAction = new LoginEposPageAction(driver);
     MerchandiseEntryAction merchandiseEntryAction = new MerchandiseEntryAction(driver);
     InventoryAllocationAction inventoryAllocationAction = new InventoryAllocationAction(driver);
-
+    InventoryActivationAction activationAction = new InventoryActivationAction();
+    int Activation =0;
 //-----------<Primer escenario>----------------
     @Given("^Se ejecutan procedimientos en bd y soapUi$")
     public void seEjecutanProcedimientosEnBdYSoapUi() throws SQLException {
@@ -64,16 +72,14 @@ public class SanitySteps{
     //-----------<Tercer escenario>----------------
 
     @Given("^se ingresa a la plataforma epos windex$")
-    public void seIngresaALaPlataformaEposWindex() {
-    }
-
-    @When("^se confirma la asignacion de inventario$")
-    public void seConfirmaLaAsignacionDeInventario() {
-
+    public void seIngresaALaPlataformaEposWindex(List<WindexModel> windexModels) throws IOException, InterruptedException, AWTException {
+       Activation= activationAction.executeStepsActivation(windexModels.get(0));
     }
 
     @Then("^se deberia poder ver mensaje de confimacion exitosa$")
     public void seDeberiaPoderVerMensajeDeConfimacionExitosa() {
+
+        assertThat("finaliza la confirmacion de inventario",Activation, Matchers.is(1));
     }
 
     //-----------<Cuarto escenario>----------------
