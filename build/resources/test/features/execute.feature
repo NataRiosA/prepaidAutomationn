@@ -24,9 +24,8 @@ Feature: Sanity limpieza y aprovisionamiento de recursos
   @windex
   Scenario: realizar la confirmacion de inventario
     Given se ingresa a la plataforma epos windex
-      | user       | password   |
-      | CQ10960370 | Tigo.2018* |
-    When se confirma la asignacion de inventario
+      | user       | password   |rutaWinWap|
+      | CQ10960370 | Tigo.2018* |C:\Program Files (x86)\Winwap Technologies\WinWAP for Windows 4.2\WinWAP4.exe|
     Then se deberia poder ver mensaje de confimacion exitosa
 
   @portal
