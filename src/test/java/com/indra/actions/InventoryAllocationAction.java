@@ -24,14 +24,9 @@ public class InventoryAllocationAction extends InventoryAllocationPage {
 
         WebElement inventory = getDriver().findElement(By.id("formMenu:j_id19_span"));
         actions.moveToElement(inventory).build().perform();
-
         WebElement inventoryAllocation = getDriver().findElement(By.id("formMenu:j_id21"));
         actions.moveToElement(inventoryAllocation).build().perform();
-
         getSubInventoryAllocation().click();
-
-        //System.out.println(getInventoryTitle().getText());
-
         getDriver().navigate().refresh();
 
         //atcherAssert.assertThat("esta en el cargue de inventario",getInventoryTitle().getText(),
@@ -43,7 +38,6 @@ public class InventoryAllocationAction extends InventoryAllocationPage {
         selectArt();
         bulkLoad();
         Thread.sleep(5000);
-
     }
 
     public void seller() throws InterruptedException {
@@ -63,6 +57,7 @@ public class InventoryAllocationAction extends InventoryAllocationPage {
     public void click_addProducts(){
         getBtnAgregarProductos().click();
     }
+
     public void selectArt() throws InterruptedException {
         getInputArticule().waitUntilEnabled();
         enter("3003324").into(getInputArticule());
@@ -72,6 +67,7 @@ public class InventoryAllocationAction extends InventoryAllocationPage {
         getBtnSeleccionar().waitUntilClickable();
         getBtnSeleccionar().click();
     }
+
     public void bulkLoad() throws InterruptedException {
         getTableCargaMasiva().waitUntilPresent();
 

@@ -62,7 +62,8 @@ public class SanitySteps{
     //-----------<Segundo escenario>----------------
 
     @When("^Se ingresa a cargue de inventario$")
-    public void seIngresaACargueDeInventario() {
+    public void seIngresaACargueDeInventario() throws InterruptedException {
+        inventoryAllocationAction.loadInventory();
     }
 
     @Then("^Deberia poder realizar el cargue de inventario$")
