@@ -14,6 +14,6 @@ public class PrepaidActivationActions extends PrepaidActivationPage {
 
 
     public void prepaidActivationClient() {
-
+        getActivator().click();
     }
 }
