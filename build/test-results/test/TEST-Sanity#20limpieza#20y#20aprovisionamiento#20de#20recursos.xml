@@ -1,46 +1,270 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Sanity limpieza y aprovisionamiento de recursos" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-01-26T22:58:57" hostname="22LAP5CG0525FBR" time="35.461">
+<testsuite name="Sanity limpieza y aprovisionamiento de recursos" tests="4" skipped="0" failures="1" errors="0" timestamp="2022-01-27T14:42:08" hostname="22LAP5CD1195R94" time="106.436">
   <properties/>
-  <testcase name="realizar el cargue de inventario" classname="Sanity limpieza y aprovisionamiento de recursos" time="35.461">
-    <failure message="org.openqa.selenium.InvalidSelectorException: Given xpath expression &quot;//span[@id='formMenu:j_id11_span'])&quot; is invalid: SyntaxError: The expression is not a legal expression.&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: '22LAP5CG0525FBR', ip: '10.183.117.133', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10048, moz:profile: C:\Users\nriosa\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 3abc8bed-384d-427e-88d2-b394d6ce11e3&#10;*** Element info: {Using=xpath, value=//span[@id='formMenu:j_id11_span'])}" type="org.openqa.selenium.InvalidSelectorException">org.openqa.selenium.InvalidSelectorException: Given xpath expression &quot;//span[@id='formMenu:j_id11_span'])&quot; is invalid: SyntaxError: The expression is not a legal expression.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+  <testcase name="se quiere ingresar a la plataforma epos" classname="Sanity limpieza y aprovisionamiento de recursos" time="62.697">
+    <failure message="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException: Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException: Expected enabled element was not enabled
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilEnabled(WebElementFacadeImpl.java:1149)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:954)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1229)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.annotations.locators.AbstractSingleItemHandler.invoke(AbstractSingleItemHandler.java:45)
+	at com.sun.proxy.$Proxy27.click(Unknown Source)
+	at com.indra.actions.MerchandiseEntryAction.merchandiseEntry(MerchandiseEntryAction.java:30)
+	at com.indra.steps_definitions.SanitySteps.seCompletaDatosParaCargarMercancia(SanitySteps.java:60)
+	at ✽.Se completa datos para cargar mercancia(src/test/resources/features/execute.feature:14)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for MerchandiseEntryPage.storeChannel to be enabled (tried for 6 second(s) with 100 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilEnabled(WebElementFacadeImpl.java:1146)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:954)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1229)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.annotations.locators.AbstractSingleItemHandler.invoke(AbstractSingleItemHandler.java:45)
+	at com.sun.proxy.$Proxy27.click(Unknown Source)
+	at com.indra.actions.MerchandiseEntryAction.merchandiseEntry(MerchandiseEntryAction.java:30)
+	at com.indra.steps_definitions.SanitySteps.seCompletaDatosParaCargarMercancia(SanitySteps.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:31)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:25)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:37)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:40)
+	at cucumber.api.TestStep.executeStep(TestStep.java:102)
+	at cucumber.api.TestStep.run(TestStep.java:83)
+	at cucumber.api.TestCase.run(TestCase.java:58)
+	at cucumber.runner.Runner.runPickle(Runner.java:80)
+	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:140)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:118)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:56)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:127)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.openqa.selenium.NoSuchElementException: Timed out after 20 seconds. Element not found
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: '22LAP5CG0525FBR', ip: '10.183.117.133', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10048, moz:profile: C:\Users\nriosa\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 3abc8bed-384d-427e-88d2-b394d6ce11e3
-*** Element info: {Using=xpath, value=//span[@id='formMenu:j_id11_span'])}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at net.thucydides.core.webdriver.WebDriverFacade.findElement(WebDriverFacade.java:222)
-	at com.indra.actions.InventoryAllocationAction.leave(InventoryAllocationAction.java:85)
-	at com.indra.steps_definitions.SanitySteps.seIngresaACargueDeInventario(SanitySteps.java:71)
-	at ✽.Se ingresa a cargue de inventario(src/test/resources/features/execute.feature:21)
+System info: host: '22LAP5CD1195R94', ip: '192.168.0.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: driver.version: unknown
+	at net.thucydides.core.annotations.locators.SmartAjaxElementLocator.ajaxFindElement(SmartAjaxElementLocator.java:166)
+	at net.thucydides.core.annotations.locators.SmartAjaxElementLocator.findElement(SmartAjaxElementLocator.java:118)
+	at net.serenitybdd.core.pages.WebElementResolverByElementLocator.resolveForDriver(WebElementResolverByElementLocator.java:30)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:221)
+	at net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:63)
+	at net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:55)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 75 more
 </failure>
   </testcase>
-  <system-out><![CDATA[17:58:58.518 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
-17:58:58.518 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
-17:59:08.334 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Opening darkroom
-17:59:08.337 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line starting up
-17:59:08.561 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\4bbc76345299fee98f37a7b03e7470f7fb5fa9b0230d10d38936344c0abdfb81.png
-17:59:08.564 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-3070312773596513812
-17:59:08.564 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\4bbc76345299fee98f37a7b03e7470f7fb5fa9b0230d10d38936344c0abdfb81.png
-17:59:27.557 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\f58b38b4b68b2b1c3381280fb17e7e7e0df6518b850ab64671397610d54a97b2.png
-17:59:27.560 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-8267278915591968498
-17:59:27.560 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\f58b38b4b68b2b1c3381280fb17e7e7e0df6518b850ab64671397610d54a97b2.png
-17:59:32.954 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91m
+  <testcase name="realizar el cargue de inventario" classname="Sanity limpieza y aprovisionamiento de recursos" time="24.601"/>
+  <testcase name="realizar la confirmacion de inventario" classname="Sanity limpieza y aprovisionamiento de recursos" time="7.211"/>
+  <testcase name="se requiere realizar una activacion de una linea en prepago" classname="Sanity limpieza y aprovisionamiento de recursos" time="11.911"/>
+  <system-out><![CDATA[09:42:10.524 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://10.65.45.12:9001
+09:42:10.529 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 10.65.45.12:9001
+09:42:10.579 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+09:42:10.579 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+09:42:10.580 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+09:42:10.580 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+09:42:10.580 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+09:42:10.580 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /gatewaycbs/BcServicesInt HTTP/1.1
+09:42:10.580 [Test worker] DEBUG org.apache.http.wire -  >> "POST /gatewaycbs/BcServicesInt HTTP/1.1[\r][\n]"
+09:42:10.581 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+09:42:10.581 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: text/xml;charset=UTF-8[\r][\n]"
+09:42:10.581 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 748[\r][\n]"
+09:42:10.581 [Test worker] DEBUG org.apache.http.wire -  >> "Host: 10.65.45.12:9001[\r][\n]"
+09:42:10.581 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+09:42:10.581 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_301)[\r][\n]"
+09:42:10.581 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+09:42:10.581 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+09:42:10.581 [Test worker] DEBUG org.apache.http.headers - >> POST /gatewaycbs/BcServicesInt HTTP/1.1
+09:42:10.581 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+09:42:10.581 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: text/xml;charset=UTF-8
+09:42:10.581 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 748
+09:42:10.581 [Test worker] DEBUG org.apache.http.headers - >> Host: 10.65.45.12:9001
+09:42:10.581 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+09:42:10.581 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_301)
+09:42:10.581 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+09:42:10.582 [Test worker] DEBUG org.apache.http.wire -  >> "<soapenv:Envelope xmlns:bcc="http://www.huawei.com/bme/cbsinterface/bccommon" xmlns:bcs="http://www.huawei.com/bme/cbsinterface/bcservices" xmlns:ws="http://ws.web.gatewaycbs.tigo.com.co/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">[\n]"
+09:42:10.582 [Test worker] DEBUG org.apache.http.wire -  >> "   <soapenv:Header/>[\n]"
+09:42:10.582 [Test worker] DEBUG org.apache.http.wire -  >> "   <soapenv:Body>[\n]"
+09:42:10.582 [Test worker] DEBUG org.apache.http.wire -  >> "      <ws:queryCustomerInfo>[\n]"
+09:42:10.582 [Test worker] DEBUG org.apache.http.wire -  >> "         <!--Optional:-->[\n]"
+09:42:10.582 [Test worker] DEBUG org.apache.http.wire -  >> "         <QueryCustomerInfoRequest>[\n]"
+09:42:10.582 [Test worker] DEBUG org.apache.http.wire -  >> "            <bcs:QueryObj>[\n]"
+09:42:10.582 [Test worker] DEBUG org.apache.http.wire -  >> "               <!--Optional:-->[\n]"
+09:42:10.582 [Test worker] DEBUG org.apache.http.wire -  >> "               <bcs:SubAccessCode>[\n]"
+09:42:10.582 [Test worker] DEBUG org.apache.http.wire -  >> "                  <!--Optional:-->[\n]"
+09:42:10.582 [Test worker] DEBUG org.apache.http.wire -  >> "                  <bcc:PrimaryIdentity>3016875982</bcc:PrimaryIdentity>[\n]"
+09:42:10.582 [Test worker] DEBUG org.apache.http.wire -  >> "               </bcs:SubAccessCode>[\n]"
+09:42:10.583 [Test worker] DEBUG org.apache.http.wire -  >> "            </bcs:QueryObj>[\n]"
+09:42:10.583 [Test worker] DEBUG org.apache.http.wire -  >> "         </QueryCustomerInfoRequest>[\n]"
+09:42:10.583 [Test worker] DEBUG org.apache.http.wire -  >> "      </ws:queryCustomerInfo>[\n]"
+09:42:10.583 [Test worker] DEBUG org.apache.http.wire -  >> "   </soapenv:Body>[\n]"
+09:42:10.583 [Test worker] DEBUG org.apache.http.wire -  >> "</soapenv:Envelope>"
+09:42:10.647 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+09:42:10.648 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 27 Jan 2022 14:42:10 GMT[\r][\n]"
+09:42:10.648 [Test worker] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+09:42:10.648 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/xml; charset=utf-8[\r][\n]"
+09:42:10.648 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+09:42:10.648 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+09:42:10.648 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+09:42:10.648 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 27 Jan 2022 14:42:10 GMT
+09:42:10.648 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+09:42:10.648 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/xml; charset=utf-8
+09:42:10.651 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+09:42:10.662 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/xml; charset=utf-8
+09:42:10.662 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+09:42:10.697 [Test worker] DEBUG org.apache.http.wire -  << "006e[\r][\n]"
+09:42:10.697 [Test worker] DEBUG org.apache.http.wire -  << "<?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body>"
+09:42:10.697 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+09:42:10.698 [Test worker] DEBUG org.apache.http.wire -  << "01f8[\r][\n]"
+09:42:10.698 [Test worker] DEBUG org.apache.http.wire -  << "<ns4:queryCustomerInfoResponse xmlns:ns2="http://www.huawei.com/bme/cbsinterface/bccommon" xmlns:ns3="http://www.huawei.com/bme/cbsinterface/bcservices" xmlns:ns4="http://ws.web.gatewaycbs.tigo.com.co/" xmlns:ns5="http://www.huawei.com/bme/cbsinterface/cbscommon"><return><ResultHeader><ns5:Version>1</ns5:Version><ns5:ResultCode>118030260</ns5:ResultCode><ns5:ResultDesc>Subscriber 3016875982 does not exist.</ns5:ResultDesc></ResultHeader></return></ns4:queryCustomerInfoResponse></S:Body></S:Envelope>"
+09:42:10.698 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+09:42:10.698 [Test worker] DEBUG org.apache.http.wire -  << "0000[\r][\n]"
+09:42:10.698 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+09:42:10.698 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@44055f
+09:42:10.698 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+La linea 3016875982 no esta activa
+se ejecuta correctamente
+se ejecuta correctamente
+se ejecuta correctamente
+se ejecuta correctamente
+09:42:15.817 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://10.65.45.12:9001
+09:42:15.817 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 10.65.45.12:9001
+09:42:15.847 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+09:42:15.847 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+09:42:15.847 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+09:42:15.847 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+09:42:15.847 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+09:42:15.847 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /gatewaycbs/BcServicesInt HTTP/1.1
+09:42:15.847 [Test worker] DEBUG org.apache.http.wire -  >> "POST /gatewaycbs/BcServicesInt HTTP/1.1[\r][\n]"
+09:42:15.847 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+09:42:15.847 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: text/xml;charset=UTF-8[\r][\n]"
+09:42:15.847 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 748[\r][\n]"
+09:42:15.847 [Test worker] DEBUG org.apache.http.wire -  >> "Host: 10.65.45.12:9001[\r][\n]"
+09:42:15.847 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+09:42:15.847 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_301)[\r][\n]"
+09:42:15.847 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+09:42:15.847 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+09:42:15.847 [Test worker] DEBUG org.apache.http.headers - >> POST /gatewaycbs/BcServicesInt HTTP/1.1
+09:42:15.847 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+09:42:15.847 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: text/xml;charset=UTF-8
+09:42:15.847 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 748
+09:42:15.847 [Test worker] DEBUG org.apache.http.headers - >> Host: 10.65.45.12:9001
+09:42:15.847 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+09:42:15.847 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_301)
+09:42:15.847 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+09:42:15.848 [Test worker] DEBUG org.apache.http.wire -  >> "<soapenv:Envelope xmlns:bcc="http://www.huawei.com/bme/cbsinterface/bccommon" xmlns:bcs="http://www.huawei.com/bme/cbsinterface/bcservices" xmlns:ws="http://ws.web.gatewaycbs.tigo.com.co/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">[\n]"
+09:42:15.848 [Test worker] DEBUG org.apache.http.wire -  >> "   <soapenv:Header/>[\n]"
+09:42:15.848 [Test worker] DEBUG org.apache.http.wire -  >> "   <soapenv:Body>[\n]"
+09:42:15.848 [Test worker] DEBUG org.apache.http.wire -  >> "      <ws:queryCustomerInfo>[\n]"
+09:42:15.848 [Test worker] DEBUG org.apache.http.wire -  >> "         <!--Optional:-->[\n]"
+09:42:15.848 [Test worker] DEBUG org.apache.http.wire -  >> "         <QueryCustomerInfoRequest>[\n]"
+09:42:15.848 [Test worker] DEBUG org.apache.http.wire -  >> "            <bcs:QueryObj>[\n]"
+09:42:15.848 [Test worker] DEBUG org.apache.http.wire -  >> "               <!--Optional:-->[\n]"
+09:42:15.848 [Test worker] DEBUG org.apache.http.wire -  >> "               <bcs:SubAccessCode>[\n]"
+09:42:15.848 [Test worker] DEBUG org.apache.http.wire -  >> "                  <!--Optional:-->[\n]"
+09:42:15.848 [Test worker] DEBUG org.apache.http.wire -  >> "                  <bcc:PrimaryIdentity>3016875893</bcc:PrimaryIdentity>[\n]"
+09:42:15.849 [Test worker] DEBUG org.apache.http.wire -  >> "               </bcs:SubAccessCode>[\n]"
+09:42:15.849 [Test worker] DEBUG org.apache.http.wire -  >> "            </bcs:QueryObj>[\n]"
+09:42:15.849 [Test worker] DEBUG org.apache.http.wire -  >> "         </QueryCustomerInfoRequest>[\n]"
+09:42:15.849 [Test worker] DEBUG org.apache.http.wire -  >> "      </ws:queryCustomerInfo>[\n]"
+09:42:15.849 [Test worker] DEBUG org.apache.http.wire -  >> "   </soapenv:Body>[\n]"
+09:42:15.849 [Test worker] DEBUG org.apache.http.wire -  >> "</soapenv:Envelope>"
+09:42:15.915 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+09:42:15.915 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 27 Jan 2022 14:42:15 GMT[\r][\n]"
+09:42:15.915 [Test worker] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+09:42:15.915 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/xml; charset=utf-8[\r][\n]"
+09:42:15.915 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+09:42:15.915 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+09:42:15.915 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+09:42:15.915 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 27 Jan 2022 14:42:15 GMT
+09:42:15.915 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+09:42:15.915 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/xml; charset=utf-8
+09:42:15.916 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+09:42:15.916 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/xml; charset=utf-8
+09:42:15.916 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+09:42:15.918 [Test worker] DEBUG org.apache.http.wire -  << "006e[\r][\n]"
+09:42:15.919 [Test worker] DEBUG org.apache.http.wire -  << "<?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body>"
+09:42:15.919 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+09:42:15.919 [Test worker] DEBUG org.apache.http.wire -  << "01f8[\r][\n]"
+09:42:15.919 [Test worker] DEBUG org.apache.http.wire -  << "<ns4:queryCustomerInfoResponse xmlns:ns2="http://www.huawei.com/bme/cbsinterface/bccommon" xmlns:ns3="http://www.huawei.com/bme/cbsinterface/bcservices" xmlns:ns4="http://ws.web.gatewaycbs.tigo.com.co/" xmlns:ns5="http://www.huawei.com/bme/cbsinterface/cbscommon"><return><ResultHeader><ns5:Version>1</ns5:Version><ns5:ResultCode>118030260</ns5:ResultCode><ns5:ResultDesc>Subscriber 3016875893 does not exist.</ns5:ResultDesc></ResultHeader></return></ns4:queryCustomerInfoResponse></S:Body></S:Envelope>"
+09:42:15.919 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+09:42:15.919 [Test worker] DEBUG org.apache.http.wire -  << "0000[\r][\n]"
+09:42:15.919 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+09:42:15.919 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@79573d9a
+09:42:15.919 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+La linea 3016875893 no esta activa
+se ejecuta correctamente
+se ejecuta correctamente
+se ejecuta correctamente
+se ejecuta correctamente
+09:42:20.798 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:58152<->10.65.45.12:9001 closed
+09:42:21.088 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+09:42:21.088 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
+09:42:24.225 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:58145<->10.65.45.12:9001 closed
+09:42:27.080 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Opening darkroom
+09:42:27.082 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line starting up
+09:42:27.224 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\090a5e64dfd76be7722bfb1ed8c6dfd7f459607e141c32fcd07b6383a5f2a721.png
+09:42:27.225 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-4793280250879312085
+09:42:27.225 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\090a5e64dfd76be7722bfb1ed8c6dfd7f459607e141c32fcd07b6383a5f2a721.png
+09:42:28.630 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\f5157752eb3f39c177be6cb08cb7dbfe1ab904c69ff2e305f5d5865c3c1f9bcc.png
+09:42:28.632 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-7268617669154629095
+09:42:28.632 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\f5157752eb3f39c177be6cb08cb7dbfe1ab904c69ff2e305f5d5865c3c1f9bcc.png
+09:43:09.376 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\f5157752eb3f39c177be6cb08cb7dbfe1ab904c69ff2e305f5d5865c3c1f9bcc.png
+09:43:11.477 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91m
            __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
   _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
  (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
@@ -48,38 +272,158 @@ Session ID: 3abc8bed-384d-427e-88d2-b394d6ce11e3
  (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
           \_\                                                            
 
-TEST FAILED WITH ERROR: realizar el cargue de inventario
----------------------------------------------------------------------?[0m
-17:59:32.954 [Test worker] DEBUG net.thucydides.core.steps.ConsoleLoggingListener - RELATED ISSUES: 
-17:59:33.039 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91mTEST FAILED AT STEP When Se ingresa a cargue de inventario?[0m
-17:59:33.039 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Given xpath expression "//span[@id='formMenu:j_id11_span'])" is invalid: SyntaxError: The expression is not a legal expression.
+TEST FAILED: se quiere ingresar a la plataforma epos
+--------------------------------------------------------------------------?[0m
+09:43:11.482 [Test worker] DEBUG net.thucydides.core.steps.ConsoleLoggingListener - RELATED ISSUES: 
+09:43:11.532 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91mTEST FAILED AT STEP Then Se completa datos para cargar mercancia?[0m
+09:43:11.533 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Expected enabled element was not enabledBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'System info: host: '22LAP5CD1195R94', ip: '192.168.0.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'Driver info: driver.version: unknown
+09:43:11.710 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+09:43:11.710 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
+09:43:17.474 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\8d0f6a683159f71359f4003b2b68d68f6271256f600d3977934f8efd664c0bac.png
+09:43:17.475 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-7997855491152961806
+09:43:17.475 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\8d0f6a683159f71359f4003b2b68d68f6271256f600d3977934f8efd664c0bac.png
+09:43:33.169 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\ec763b7c3915e691aa75707b36e940d02cd983744f71383dc8c6e162758fa195.png
+09:43:36.140 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[92m
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+TEST PASSED: realizar el cargue de inventario
+----------------------------------------------------------------------------?[0m
+09:43:43.360 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[92m
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+TEST PASSED: realizar la confirmacion de inventario
+----------------------------------------------------------------------------?[0m
+09:43:43.559 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+09:43:43.559 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
+09:43:52.662 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\eb5662727f933fd0a4acd45e9af08ec62cba17041b7b3bf67bbf1c84f5d1374f.png
+09:43:52.664 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-4014038281013703822
+09:43:52.664 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\eb5662727f933fd0a4acd45e9af08ec62cba17041b7b3bf67bbf1c84f5d1374f.png
+09:43:55.273 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[92m
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+TEST PASSED: se requiere realizar una activacion de una linea en prepago
+----------------------------------------------------------------------------?[0m
 ]]></system-out>
-  <system-err><![CDATA[ene 26, 2022 5:58:58 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+  <system-err><![CDATA[ene 27, 2022 9:42:20 AM org.openqa.selenium.remote.DesiredCapabilities firefox
 INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-ene 26, 2022 5:58:58 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+ene 27, 2022 9:42:20 AM org.openqa.selenium.remote.DesiredCapabilities firefox
 INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-1643237939432	geckodriver	INFO	Listening on 127.0.0.1:2059
-1643237939991	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\nriosa\\AppData\\Local\\Temp\\rust_mozprofileV8HLp2"
-1643237940972	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
-1643237941004	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1643237941004	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1643237941005	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1643237941005	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1643294541322	geckodriver	INFO	Listening on 127.0.0.1:30241
+1643294541851	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PROJEC~1\\AppData\\Local\\Temp\\rust_mozprofileBTvSWH"
+1643294542374	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1643294542396	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1643294542396	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1643294542396	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1643294542396	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1643237943903	Marionette	INFO	Listening on port 49692
-1643237944228	Marionette	WARN	TLS certificate errors will be ignored for this session
-ene 26, 2022 5:59:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1643294543734	Marionette	INFO	Listening on port 58159
+1643294544009	Marionette	WARN	TLS certificate errors will be ignored for this session
+ene 27, 2022 9:42:24 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
-JavaScript error: http://10.69.60.77:8180/tigo-pos-web-ii/a4j_3_2_0.SR1-SNAPSHOTorg/ajax4jsf/javascript/scripts/form.js.jsf, line 11: TypeError: element is null
-JavaScript error: http://10.69.60.77:8180/tigo-pos-web-ii/a4j_3_2_0.SR1-SNAPSHOTorg/ajax4jsf/javascript/scripts/form.js.jsf, line 11: TypeError: element is null
-1643237967968	Marionette	INFO	Stopped listening on port 49692
-Extension error: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: moz-extension://e43c37ae-2e58-47d2-a69c-35663af49645/main.js :: connect :: line 12066"  data: no] undefined 12066
+1643294545350	addons.xpi	WARN	failed to set lastModifiedTime on C:\Users\ProjectSupport\AppData\Local\Temp\rust_mozprofileBTvSWH\extensions\firefoxhpsureclicksecurebrowsing@bromium.com.xpi: [Exception... "Component returned failure code: 0x8052000e (NS_ERROR_FILE_IS_LOCKED) [nsIFile.lastModifiedTime]"  nsresult: "0x8052000e (NS_ERROR_FILE_IS_LOCKED)"  location: "JS frame :: resource://gre/modules/addons/XPIInstall.jsm :: installAddon :: line 3239"  data: no] Stack trace: installAddon()@resource://gre/modules/addons/XPIInstall.jsm:3239
+install()@resource://gre/modules/addons/XPIInstall.jsm:1767
+startInstall/this._startupPromise<()@resource://gre/modules/addons/XPIInstall.jsm:1833
+startInstall()@resource://gre/modules/addons/XPIInstall.jsm:1839
+1643294589533	Marionette	INFO	Stopped listening on port 58159
+Extension error: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: moz-extension://a593b3ba-5f10-4317-b134-e3e8a57b817e/main.js :: connect :: line 12066"  data: no] undefined 12066
 [[Exception stack
-connect@moz-extension://e43c37ae-2e58-47d2-a69c-35663af49645/main.js:12066:23
-onPortDisconnected@moz-extension://e43c37ae-2e58-47d2-a69c-35663af49645/main.js:20316:30
-makeConnection/channel<@moz-extension://e43c37ae-2e58-47d2-a69c-35663af49645/main.js:20289:136
-handleDisconnect@moz-extension://e43c37ae-2e58-47d2-a69c-35663af49645/main.js:12172:14
-connect/</<@moz-extension://e43c37ae-2e58-47d2-a69c-35663af49645/main.js:12052:63
+connect@moz-extension://a593b3ba-5f10-4317-b134-e3e8a57b817e/main.js:12066:23
+onPortDisconnected@moz-extension://a593b3ba-5f10-4317-b134-e3e8a57b817e/main.js:20316:30
+makeConnection/channel<@moz-extension://a593b3ba-5f10-4317-b134-e3e8a57b817e/main.js:20289:136
+handleDisconnect@moz-extension://a593b3ba-5f10-4317-b134-e3e8a57b817e/main.js:12172:14
+connect/</<@moz-extension://a593b3ba-5f10-4317-b134-e3e8a57b817e/main.js:12052:63
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:606:13
+addListener/asyncWithoutClone/<@resource://gre/modules/ExtensionCommon.jsm:2443:39
+]]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+ene 27, 2022 9:43:11 AM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+ene 27, 2022 9:43:11 AM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+1643294591882	geckodriver	INFO	Listening on 127.0.0.1:31853
+1643294592329	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PROJEC~1\\AppData\\Local\\Temp\\rust_mozprofilegyHNsf"
+1643294592823	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1643294592845	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1643294592845	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1643294592845	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1643294592845	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1643294594233	Marionette	INFO	Listening on port 58197
+1643294594586	Marionette	WARN	TLS certificate errors will be ignored for this session
+ene 27, 2022 9:43:14 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+1643294595564	addons.xpi	WARN	failed to set lastModifiedTime on C:\Users\ProjectSupport\AppData\Local\Temp\rust_mozprofilegyHNsf\extensions\firefoxhpsureclicksecurebrowsing@bromium.com.xpi: [Exception... "Component returned failure code: 0x8052000e (NS_ERROR_FILE_IS_LOCKED) [nsIFile.lastModifiedTime]"  nsresult: "0x8052000e (NS_ERROR_FILE_IS_LOCKED)"  location: "JS frame :: resource://gre/modules/addons/XPIInstall.jsm :: installAddon :: line 3239"  data: no] Stack trace: installAddon()@resource://gre/modules/addons/XPIInstall.jsm:3239
+install()@resource://gre/modules/addons/XPIInstall.jsm:1767
+startInstall/this._startupPromise<()@resource://gre/modules/addons/XPIInstall.jsm:1833
+startInstall()@resource://gre/modules/addons/XPIInstall.jsm:1839
+JavaScript error: http://10.69.60.77:8180/tigo-pos-web-ii/a4j_3_2_0.SR1-SNAPSHOTorg/ajax4jsf/javascript/scripts/form.js.jsf, line 11: TypeError: element is null
+JavaScript error: http://10.69.60.77:8180/tigo-pos-web-ii/a4j_3_2_0.SR1-SNAPSHOTorg/ajax4jsf/javascript/scripts/form.js.jsf, line 11: TypeError: element is null
+1643294613377	Marionette	INFO	Stopped listening on port 58197
+Extension error: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: moz-extension://40886580-aa8c-4800-bcc6-d00e70109e22/main.js :: connect :: line 12066"  data: no] undefined 12066
+[[Exception stack
+connect@moz-extension://40886580-aa8c-4800-bcc6-d00e70109e22/main.js:12066:23
+onPortDisconnected@moz-extension://40886580-aa8c-4800-bcc6-d00e70109e22/main.js:20316:30
+makeConnection/channel<@moz-extension://40886580-aa8c-4800-bcc6-d00e70109e22/main.js:20289:136
+handleDisconnect@moz-extension://40886580-aa8c-4800-bcc6-d00e70109e22/main.js:12172:14
+connect/</<@moz-extension://40886580-aa8c-4800-bcc6-d00e70109e22/main.js:12052:63
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:606:13
+addListener/asyncWithoutClone/<@resource://gre/modules/ExtensionCommon.jsm:2443:39
+]]
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x370128,name=PContent::Msg_AsyncMessage) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ene 27, 2022 9:43:43 AM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+ene 27, 2022 9:43:43 AM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+1643294623727	geckodriver	INFO	Listening on 127.0.0.1:32152
+1643294624182	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PROJEC~1\\AppData\\Local\\Temp\\rust_mozprofilevIaiKD"
+1643294624705	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1643294624727	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1643294624727	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1643294624727	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1643294624727	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1643294626102	Marionette	INFO	Listening on port 58242
+1643294626665	Marionette	WARN	TLS certificate errors will be ignored for this session
+ene 27, 2022 9:43:46 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
+JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
+JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Consultas, line 1: ReferenceError: setIframeListeners is not defined
+1643294632811	Marionette	INFO	Stopped listening on port 58242
+Extension error: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: moz-extension://9066f66e-a4be-43db-bf02-45e93769b437/main.js :: connect :: line 12066"  data: no] undefined 12066
+[[Exception stack
+connect@moz-extension://9066f66e-a4be-43db-bf02-45e93769b437/main.js:12066:23
+onPortDisconnected@moz-extension://9066f66e-a4be-43db-bf02-45e93769b437/main.js:20316:30
+makeConnection/channel<@moz-extension://9066f66e-a4be-43db-bf02-45e93769b437/main.js:20289:136
+handleDisconnect@moz-extension://9066f66e-a4be-43db-bf02-45e93769b437/main.js:12172:14
+connect/</<@moz-extension://9066f66e-a4be-43db-bf02-45e93769b437/main.js:12052:63
 Current stack
 applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:606:13
 addListener/asyncWithoutClone/<@resource://gre/modules/ExtensionCommon.jsm:2443:39

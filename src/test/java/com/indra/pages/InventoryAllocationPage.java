@@ -3,9 +3,10 @@ package com.indra.pages;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
+import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
+@DefaultUrl("http://10.69.60.77:8180/tigo-pos-web-ii/asignacion/asignacion.jsf")
 public class InventoryAllocationPage extends PageObject {
 
     public InventoryAllocationPage(WebDriver driver) {
@@ -55,6 +56,12 @@ public class InventoryAllocationPage extends PageObject {
     @FindBy(id = "form1:j_id_jsp_1482417417_167")
     WebElementFacade btnAcceptInventory;
 
+    @FindBy(id = "menu:formMenu:j_id33:anchor")
+    WebElementFacade btnLeave;
+
+    public WebElementFacade getBtnLeave() {
+        return btnLeave;
+    }
 
     public WebElement getBtnCargarArchivo() {
         return btnCargarArchivo;

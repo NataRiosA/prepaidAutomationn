@@ -1,8 +1,6 @@
 package com.indra.actions;
 
-import com.ibm.icu.impl.UResource;
 import com.indra.pages.InventoryAllocationPage;
-import net.serenitybdd.core.pages.WebElementFacade;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
@@ -74,11 +72,19 @@ public class InventoryAllocationAction extends InventoryAllocationPage {
                 getTableCargaMasiva().isPresent(), Matchers.is(true));
         getBtnCargaMasiva().click();
         Thread.sleep(1000);
-        WebElement we = getDriver().findElement(By.id("formUpload:upload:file"));
-        we.sendKeys("C:\\Users\\nriosa\\Desktop\\Inventario.csv");
+        WebElement btnCargarArchivo = getDriver().findElement(By.id("formUpload:upload:file"));
+        btnCargarArchivo.sendKeys("C:\\Sanity Ambientes\\PrepaidAutomation\\src\\test\\resources\\config_data\\Inventario.csv");
         Thread.sleep(2000);
         getBtnAccept().click();
         getBtnAcceptInventory().click();
+    }
+    public void leaveSesion(){
+
+            Actions actions = new Actions(getDriver());
+            WebElement leave = getDriver().findElement(By.id("menu:formMenu:j_id32_span"));
+            actions.moveToElement(leave).build().perform();
+            getBtnLeave().click();
+
     }
 
 }

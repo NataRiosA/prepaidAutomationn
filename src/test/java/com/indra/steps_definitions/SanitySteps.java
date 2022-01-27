@@ -40,7 +40,7 @@ public class SanitySteps{
 //-----------<Primer escenario>----------------
     @Given("^Se ejecutan procedimientos en bd y soapUi$")
     public void seEjecutanProcedimientosEnBdYSoapUi() throws SQLException {
-        enlistment.executeAllProcedures();
+        //enlistment.executeAllProcedures();
     }
 
     @When("^Se ingresa a la plataforma epos para cargue de inventario$")
@@ -68,7 +68,8 @@ public class SanitySteps{
     @When("^Se ingresa a cargue de inventario$")
     public void seIngresaACargueDeInventario() throws InterruptedException {
         inventoryAllocationAction.loadInventory();
-        loginPageAction.leave();
+        inventoryAllocationAction.leaveSesion();
+
     }
 
     @Then("^Deberia poder realizar el cargue de inventario$")
