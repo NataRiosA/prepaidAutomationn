@@ -10,9 +10,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-public class InventoryAllocationAction extends InventoryAllocationPage {
+public class InventoryAllocationActions extends InventoryAllocationPage {
 
-    public InventoryAllocationAction(WebDriver driver) {
+    public InventoryAllocationActions(WebDriver driver) {
         super(driver);
     }
 
@@ -77,6 +77,8 @@ public class InventoryAllocationAction extends InventoryAllocationPage {
         Thread.sleep(2000);
         getBtnAccept().click();
         getBtnAcceptInventory().click();
+        MatcherAssert.assertThat("Se presenta el message de cargue de inventario"
+                ,getMessageAllocationInventory().isPresent(),Matchers.is(true));
     }
 
     public void leaveSesion(){

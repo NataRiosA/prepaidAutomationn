@@ -1,11 +1,11 @@
 package com.indra.actions;
 
-import com.indra.models.DataExcel;
+import com.indra.models.DataExcelModels;
 import oracle.jdbc.datasource.impl.OracleDataSource;
-import org.openqa.selenium.WebDriver;
+
 import java.sql.*;
 
-public class DatabaseConnection extends DataExcel {
+public class DatabaseConnectionActions extends DataExcelModels {
 
         public void executeAllProcedures(String msi, String msisdn) throws SQLException {
             databaseConnectionActivator(getUrlDBA(),getPort(),getServiceA(),getUserA(),getPasswordA()

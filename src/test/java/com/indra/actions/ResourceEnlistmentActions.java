@@ -1,13 +1,13 @@
 package com.indra.actions;
-import com.indra.models.DataExcel;
+import com.indra.models.DataExcelModels;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-public class ResourceEnlistment extends DataExcel {
-    UninstallCBSServices uninstallCBSServices = new UninstallCBSServices();
-    DatabaseConnection databaseConnection = new DatabaseConnection();
-    ReadFileXLSX fileXLSX = new ReadFileXLSX();
+public class ResourceEnlistmentActions extends DataExcelModels {
+    UninstallCBSServicesActions uninstallCBSServicesActions = new UninstallCBSServicesActions();
+    DatabaseConnectionActions databaseConnectionActions = new DatabaseConnectionActions();
+    ReadFileXLSXActions fileXLSX = new ReadFileXLSXActions();
     List<String> listMsisdn = new ArrayList<>();
     List<String> listMsi = new ArrayList<>();
     /**  Este metodo retorna una lista de los valores de la columna especificada, la columna de excel donde estan ya sea
@@ -32,9 +32,9 @@ public class ResourceEnlistment extends DataExcel {
         int total = listMsisdn.size();
         int i = 0;
         while(!(i ==total)) {
-            uninstallCBSServices.performLineCleaning(getUrlGatewayCBS(), getUrlGatewayMG(), listMsisdn.get(i));
+            uninstallCBSServicesActions.performLineCleaning(getUrlGatewayCBS(), getUrlGatewayMG(), listMsisdn.get(i));
             //colocar metodo de base de datos
-            databaseConnection.executeAllProcedures(listMsi.get(i), listMsisdn.get(i));
+            databaseConnectionActions.executeAllProcedures(listMsi.get(i), listMsisdn.get(i));
             i++;
         }
     }

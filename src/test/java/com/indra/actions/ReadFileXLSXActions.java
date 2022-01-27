@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ReadFileXLSX {
+public class ReadFileXLSXActions {
     public ArrayList<ArrayList<String>> excelArray = new ArrayList<>();
 
     public void readFileExcel(){

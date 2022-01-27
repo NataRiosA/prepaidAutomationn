@@ -1,6 +1,6 @@
 package com.indra.models;
 
-public class LoginEposModel {
+public class LoginPortalCRMModels {
     String user;
     String password;
 

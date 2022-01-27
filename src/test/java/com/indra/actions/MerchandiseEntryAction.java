@@ -1,6 +1,7 @@
 package com.indra.actions;
 
 import com.indra.pages.MerchandiseEntryPage;
+import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
@@ -15,7 +16,6 @@ public class MerchandiseEntryAction extends MerchandiseEntryPage {
     public MerchandiseEntryAction(WebDriver driver) {
         super(driver);
     }
-
 
     public void loadMerchandise(){
         Actions actions = new Actions(getDriver());
@@ -47,7 +47,7 @@ public class MerchandiseEntryAction extends MerchandiseEntryPage {
 
     public void merchandiseEntryInventory() throws InterruptedException {
         getBulkUploadItems().waitUntilClickable();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         getBulkUploadItems().click();
         Actions actions = new Actions(getDriver());
         WebElement we = getDriver().findElement(By.xpath("//input[contains(@id,'formload:uploadFile:file')]"));
@@ -57,6 +57,9 @@ public class MerchandiseEntryAction extends MerchandiseEntryPage {
         //compareM();
         Thread.sleep(2000);
         getUpload().click();
-    }
+        getResultLoad().waitUntilPresent();
 
+        MatcherAssert.assertThat("la carga de mercacia fue exitosa",
+                getResultLoad().getText(),Matchers.containsString("Carga Masiva Efectuada Exitosamente"));
+    }
 }

@@ -34,14 +34,15 @@ public class PrepaidActivationActions extends PrepaidActivationPage {
     }
 
     public void activationInformation(){
-        enter("732111198172291").into(getImsi());
-        enter("3016875982").into(getMsisdn());
+        enter("732111198172290").into(getImsi());
+        enter("3016875893").into(getMsisdn());
         getTypeOfSaleArrow().click();
         getJustSim().click();
         WebElement continuar = getDriver().findElement(By.id("ActivacionesForm:btnContinuarActivacionVenta"));
         continuar.click();
         getContinueTarife().click();
     }
+
     public  void demographicInformation(){
         getPaymentDepar().click();
         getDeparment().click();
@@ -59,21 +60,20 @@ public class PrepaidActivationActions extends PrepaidActivationPage {
     }
 
     public void consultSingleScreen(){
+        getDriver().switchTo().defaultContent();
         getConsult().click();
         getConsultPos().click();
         getConsultIntegral().click();
         getCosultaPantallaUnica().click();
         WebElement iframe = getDriver().findElement(By.id("iframe"));
         getDriver().switchTo().frame(iframe);
-        enter("3016875982").into(getMsisdn2());
+        enter("3016875893").into(getMsisdn2());
         getSearchButton().click();
         getGeneralCustomerInformation().waitUntilPresent();
         WebElement plan = getDriver().findElement(By.id("j_id135:j_id157"));
 
         MatcherAssert.assertThat("el plan es prepago",
                 plan.getText(),Matchers.containsString("Plan Tigo Prepago") );
-
-
     }
 
 }

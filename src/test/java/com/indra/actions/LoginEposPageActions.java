@@ -1,26 +1,26 @@
 package com.indra.actions;
 
-import com.indra.models.LoginEposModel;
+import com.indra.models.LoginEposModels;
 import com.indra.pages.LoginEposPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class LoginEposPageAction extends LoginEposPage {
+public class LoginEposPageActions extends LoginEposPage {
 
     public String contraseniaInicial;
 
-    public LoginEposPageAction(WebDriver driver) {
+    public LoginEposPageActions(WebDriver driver) {
         super(driver);
     }
 
-    public void fillLogin(LoginEposModel signIn)  {
+    public void fillLogin(LoginEposModels signIn)  {
         enter(signIn.getUser()).into(getUser());
         enter(signIn.getPassword()).into(getPassword());
     }
 
-    public void clickOnLogin(LoginEposModel signIn){
+    public void clickOnLogin(LoginEposModels signIn){
         fillLogin(signIn);
         login();
     }

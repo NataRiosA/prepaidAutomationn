@@ -59,6 +59,13 @@ public class InventoryAllocationPage extends PageObject {
     @FindBy(id = "menu:formMenu:j_id33:anchor")
     WebElementFacade btnLeave;
 
+    @FindBy(id = "form1:cabezoteGrid")
+    WebElementFacade messageAllocationInventory;
+
+    public WebElementFacade getMessageAllocationInventory() {
+        return messageAllocationInventory;
+    }
+
     public WebElementFacade getBtnLeave() {
         return btnLeave;
     }

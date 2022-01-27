@@ -1,8 +1,9 @@
 package com.indra.models;
 
-public class LoginPortalCRMModel {
+public class WindexModels {
     String user;
     String password;
+    String rutaWinWap;
 
     public String getUser() {
         return user;
@@ -10,5 +11,9 @@ public class LoginPortalCRMModel {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getRutaWinWap() {
+        return rutaWinWap;
     }
 }

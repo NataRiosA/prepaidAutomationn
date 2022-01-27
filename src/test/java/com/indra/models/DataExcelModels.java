@@ -1,8 +1,8 @@
 package com.indra.models;
 
-import com.indra.actions.ReadFileXLSX;
+import com.indra.actions.ReadFileXLSXActions;
 
-public class DataExcel {
+public class DataExcelModels {
     String urlEpos;
     String urlCRM;
     String urlComfirmador;
@@ -29,7 +29,7 @@ public class DataExcel {
     String passwordP;
     String port;
 
-    ReadFileXLSX fileXLSX = new ReadFileXLSX();
+    ReadFileXLSXActions fileXLSX = new ReadFileXLSXActions();
 
     public String getUrlEpos() {
         return urlEpos;
@@ -71,7 +71,7 @@ public class DataExcel {
         return Serial;
     }
 
-    public ReadFileXLSX getFileXLSX() {
+    public ReadFileXLSXActions getFileXLSX() {
         return fileXLSX;
     }
 

@@ -3,7 +3,7 @@ package com.indra.actions;
 import static io.restassured.RestAssured.given;
 
 
-public class UninstallCBSServices  {
+public class UninstallCBSServicesActions {
 
     public void performLineCleaning(String urlGatewayCBS, String urlGatewayMG, String MSISDN){
         //System.out.println("CBS  "+urlGatewayCBS);

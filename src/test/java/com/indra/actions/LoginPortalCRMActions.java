@@ -1,23 +1,23 @@
 package com.indra.actions;
 
-import com.indra.models.LoginPortalCRMModel;
+import com.indra.models.LoginPortalCRMModels;
 import com.indra.pages.LoginPortalCRMPage;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPortalCRMAction extends LoginPortalCRMPage {
+public class LoginPortalCRMActions extends LoginPortalCRMPage {
 
     public String contraseniaInicial;
 
-    public LoginPortalCRMAction(WebDriver driver) {
+    public LoginPortalCRMActions(WebDriver driver) {
         super(driver);
     }
 
-    public void fillLogin(LoginPortalCRMModel signIn)  {
+    public void fillLogin(LoginPortalCRMModels signIn)  {
         enter(signIn.getUser()).into(getUser());
         enter(signIn.getPassword()).into(getPassword());
     }
 
-    public void clickOnLogin(LoginPortalCRMModel signIn){
+    public void clickOnLogin(LoginPortalCRMModels signIn){
         fillLogin(signIn);
         login();
     }

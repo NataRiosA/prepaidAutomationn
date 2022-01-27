@@ -1,13 +1,12 @@
 package com.indra.actions;
 
-import com.indra.models.WindexModel;
-import org.openqa.selenium.WebDriver;
+import com.indra.models.WindexModels;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 
-public class InventoryActivationAction extends ReadFileXLSX{
+public class InventoryActivationActions extends ReadFileXLSXActions {
 
     public String resultExecuteActivation(int resultActivation)  {
         if(resultActivation==1){
@@ -16,12 +15,12 @@ public class InventoryActivationAction extends ReadFileXLSX{
         return "Activacion Fallida";
     }
 
-    public int executeStepsActivation(WindexModel windexModel)
+    public int executeStepsActivation(WindexModels windexModels)
             throws InterruptedException, IOException, AWTException {
 
-        Process proceso = Runtime.getRuntime().exec(windexModel.getRutaWinWap());
+        Process proceso = Runtime.getRuntime().exec(windexModels.getRutaWinWap());
         Thread.sleep(2000);
-        confirmInventory(windexModel.getUser(),windexModel.getPassword());
+        confirmInventory(windexModels.getUser(), windexModels.getPassword());
         proceso.destroy();
         proceso.waitFor();
         return proceso.exitValue();

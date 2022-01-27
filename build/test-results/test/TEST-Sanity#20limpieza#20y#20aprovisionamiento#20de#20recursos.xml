@@ -1,62 +1,438 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Sanity limpieza y aprovisionamiento de recursos" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-01-27T20:02:38" hostname="22LAP5CD1195R94" time="13.89">
+<testsuite name="Sanity limpieza y aprovisionamiento de recursos" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-01-27T21:45:08" hostname="22LAP5CD1195R94" time="124.459">
   <properties/>
-  <testcase name="se requiere realizar una activacion de una linea en prepago" classname="Sanity limpieza y aprovisionamiento de recursos" time="13.89">
-    <failure message="java.lang.AssertionError: el plan es prepago&#10;Expected: a string containing &quot;debe fallar&quot;&#10;     but: was &quot;Plan Tigo Prepago Tarifa Plana 3&quot;" type="java.lang.AssertionError">java.lang.AssertionError: el plan es prepago
-Expected: a string containing &quot;debe fallar&quot;
-     but: was &quot;Plan Tigo Prepago Tarifa Plana 3&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at com.indra.actions.PrepaidActivationActions.consultSingleScreen(PrepaidActivationActions.java:73)
-	at com.indra.steps_definitions.SanitySteps.seDeberiaVerEnPantallaUnicaLaLineaActivaEnPrepago(SanitySteps.java:111)
-	at ✽.Se deberia ver en pantalla unica la linea activa en prepago(src/test/resources/features/execute.feature:37)
-</failure>
-  </testcase>
-  <system-out><![CDATA[15:02:39.523 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
-15:02:39.524 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
-15:02:45.875 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Opening darkroom
-15:02:45.876 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line starting up
-15:02:46.058 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\eb5662727f933fd0a4acd45e9af08ec62cba17041b7b3bf67bbf1c84f5d1374f.png
-15:02:49.600 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\fcfb1e62324377e83c061649d3a5b82e42040bb8ace929c731a6d2d42382fdce.png
-15:02:49.602 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-6938534684692629490
-15:02:49.602 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\fcfb1e62324377e83c061649d3a5b82e42040bb8ace929c731a6d2d42382fdce.png
-15:02:52.478 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91m
-           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
-  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
- (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
-  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
- (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
-          \_\                                                            
+  <testcase name="se quiere ingresar a la plataforma epos" classname="Sanity limpieza y aprovisionamiento de recursos" time="34.893"/>
+  <testcase name="realizar el cargue de inventario" classname="Sanity limpieza y aprovisionamiento de recursos" time="26.825"/>
+  <testcase name="realizar la confirmacion de inventario" classname="Sanity limpieza y aprovisionamiento de recursos" time="7.188"/>
+  <testcase name="se requiere realizar una activacion de una linea en prepago" classname="Sanity limpieza y aprovisionamiento de recursos" time="55.536"/>
+  <system-out><![CDATA[16:45:10.149 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://10.65.45.12:9001
+16:45:10.154 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 10.65.45.12:9001
+16:45:10.235 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+16:45:10.236 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+16:45:10.236 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+16:45:10.236 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+16:45:10.236 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+16:45:10.236 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /gatewaycbs/BcServicesInt HTTP/1.1
+16:45:10.237 [Test worker] DEBUG org.apache.http.wire -  >> "POST /gatewaycbs/BcServicesInt HTTP/1.1[\r][\n]"
+16:45:10.237 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+16:45:10.237 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: text/xml;charset=UTF-8[\r][\n]"
+16:45:10.237 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 748[\r][\n]"
+16:45:10.237 [Test worker] DEBUG org.apache.http.wire -  >> "Host: 10.65.45.12:9001[\r][\n]"
+16:45:10.237 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+16:45:10.237 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_301)[\r][\n]"
+16:45:10.237 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+16:45:10.237 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+16:45:10.237 [Test worker] DEBUG org.apache.http.headers - >> POST /gatewaycbs/BcServicesInt HTTP/1.1
+16:45:10.237 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+16:45:10.237 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: text/xml;charset=UTF-8
+16:45:10.237 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 748
+16:45:10.237 [Test worker] DEBUG org.apache.http.headers - >> Host: 10.65.45.12:9001
+16:45:10.237 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+16:45:10.237 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_301)
+16:45:10.237 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "<soapenv:Envelope xmlns:bcc="http://www.huawei.com/bme/cbsinterface/bccommon" xmlns:bcs="http://www.huawei.com/bme/cbsinterface/bcservices" xmlns:ws="http://ws.web.gatewaycbs.tigo.com.co/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "   <soapenv:Header/>[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "   <soapenv:Body>[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "      <ws:queryCustomerInfo>[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "         <!--Optional:-->[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "         <QueryCustomerInfoRequest>[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "            <bcs:QueryObj>[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "               <!--Optional:-->[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "               <bcs:SubAccessCode>[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "                  <!--Optional:-->[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "                  <bcc:PrimaryIdentity>3016875982</bcc:PrimaryIdentity>[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "               </bcs:SubAccessCode>[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "            </bcs:QueryObj>[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "         </QueryCustomerInfoRequest>[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "      </ws:queryCustomerInfo>[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "   </soapenv:Body>[\n]"
+16:45:10.238 [Test worker] DEBUG org.apache.http.wire -  >> "</soapenv:Envelope>"
+16:45:10.365 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+16:45:10.368 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 27 Jan 2022 21:45:10 GMT[\r][\n]"
+16:45:10.368 [Test worker] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+16:45:10.368 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/xml; charset=utf-8[\r][\n]"
+16:45:10.368 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:10.369 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+16:45:10.369 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+16:45:10.369 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 27 Jan 2022 21:45:10 GMT
+16:45:10.369 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+16:45:10.369 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/xml; charset=utf-8
+16:45:10.374 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+16:45:10.384 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/xml; charset=utf-8
+16:45:10.385 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+16:45:10.422 [Test worker] DEBUG org.apache.http.wire -  << "006e[\r][\n]"
+16:45:10.422 [Test worker] DEBUG org.apache.http.wire -  << "<?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body>"
+16:45:10.423 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:10.423 [Test worker] DEBUG org.apache.http.wire -  << "01f8[\r][\n]"
+16:45:10.423 [Test worker] DEBUG org.apache.http.wire -  << "<ns4:queryCustomerInfoResponse xmlns:ns2="http://www.huawei.com/bme/cbsinterface/bccommon" xmlns:ns3="http://www.huawei.com/bme/cbsinterface/bcservices" xmlns:ns4="http://ws.web.gatewaycbs.tigo.com.co/" xmlns:ns5="http://www.huawei.com/bme/cbsinterface/cbscommon"><return><ResultHeader><ns5:Version>1</ns5:Version><ns5:ResultCode>118030260</ns5:ResultCode><ns5:ResultDesc>Subscriber 3016875982 does not exist.</ns5:ResultDesc></ResultHeader></return></ns4:queryCustomerInfoResponse></S:Body></S:Envelope>"
+16:45:10.423 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:10.423 [Test worker] DEBUG org.apache.http.wire -  << "0000[\r][\n]"
+16:45:10.423 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:10.423 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@651be154
+16:45:10.423 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+La linea 3016875982 no esta activa
+se ejecuta correctamente DB Activator
+se ejecuta correctamente  DB EPOS
+se ejecuta correctamente DB Siebel
+se ejecuta correctamente DB Postale
+16:45:15.977 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://10.65.45.12:9001
+16:45:15.977 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 10.65.45.12:9001
+16:45:16.011 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+16:45:16.011 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+16:45:16.011 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+16:45:16.011 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+16:45:16.011 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+16:45:16.011 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /gatewaycbs/BcServicesInt HTTP/1.1
+16:45:16.011 [Test worker] DEBUG org.apache.http.wire -  >> "POST /gatewaycbs/BcServicesInt HTTP/1.1[\r][\n]"
+16:45:16.011 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+16:45:16.011 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: text/xml;charset=UTF-8[\r][\n]"
+16:45:16.011 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 748[\r][\n]"
+16:45:16.011 [Test worker] DEBUG org.apache.http.wire -  >> "Host: 10.65.45.12:9001[\r][\n]"
+16:45:16.011 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+16:45:16.011 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_301)[\r][\n]"
+16:45:16.011 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+16:45:16.011 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+16:45:16.011 [Test worker] DEBUG org.apache.http.headers - >> POST /gatewaycbs/BcServicesInt HTTP/1.1
+16:45:16.012 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+16:45:16.012 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: text/xml;charset=UTF-8
+16:45:16.012 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 748
+16:45:16.012 [Test worker] DEBUG org.apache.http.headers - >> Host: 10.65.45.12:9001
+16:45:16.012 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+16:45:16.012 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_301)
+16:45:16.012 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+16:45:16.012 [Test worker] DEBUG org.apache.http.wire -  >> "<soapenv:Envelope xmlns:bcc="http://www.huawei.com/bme/cbsinterface/bccommon" xmlns:bcs="http://www.huawei.com/bme/cbsinterface/bcservices" xmlns:ws="http://ws.web.gatewaycbs.tigo.com.co/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">[\n]"
+16:45:16.012 [Test worker] DEBUG org.apache.http.wire -  >> "   <soapenv:Header/>[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "   <soapenv:Body>[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "      <ws:queryCustomerInfo>[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "         <!--Optional:-->[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "         <QueryCustomerInfoRequest>[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "            <bcs:QueryObj>[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "               <!--Optional:-->[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "               <bcs:SubAccessCode>[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "                  <!--Optional:-->[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "                  <bcc:PrimaryIdentity>3016875893</bcc:PrimaryIdentity>[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "               </bcs:SubAccessCode>[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "            </bcs:QueryObj>[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "         </QueryCustomerInfoRequest>[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "      </ws:queryCustomerInfo>[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "   </soapenv:Body>[\n]"
+16:45:16.013 [Test worker] DEBUG org.apache.http.wire -  >> "</soapenv:Envelope>"
+16:45:16.129 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+16:45:16.129 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 27 Jan 2022 21:45:16 GMT[\r][\n]"
+16:45:16.129 [Test worker] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+16:45:16.129 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/xml; charset=utf-8[\r][\n]"
+16:45:16.129 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.130 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+16:45:16.130 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+16:45:16.130 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 27 Jan 2022 21:45:16 GMT
+16:45:16.130 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+16:45:16.130 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/xml; charset=utf-8
+16:45:16.130 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+16:45:16.131 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/xml; charset=utf-8
+16:45:16.131 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+16:45:16.134 [Test worker] DEBUG org.apache.http.wire -  << "006e[\r][\n]"
+16:45:16.135 [Test worker] DEBUG org.apache.http.wire -  << "<?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body>"
+16:45:16.135 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.135 [Test worker] DEBUG org.apache.http.wire -  << "0fe8[\r][\n]"
+16:45:16.135 [Test worker] DEBUG org.apache.http.wire -  << "<ns4:queryCustomerInfoResponse xmlns:ns2="http://www.huawei.com/bme/cbsinterface/bccommon" xmlns:ns3="http://www.huawei.com/bme/cbsinterface/bcservices" xmlns:ns4="http://ws.web.gatewaycbs.tigo.com.co/" xmlns:ns5="http://www.huawei.com/bme/cbsinterface/cbscommon"><return><ResultHeader><ns5:Version>1</ns5:Version><ns5:ResultCode>0</ns5:ResultCode><ns5:ResultDesc>Operation successfully.</ns5:ResultDesc></ResultHeader><QueryCustomerInfoResult><ns3:Customer><ns3:CustKey>CTA00000923985</ns3:CustKey><ns3:CustInfo><ns2:CustType>1</ns2:CustType><ns2:CustNodeType>1</ns2:CustNodeType><ns2:CustClass>1</ns2:CustClass><ns2:CustCode>CBS100010000000314045</ns2:CustCode><ns2:CustBasicInfo><ns2:DFTWrittenLang>2002</ns2:DFTWrittenLang><ns2:DFTIVRLang>2002</ns2:DFTIVRLang><ns2:DunningFlag>1</ns2:DunningFlag><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr8</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUSTOMER_TAX_RATE</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr9</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_BANKRUPTCY</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr10</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr4</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr5</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr6</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr7</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_LEGAL_CATEGORY</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CONTRACT_ID</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr1</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr2</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_NEW_IC</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr3</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_REG_FLAG</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_NRC</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_CATEGORY</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_SALT</ns2:Code><ns2:Value>80761E7C89F49E05</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_EXTERNAL_CUST_ID</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_FRAUD_FLAG</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_TAX_PAYER_IDENTIFICATION_NO</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_MEDIA_FLAG</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_EVENING_PHONE</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_DECEASED</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr5</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr4</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr3</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr2</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_DAYTIME_PHONE</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr9</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr8</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_MARKETING_CONSENT</n"
+16:45:16.136 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.136 [Test worker] DEBUG org.apache.http.wire -  << "0fe8[\r][\n]"
+16:45:16.136 [Test worker] DEBUG org.apache.http.wire -  << "s2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr7</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr6</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_OLD_IC</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr1</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr10</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_BILLSUM</ns2:Code><ns2:Value>0</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CORP_CUST_SEGMENT</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_ACCESSIBILITY_FLAG</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_BelToAreaID</ns2:Code><ns2:Value>101</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_ID</ns2:Code><ns2:Value>100010000000314045</ns2:Value></ns2:CustProperty></ns2:CustBasicInfo></ns3:CustInfo><ns3:IndividualInfo><ns2:IDType>6</ns2:IDType><ns2:IDNumber>667299000</ns2:IDNumber><ns2:FirstName>BEATRIZ</ns2:FirstName><ns2:LastName>RLOS JULIO</ns2:LastName><ns2:HomePhone>3222345678</ns2:HomePhone><ns2:IndividualProperty><ns2:Code>C_MKT_P_STATUS</ns2:Code><ns2:Value>1</ns2:Value></ns2:IndividualProperty></ns3:IndividualInfo></ns3:Customer><ns3:Subscriber><ns3:SubscriberKey>ACT00009357364</ns3:SubscriberKey><ns3:SubscriberInfo><ns2:SubBasicInfo><ns2:WrittenLang>2021</ns2:WrittenLang><ns2:IVRLang>2021</ns2:IVRLang><ns2:DunningFlag>1</ns2:DunningFlag><ns2:SubProperty><ns2:Code>C_WORK_ADDRESS</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_SMS_ROMING_RIGHT</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_LAST_TRANS_EVENT</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SALES_CHANNEL_ID</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_HANDSET_TYPE</ns2:Code><ns2:Value>-1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_MAX_BALANCE</ns2:Code><ns2:Value>-1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_ACCOUNTING_SCENARIO</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_RESUME_DATE</ns2:Code><ns2:Value>19991231190000</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_BAK_ORG_CHILD_ACCTID</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_HANDSET_NETWORK</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_UNBLOCK</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LOW_SPENDING_GATE</ns2:Code><ns2:Value>-1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LOAN_FLAG</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LASTRECHARGETIME</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LASTRGADATE</ns2:Code><ns2:Value>19700101000000</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_PORT_IN_FLAG</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_NOTIFICATION_TIMES</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_BLACK_FLAG</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_VOICE_ROAM_RIGHT</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_HYBRID_PAY_TYPE</ns2:Code><ns2:Value>-1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_MAX_VALIDITY</ns2:Code><ns2:Value>365</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_TEST_EXTEND_DAYS</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUBDISCOUNT</ns2:Code><ns2:Value>O</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LASTZONETYPE</ns2:Code>"
+16:45:16.137 [Test worker] DEBUG org.apache.http.wire -  << "<ns2:Value>00</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_S"
+16:45:16.137 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.155 [Test worker] DEBUG org.apache.http.wire -  << "0fe8[\r][\n]"
+16:45:16.156 [Test worker] DEBUG org.apache.http.wire -  << "tr_Attr4</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Str_Attr3</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Str_Attr6</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Str_Attr5</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_DAILYRENTNOTIFLAG</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_TIGO_ZONE</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Str_Attr2</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Str_Attr1</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_PLACA_INFO</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Int_Attr10</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_HANDSET_OS_TYPE</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_USER_NAME</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_TEST_EXPIRE_TIME</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_TEST_EXHAUST_RULE</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Str_Attr8</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Str_Attr7</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_REGISTERED</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Str_Attr9</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_LIFECYCLE</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_VOD_VIDEO_RIGHT</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_LAST_CHARGE_BEGIN_TIME</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LOW_BAL_NOTIFY_DATE</ns2:Code><ns2:Value>19991231190000</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_GPRS_FORBIDDEN_MAIN_BAL</ns2:Code><ns2:Value>1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_LAST_DATA_SESINI</ns2:Code><ns2:Value>19700101030000</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_CONSUMENOTIFYGATE</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LOW_BAL_NOTIFY_TIMES</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_FIRST_RECHARGE_FLAG</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_PROB</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_SALT</ns2:Code><ns2:Value>32AE7852F567FD1B</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_SERVICEPROVIDER</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_CALL_COST</ns2:Code><ns2:Value>0000</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_RNW_PRODUCTSET</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Str_Attr10</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_DOMESIC_ROAM_CALL_RIGHT</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_LAST_TRANS_DATE_TIME</ns2:Code><ns2:Value>20000101000000</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUBSCRIBER_INFO_3</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUBSCRIBER_INFO_2</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUBSCRIBER_INFO_4</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_STARTTIME_OF_SWITCH_COS</ns2:Code><ns2:Value>-1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_PREBARRING</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUBSCRIBER_INFO_1</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:S"
+16:45:16.157 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.157 [Test worker] DEBUG org.apache.http.wire -  << "0094[\r][\n]"
+16:45:16.157 [Test worker] DEBUG org.apache.http.wire -  << "ubProperty><ns2:Code>C_SUB_BARRED_DAYS</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_DETAIL</ns2:Code><ns2:Value>"
+16:45:16.157 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.157 [Test worker] DEBUG org.apache.http.wire -  << "0fe8[\r][\n]"
+16:45:16.157 [Test worker] DEBUG org.apache.http.wire -  << "0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_TIGO_CITY</ns2:Code><ns2:Value>*</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_TECHNOLOGY</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Int_Attr7</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Int_Attr8</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Int_Attr5</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Int_Attr6</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Int_Attr3</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Int_Attr4</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_HANDSET_BRAND</ns2:Code><ns2:V"
+16:45:16.158 [Test worker] DEBUG org.apache.http.wire -  << "alue></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Int_Attr1</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LASTRECHARGEAMT</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Int_Attr2</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUBCOS_FOR_EIPIN</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_Extend_Sub_Int_Attr9</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_BLACKLIST_CALL_RIGHT</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_MSCC_FEE_AMOUNT</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_BACKUP_DAYS</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_IS_PRIMARY_SUBSCRIBER</ns2:Code><ns2:Value>1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_NODO_INFO</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_AUTOTOPUP_LOWBALANCE</ns2:Code><ns2:Value>1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_REGISTERED_RETAILER</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_IS_GROUP_MEMBER</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_TSMSUBTYPE</ns2:Code><ns2:Value>-1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_DTNotification</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_GPRS_ROAM_RIGHT</ns2:Code><ns2:Value>3</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_ZONEINFOS</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_ETU_STAGE_PERCENT</ns2:Code><ns2:Value>100</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SPEC_NUM_RENT_END_TIME</ns2:Code><ns2:Value>20000101030000</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_ALLOW_OTHCARRIER_CALLS</ns2:Code><ns2:Value>Y</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LOW_BAL_GATE_1</ns2:Code><ns2:Value>-1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LOW_BAL_GATE_2</ns2:Code><ns2:Value>-1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LOW_BAL_GATE_3</ns2:Code><ns2:Value>-1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_NOROAM_CALL_RIGHT</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LOW_BAL_GATE_4</ns2:Code><ns2:Value>-1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LOW_BAL_GATE_5</ns2:Code><ns2:Value>-1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_AUTOTOPUP_RECURRING</ns2:Code><ns2:Value>1</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_LOAN_STATUS</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_IOD_FLAG</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_ETU_BLACKLIST_DATE</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_APP_ACTIVE_USAGE</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_BARRINGCODE</n"
+16:45:16.158 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.158 [Test worker] DEBUG org.apache.http.wire -  << "0fe8[\r][\n]"
+16:45:16.159 [Test worker] DEBUG org.apache.http.wire -  << "s2:Code><ns2:Value>99999999999</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_REFEREE_IDENTIFER</ns2:Code><ns2:Value></ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_INTERROAM_CALL_RIGHT</ns2:Code><ns2:Value>0</ns2:Value></ns2:SubProperty><ns2:SubProperty><ns2:Code>C_SUB_ID</ns2:Code><ns2:Value>100010000000314103</ns2:Value></ns2:SubProperty></ns2:SubBasicInfo><ns2:UserCustomerKey>CTA00000923985</ns2:UserCustomerKey><ns2:SubIdentity><ns2:SubIdentityType>1</ns2:SubIdentityType><ns2:SubIdentity>3016875893</ns2:SubIdentity><ns2:PrimaryFlag>1</ns2:PrimaryFlag></ns2:SubIdentity><ns2:SubIdentity><ns2:SubIdentityType>2</ns2:SubIdentityType><ns2:SubIdentity>732111198172290</ns2:SubIdentity><ns2:PrimaryFlag>2</ns2:PrimaryFlag></ns2:SubIdentity><ns2:Brand>110</ns2:Brand><ns2:SubClass>1</ns2:SubClass><ns2:NetworkType>1</ns2:NetworkType><ns2:Status>2</ns2:Status><ns2:ConsumptionLimit><ns2:LimitType>C_CL_USAGE_NOROAM</ns2:LimitType><ns2:UnitType>M</ns2:UnitType><ns2:CurrencyID>1032</ns2:CurrencyID><ns2:LimitValue>0</ns2:LimitValue></ns2:ConsumptionLimit><ns3:StatusDetail>000000000000000000000000</ns3:StatusDetail><ns3:ActivationTime>20220127163622</ns3:ActivationTime><ns3:UserCustomer><ns3:CustKey>CTA00000923985</ns3:CustKey><ns3:CustInfo><ns2:CustType>1</ns2:CustType><ns2:CustNodeType>1</ns2:CustNodeType><ns2:CustClass>1</ns2:CustClass><ns2:CustCode>CBS100010000000314045</ns2:CustCode><ns2:CustBasicInfo><ns2:DFTWrittenLang>2002</ns2:DFTWrittenLang><ns2:DFTIVRLang>2002</ns2:DFTIVRLang><ns2:DunningFlag>1</ns2:DunningFlag><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr8</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUSTOMER_TAX_RATE</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr9</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_BANKRUPTCY</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr10</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr4</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr5</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr6</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr7</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_LEGAL_CATEGORY</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CONTRACT_ID</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr1</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr2</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_NEW_IC</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr3</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_REG_FLAG</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_NRC</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_CATEGORY</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_SALT</ns2:Code><ns2:Value>80761E7C89F49E05</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_EXTERNAL_CUST_ID</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_FRAUD_FLAG</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_TAX_PAYER_IDENTIFICATION_NO</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_MEDIA_FLAG</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_EVENING_PHONE</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_DECEASED</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProp"
+16:45:16.159 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.159 [Test worker] DEBUG org.apache.http.wire -  << "0fe8[\r][\n]"
+16:45:16.160 [Test worker] DEBUG org.apache.http.wire -  << "erty><ns2:Code>C_Extend_Cust_Str_Attr5</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr4</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr3</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr2</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_DAYTIME_PHONE</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr9</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr8</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_MARKETING_CONSENT</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr7</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr6</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_OLD_IC</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr1</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr10</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_BILLSUM</ns2:Code><ns2:Value>0</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CORP_CUST_SEGMENT</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_ACCESSIBILITY_FLAG</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_BelToAreaID</ns2:Code><ns2:Value>101</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_ID</ns2:Code><ns2:Value>100010000000314045</ns2:Value></ns2:CustProperty></ns2:CustBasicInfo></ns3:CustInfo><ns3:IndividualInfo><ns2:IDType>6</ns2:IDType><ns2:IDNumber>667299000</ns2:IDNumber><ns2:FirstName>BEATRIZ</ns2:FirstName><ns2:LastName>RLOS JULIO</ns2:LastName><ns2:HomePhone>3222345678</ns2:HomePhone><ns2:IndividualProperty><ns2:Code>C_MKT_P_STATUS</ns2:Code><ns2:Value>1</ns2:Value></ns2:IndividualProperty></ns3:IndividualInfo></ns3:UserCustomer></ns3:SubscriberInfo><ns3:PaymentMode>0</ns3:PaymentMode><ns3:PrimaryOffering><ns2:OfferingKey><ns2:OfferingID>110110367</ns2:OfferingID><ns2:PurchaseSeq>179545</ns2:PurchaseSeq></ns2:OfferingKey><ns2:BundledFlag>S</ns2:BundledFlag><ns2:OfferingClass>I</ns2:OfferingClass><ns2:Status>2</ns2:Status><ns2:ProductInst><ns2:ProductID>1010</ns2:ProductID><ns2:PrimaryFlag>A</ns2:PrimaryFlag><ns2:PackageFlag>A</ns2:PackageFlag><ns2:NetworkType>1</ns2:NetworkType><ns2:ProductType>4</ns2:ProductType></ns2:ProductInst><ns2:ProductInst><ns2:ProductID>1014</ns2:ProductID><ns2:PrimaryFlag>A</ns2:PrimaryFlag><ns2:PackageFlag>A</ns2:PackageFlag><ns2:NetworkType>1</ns2:NetworkType><ns2:ProductType>1</ns2:ProductType></ns2:ProductInst><ns2:ProductInst><ns2:ProductID>1042</ns2:ProductID><ns2:PrimaryFlag>A</ns2:PrimaryFlag><ns2:PackageFlag>A</ns2:PackageFlag><ns2:NetworkType>1</ns2:NetworkType><ns2:ProductType>1</ns2:ProductType></ns2:ProductInst><ns2:ProductInst><ns2:ProductID>1011</ns2:ProductID><ns2:PrimaryFlag>A</ns2:PrimaryFlag><ns2:PackageFlag>A</ns2:PackageFlag><ns2:NetworkType>1</ns2:NetworkType><ns2:ProductType>1</ns2:ProductType></ns2:ProductInst><ns2:ProductInst><ns2:ProductID>1822969218</ns2:ProductID><ns2:PrimaryFlag>A</ns2:PrimaryFlag><ns2:PackageFlag>A</ns2:PackageFlag><ns2:NetworkType>1</ns2:NetworkType><ns2:ProductType>1</ns2:ProductType></ns2:ProductInst><ns2:ProductInst><ns2:ProductID>1053</ns2:ProductID><ns2:PrimaryFlag>M</ns2:PrimaryFlag><ns2:PackageFlag>A</ns2:PackageFlag><ns2:NetworkType>1</ns2:NetworkType><ns2:ProductType>1</ns2:ProductType></ns2:ProductInst></ns3:PrimaryOffering></ns3:Subscriber><ns3:Account><ns3:AcctKey>PRE-8830076099</ns3:AcctKey><ns3:AcctInfo><ns3:AcctCode>CBS100010000000314104</ns3:AcctCode><ns3:UserCustomerKey>CTA00000923985</ns3:UserCustomerKey><ns3:UserCustomer><ns3:CustKey>CTA00000923985</ns3:CustKey>"
+16:45:16.160 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.160 [Test worker] DEBUG org.apache.http.wire -  << "0073[\r][\n]"
+16:45:16.161 [Test worker] DEBUG org.apache.http.wire -  << "<ns3:CustInfo><ns2:CustT"
+16:45:16.161 [Test worker] DEBUG org.apache.http.wire -  << "ype>1</ns2:CustType><ns2:CustNodeType>1</ns2:CustNodeType><ns2:CustClass>1</ns2:CustClass><"
+16:45:16.161 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.161 [Test worker] DEBUG org.apache.http.wire -  << "0fe8[\r][\n]"
+16:45:16.161 [Test worker] DEBUG org.apache.http.wire -  << "ns2:CustCode>CBS100010000000314045</ns2:CustCode><ns2:CustBasicInfo><ns2:DFTWrittenLang>2002</ns2:DFTWrittenLang><ns2:DFTIVRLang>2002</ns2:DFTIVRLang><ns2:DunningFlag>1</ns2:DunningFlag><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr8</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUSTOMER_TAX_RATE</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr9</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_BANKRUPTCY</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr10</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr4</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr5</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr6</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr7</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_LEGAL_CATEGORY</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CONTRACT_ID</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustP"
+16:45:16.182 [Test worker] DEBUG org.apache.http.wire -  << "roperty><ns2:Code>C_Extend_Cust_Int_Attr1</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr2</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_NEW_IC</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Int_Attr3</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_REG_FLAG</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_NRC</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_CATEGORY</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_SALT</ns2:Code><ns2:Value>80761E7C89F49E05</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_EXTERNAL_CUST_ID</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_FRAUD_FLAG</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_TAX_PAYER_IDENTIFICATION_NO</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_MEDIA_FLAG</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_EVENING_PHONE</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_DECEASED</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr5</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr4</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr3</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr2</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_DAYTIME_PHONE</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr9</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr8</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_MARKETING_CONSENT</ns2:Code><ns2:Value>N</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr7</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr6</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_OLD_IC</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr1</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_Extend_Cust_Str_Attr10</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_BILLSUM</ns2:Code><ns2"
+16:45:16.182 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.182 [Test worker] DEBUG org.apache.http.wire -  << "0fe8[\r][\n]"
+16:45:16.182 [Test worker] DEBUG org.apache.http.wire -  << ":Value>0</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CORP_CUST_SEGMENT</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_ACCESSIBILITY_FLAG</ns2:Code><ns2:Value></ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_BelToAreaID</ns2:Code><ns2:Value>101</ns2:Value></ns2:CustProperty><ns2:CustProperty><ns2:Code>C_CUST_ID</ns2:Code><ns2:Value>100010000000314045</ns2:Value></ns2:CustProperty></ns2:CustBasicInfo></ns3:CustInfo><ns3:IndividualInfo><ns2:IDType>6</ns2:IDType><ns2:IDNumber>667299000</ns2:IDNumber><ns2:FirstName>BEATRIZ</ns2:FirstName><ns2:LastName>RLOS JULIO</ns2:LastName><ns2:HomePhone>3222345678</ns2:HomePhone><ns2:IndividualProperty><ns2:Code>C_MKT_P_STATUS</ns2:Code><ns2:Value>1</ns2:Value></ns2:IndividualProperty></ns3:IndividualInfo></ns3:UserCustomer><ns3:RootAcctKey>PRE-8830076099</ns3:RootAcctKey><ns3:AcctBasicInfo><ns2:BillLang>2002</ns2:BillLang><ns2:DunningFlag>1</ns2:DunningFlag><ns2:LateFeeChargeable>N</ns2:LateFeeChargeable><ns2:RedlistFlag>0</ns2:RedlistFlag><ns2:ContactInfo><ns2:FirstName>BEATRIZ</ns2:FirstName><ns2:LastName>RLOS JULIO</ns2:LastName><ns2:AddressKey>04d332af8d0a3b06a57fb07bc275d66e</ns2:AddressKey><ns2:HomePhone>3222345678</ns2:HomePhone><ns2:MobilePhone>3016875893</ns2:MobilePhone></ns2:ContactInfo><ns2:AcctProperty><ns2:Code>C_ACCOUNT_INFO_5</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_GRP_IND_ACCT</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_INIT_BALANCE</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ACCOUNT_INFO_3</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ACCOUNT_INFO_4</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Int_Attr1</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Int_Attr2</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_POINT_ACCM_FLAG</ns2:Code><ns2:Value>1</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Int_Attr3</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_RTN</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_BILLING_GROUP_NO</ns2:Code><"
+16:45:16.186 [Test worker] DEBUG org.apache.http.wire -  << "ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_GRACE_PERIOD</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_TAX_CORRELATIVE_TYPE</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_BILL_TYPE</ns2:Code><ns2:Value>T</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_IS_VPN_ACCT_SUSPEND</ns2:Code><ns2:Value>0</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ACCOUNT_CATEGORY</ns2:Code><ns2:Value>0</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_BUSINESS_TYPE</ns2:Code><ns2:Value>0</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Int_Attr4</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Int_Attr5</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_FRAUD_WRITEOFF_FLAG</ns2:Code><ns2:Value>N</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Int_Attr6</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Int_Attr7</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_IMG_IDX</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ACCOUNT_INFO_1</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Int_Attr8</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_MCF_SELECTED</ns2:Code><ns2:Value>1</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ACCOUNT_INFO_2</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Int_Attr9</ns2:Code><ns2:Value></ns2:Val"
+16:45:16.186 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.186 [Test worker] DEBUG org.apache.http.wire -  << "0fe8[\r][\n]"
+16:45:16.187 [Test worker] DEBUG org.apache.http.wire -  << "ue></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_VERIFICATION_DIGIT</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_PRI_SUB_ID</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_DVD_IDX</ns2:Code><ns2:Value>N</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_POINT_EXCHANGE_FLAG</ns2:Code><ns2:Value>0</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Str_Attr1</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_NIT</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ACCT_AUTOPAY_FAILCOUNTER</ns2:Code><ns2:Value>0</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_CONTRACT_NUMBER</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_PAY_INTIME_DATE</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_OVER_DRAFT_FOR_PREPAID</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ACCOUNT_TAX_EXEMPTION</ns2:Code><ns2:Value>0</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ACCT_BILLFLAG</ns2:Code><ns2:Value>0</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_DUNNING_EXCEPTION_LIST</ns2:Code><ns2:Value>0000</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_MARKETING_CATEGORY</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_SOCIETY</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_DDI_STATUS</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Str_Attr10</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Str_Attr9</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ECONOMIC_STRATUM</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Str_Attr8</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Str_Attr7</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Str_Attr6</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Str_Attr5</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_BILL_CONFIRM</ns2:Code><ns2:Value>N</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Str_Attr4</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Str_Attr3</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ACCT_STATUS</ns2:Code><ns2:Value>0</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Str_Attr2</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_Extend_Acct_Int_Attr10</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ACCOUNT_RELIABILITY</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_COLLECTION_CATEGORY</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_CITY</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ACCOUNT_MANDATE_CODE</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_PROVINCE</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_RFC</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_CLAIM_FLAG</ns2:Code><ns2:Value>N</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ROUTEID</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_SUC_AUTOPAY_DATE</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_POINT_DISTRIBUTE_RATE</ns2:Code><ns2:Value>0</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ROAM_ACCT_ORDER_SEND</ns2:Code><ns2:Value>0</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_DD_REFERENCE</ns2:Code><ns2:Value></ns2:Val"
+16:45:16.187 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.187 [Test worker] DEBUG org.apache.http.wire -  << "0073[\r][\n]"
+16:45:16.187 [Test worker] DEBUG org.apache.http.wire -  << "ue></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_TERRITORY</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><"
+16:45:16.187 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.187 [Test worker] DEBUG org.apache.http.wire -  << "07e8[\r][\n]"
+16:45:16.187 [Test worker] DEBUG org.apache.http.wire -  << "ns2:AcctProperty><ns2:Code>C_CHG_ACCT_STATUS</ns2:Code><ns2:Value>0</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_DUE_DATE_TYPE</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_CREDIT_RECALCULATION_FLAG</ns2:Code><ns2:Value>N</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_BUSINESS_UNIT</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_OTHER_CARRIER</ns2:Code><ns2:Value>0</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_LATEFEE_FLAG</ns2:Code><ns2:Value>N</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_REF_A</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_BILL_DISPATCH_CODE</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_REF_B</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_PRI_SUB_IDENTIFIER</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ACCTCYCLELENGTH</ns2:Code><ns2:Value>1</ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_DCA_NAME</ns2:Code><ns2:Value></ns2:Value></ns2:AcctProperty><ns2:AcctProperty><ns2:Code>C_ACCT_ID</ns2:Code><ns2:Value>100010000000314104</ns2:Value></ns2:AcctProperty></ns3:AcctBasicInfo><ns3:BillCycleType>01</ns3:BillCycleType><ns3:AcctType>1</ns3:AcctType><ns3:PaymentType>0</ns3:PaymentType><ns3:AcctClass>1</ns3:AcctClass><ns3:CurrencyID>1032</ns3:CurrencyID><ns3:AcctPayMethod>1</ns3:AcctPayMethod><ns3:AddressInfo><ns2:AddressKey>04d332af8d0a3b06a57fb07bc275d66e</ns2:AddressKey><ns2:Address1>Carrera 48 55-23</ns2:Address1><ns2:Address5>66001</ns2:Address5><ns2:Address6>66</ns2:Address6><ns2:Address7>Centro</ns2:Address7><ns2:Address8>Colombi"
+16:45:16.187 [Test worker] DEBUG org.apache.http.wire -  << "a</ns2:Address8></ns3:AddressInfo><ns3:BillCycleOpenDate>20220101000000</ns3:BillCycleOpenDate><ns3:BillCycleEndDate>20220201000000</ns3:BillCycleEndDate></ns3:AcctInfo></ns3:Account></QueryCustomerInfoResult></return></ns4:queryCustomerInfoResponse></S:Body></S:Envelope>"
+16:45:16.188 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.188 [Test worker] DEBUG org.apache.http.wire -  << "0000[\r][\n]"
+16:45:16.188 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.188 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@7414bd9d
+16:45:16.188 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+16:45:16.198 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://10.65.45.12:9001
+16:45:16.198 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 10.65.45.12:9001
+16:45:16.230 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+16:45:16.230 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+16:45:16.230 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+16:45:16.230 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+16:45:16.230 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+16:45:16.230 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /gatewaymgint/GatewayMGWSInt HTTP/1.1
+16:45:16.230 [Test worker] DEBUG org.apache.http.wire -  >> "POST /gatewaymgint/GatewayMGWSInt HTTP/1.1[\r][\n]"
+16:45:16.230 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+16:45:16.230 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: text/xml;charset=UTF-8[\r][\n]"
+16:45:16.230 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 479[\r][\n]"
+16:45:16.231 [Test worker] DEBUG org.apache.http.wire -  >> "Host: 10.65.45.12:9001[\r][\n]"
+16:45:16.231 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+16:45:16.231 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_301)[\r][\n]"
+16:45:16.231 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+16:45:16.231 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+16:45:16.231 [Test worker] DEBUG org.apache.http.headers - >> POST /gatewaymgint/GatewayMGWSInt HTTP/1.1
+16:45:16.231 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+16:45:16.231 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: text/xml;charset=UTF-8
+16:45:16.231 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 479
+16:45:16.231 [Test worker] DEBUG org.apache.http.headers - >> Host: 10.65.45.12:9001
+16:45:16.231 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+16:45:16.231 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_301)
+16:45:16.231 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.gatewaymg.tigo.com.co/">[\n]"
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "   <soapenv:Header/>[\n]"
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "   <soapenv:Body>[\n]"
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "      <web:uninstallSubscription>[\n]"
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "         <!--Optional:-->[\n]"
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "         <arg0>[\n]"
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "            <!--Optional:-->[\n]"
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "            <msisdn>3016875893</msisdn>[\n]"
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "            <!--Optional:-->[\n]"
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "            <transactionId>?</transactionId>[\n]"
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "         </arg0>[\n]"
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "      </web:uninstallSubscription>[\n]"
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "   </soapenv:Body>[\n]"
+16:45:16.232 [Test worker] DEBUG org.apache.http.wire -  >> "</soapenv:Envelope>"
+16:45:16.401 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+16:45:16.401 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 27 Jan 2022 21:45:16 GMT[\r][\n]"
+16:45:16.401 [Test worker] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+16:45:16.401 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/xml; charset=utf-8[\r][\n]"
+16:45:16.401 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.401 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+16:45:16.401 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+16:45:16.401 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 27 Jan 2022 21:45:16 GMT
+16:45:16.401 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+16:45:16.401 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/xml; charset=utf-8
+16:45:16.401 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+16:45:16.402 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/xml; charset=utf-8
+16:45:16.402 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+16:45:16.403 [Test worker] DEBUG org.apache.http.wire -  << "006e[\r][\n]"
+16:45:16.403 [Test worker] DEBUG org.apache.http.wire -  << "<?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body>"
+16:45:16.403 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.403 [Test worker] DEBUG org.apache.http.wire -  << "00df[\r][\n]"
+16:45:16.403 [Test worker] DEBUG org.apache.http.wire -  << "<ns2:uninstallSubscriptionResponse xmlns:ns2="http://webservices.gatewaymg.tigo.com.co/"><return><authorizationNumber>9916374333766539</authorizationNumber></return></ns2:uninstallSubscriptionResponse></S:Body></S:Envelope>"
+16:45:16.403 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.403 [Test worker] DEBUG org.apache.http.wire -  << "0000[\r][\n]"
+16:45:16.403 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:45:16.403 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5b6b8d71
+16:45:16.403 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+se ejecuta correctamente DB Activator
+se ejecuta correctamente  DB EPOS
+se ejecuta correctamente DB Siebel
+se ejecuta correctamente DB Postale
+16:45:21.318 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:60300<->10.65.45.12:9001 closed
+16:45:21.319 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:60301<->10.65.45.12:9001 closed
+16:45:21.643 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+16:45:21.643 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
+16:45:24.889 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:60292<->10.65.45.12:9001 closed
+16:45:27.999 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Opening darkroom
+16:45:28.000 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line starting up
+16:45:28.138 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\24335c18dd9769f00ea8c4437d81deab28a2b8fd4ccfd74c57ff67583c7be611.png
+16:45:28.140 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-8178421008071197620
+16:45:28.140 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\24335c18dd9769f00ea8c4437d81deab28a2b8fd4ccfd74c57ff67583c7be611.png
+16:45:29.478 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\c6a5e237f17e8261671f5210533496b9009ad4ae360f06e46b6389b17006a3f0.png
+16:45:29.480 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-2881012637953755665
+16:45:29.480 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\c6a5e237f17e8261671f5210533496b9009ad4ae360f06e46b6389b17006a3f0.png
+16:45:40.734 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\ec763b7c3915e691aa75707b36e940d02cd983744f71383dc8c6e162758fa195.png
+16:45:43.315 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[92m
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
 
-TEST FAILED: se requiere realizar una activacion de una linea en prepago
---------------------------------------------------------------------------?[0m
-15:02:52.482 [Test worker] DEBUG net.thucydides.core.steps.ConsoleLoggingListener - RELATED ISSUES: 
-15:02:52.534 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91mTEST FAILED AT STEP Then Se deberia ver en pantalla unica la linea activa en prepago?[0m
-15:02:52.534 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - el plan es prepagoExpected: a string containing "debe fallar" but: was "Plan Tigo Prepago Tarifa Plana 3"
+TEST PASSED: se quiere ingresar a la plataforma epos
+----------------------------------------------------------------------------?[0m
+16:45:43.484 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+16:45:43.484 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
+16:45:49.066 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\24335c18dd9769f00ea8c4437d81deab28a2b8fd4ccfd74c57ff67583c7be611.png
+16:46:07.239 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\ec763b7c3915e691aa75707b36e940d02cd983744f71383dc8c6e162758fa195.png
+16:46:10.148 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[92m
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+TEST PASSED: realizar el cargue de inventario
+----------------------------------------------------------------------------?[0m
+16:46:17.342 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[92m
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+TEST PASSED: realizar la confirmacion de inventario
+----------------------------------------------------------------------------?[0m
+16:46:17.523 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+16:46:17.523 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
+16:46:25.337 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\eb5662727f933fd0a4acd45e9af08ec62cba17041b7b3bf67bbf1c84f5d1374f.png
+16:47:06.234 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\974652448d9004c75014aa67e7aa18402b21ce837dfaaabe0365fb1f8eaa65bf.png
+16:47:09.802 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\6026a4a61a4d870e92dc9c7f9857b276cd2588725417e8a0c180473736ddea72.png
+16:47:09.804 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-7938547204422988289
+16:47:09.804 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\6026a4a61a4d870e92dc9c7f9857b276cd2588725417e8a0c180473736ddea72.png
+16:47:12.883 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[92m
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+TEST PASSED: se requiere realizar una activacion de una linea en prepago
+----------------------------------------------------------------------------?[0m
 ]]></system-out>
-  <system-err><![CDATA[ene 27, 2022 3:02:39 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+  <system-err><![CDATA[ene 27, 2022 4:45:21 PM org.openqa.selenium.remote.DesiredCapabilities firefox
 INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-ene 27, 2022 3:02:39 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+ene 27, 2022 4:45:21 PM org.openqa.selenium.remote.DesiredCapabilities firefox
 INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-1643313760214	geckodriver	INFO	Listening on 127.0.0.1:39299
-1643313760736	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PROJEC~1\\AppData\\Local\\Temp\\rust_mozprofilenxE4fG"
-1643313761222	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
-1643313761244	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1643313761244	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1643313761244	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1643313761244	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1643319921897	geckodriver	INFO	Listening on 127.0.0.1:19704
+1643319922418	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PROJEC~1\\AppData\\Local\\Temp\\rust_mozprofileoeul9v"
+1643319922969	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1643319922990	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1643319922990	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1643319922990	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1643319922990	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1643313762628	Marionette	INFO	Listening on port 57719
-1643313762845	Marionette	WARN	TLS certificate errors will be ignored for this session
-ene 27, 2022 3:02:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1643319924375	Marionette	INFO	Listening on port 60308
+1643319924690	Marionette	WARN	TLS certificate errors will be ignored for this session
+ene 27, 2022 4:45:24 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+1643319925934	addons.xpi	WARN	failed to set lastModifiedTime on C:\Users\ProjectSupport\AppData\Local\Temp\rust_mozprofileoeul9v\extensions\firefoxhpsureclicksecurebrowsing@bromium.com.xpi: [Exception... "Component returned failure code: 0x8052000e (NS_ERROR_FILE_IS_LOCKED) [nsIFile.lastModifiedTime]"  nsresult: "0x8052000e (NS_ERROR_FILE_IS_LOCKED)"  location: "JS frame :: resource://gre/modules/addons/XPIInstall.jsm :: installAddon :: line 3239"  data: no] Stack trace: installAddon()@resource://gre/modules/addons/XPIInstall.jsm:3239
+install()@resource://gre/modules/addons/XPIInstall.jsm:1767
+startInstall/this._startupPromise<()@resource://gre/modules/addons/XPIInstall.jsm:1833
+startInstall()@resource://gre/modules/addons/XPIInstall.jsm:1839
+1643319940901	Marionette	INFO	Stopped listening on port 60308
+Extension error: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: moz-extension://31a5705f-25ec-49a6-b266-b77e7cd48c3d/main.js :: connect :: line 12066"  data: no] undefined 12066
+[[Exception stack
+connect@moz-extension://31a5705f-25ec-49a6-b266-b77e7cd48c3d/main.js:12066:23
+onPortDisconnected@moz-extension://31a5705f-25ec-49a6-b266-b77e7cd48c3d/main.js:20316:30
+makeConnection/channel<@moz-extension://31a5705f-25ec-49a6-b266-b77e7cd48c3d/main.js:20289:136
+handleDisconnect@moz-extension://31a5705f-25ec-49a6-b266-b77e7cd48c3d/main.js:12172:14
+connect/</<@moz-extension://31a5705f-25ec-49a6-b266-b77e7cd48c3d/main.js:12052:63
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:606:13
+addListener/asyncWithoutClone/<@resource://gre/modules/ExtensionCommon.jsm:2443:39
+]]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ene 27, 2022 4:45:43 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+ene 27, 2022 4:45:43 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+1643319943651	geckodriver	INFO	Listening on 127.0.0.1:39023
+1643319944095	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PROJEC~1\\AppData\\Local\\Temp\\rust_mozprofiletMyzkZ"
+1643319944616	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1643319944638	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1643319944638	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1643319944638	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1643319944638	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1643319946004	Marionette	INFO	Listening on port 60337
+1643319946242	Marionette	WARN	TLS certificate errors will be ignored for this session
+ene 27, 2022 4:45:46 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+1643319947361	addons.xpi	WARN	failed to set lastModifiedTime on C:\Users\ProjectSupport\AppData\Local\Temp\rust_mozprofiletMyzkZ\extensions\firefoxhpsureclicksecurebrowsing@bromium.com.xpi: [Exception... "Component returned failure code: 0x8052000e (NS_ERROR_FILE_IS_LOCKED) [nsIFile.lastModifiedTime]"  nsresult: "0x8052000e (NS_ERROR_FILE_IS_LOCKED)"  location: "JS frame :: resource://gre/modules/addons/XPIInstall.jsm :: installAddon :: line 3239"  data: no] Stack trace: installAddon()@resource://gre/modules/addons/XPIInstall.jsm:3239
+install()@resource://gre/modules/addons/XPIInstall.jsm:1767
+startInstall/this._startupPromise<()@resource://gre/modules/addons/XPIInstall.jsm:1833
+startInstall()@resource://gre/modules/addons/XPIInstall.jsm:1839
+JavaScript error: http://10.69.60.77:8180/tigo-pos-web-ii/a4j_3_2_0.SR1-SNAPSHOTorg/ajax4jsf/javascript/scripts/form.js.jsf, line 11: TypeError: element is null
+JavaScript error: http://10.69.60.77:8180/tigo-pos-web-ii/a4j_3_2_0.SR1-SNAPSHOTorg/ajax4jsf/javascript/scripts/form.js.jsf, line 11: TypeError: element is null
+1643319967438	Marionette	INFO	Stopped listening on port 60337
+Extension error: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: moz-extension://1f0c6f96-2a32-4a58-b9ce-cb76974b87ed/main.js :: connect :: line 12066"  data: no] undefined 12066
+[[Exception stack
+connect@moz-extension://1f0c6f96-2a32-4a58-b9ce-cb76974b87ed/main.js:12066:23
+onPortDisconnected@moz-extension://1f0c6f96-2a32-4a58-b9ce-cb76974b87ed/main.js:20316:30
+makeConnection/channel<@moz-extension://1f0c6f96-2a32-4a58-b9ce-cb76974b87ed/main.js:20289:136
+handleDisconnect@moz-extension://1f0c6f96-2a32-4a58-b9ce-cb76974b87ed/main.js:12172:14
+connect/</<@moz-extension://1f0c6f96-2a32-4a58-b9ce-cb76974b87ed/main.js:12052:63
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:606:13
+addListener/asyncWithoutClone/<@resource://gre/modules/ExtensionCommon.jsm:2443:39
+]]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ene 27, 2022 4:46:17 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+ene 27, 2022 4:46:17 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+1643319977684	geckodriver	INFO	Listening on 127.0.0.1:30562
+1643319978141	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PROJEC~1\\AppData\\Local\\Temp\\rust_mozprofileBgEKoZ"
+1643319978690	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1643319978714	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1643319978714	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1643319978714	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1643319978714	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1643319980073	Marionette	INFO	Listening on port 60378
+1643319980435	Marionette	WARN	TLS certificate errors will be ignored for this session
+ene 27, 2022 4:46:20 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
 JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
 JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Consultas, line 1: ReferenceError: setIframeListeners is not defined
+JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Venta?portal:windowState=normal&portal:componentId=gtn1dfca009-52ed-45cd-a543-6660573bef81&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
+JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Venta?portal:windowState=normal&portal:componentId=gtn1dfca009-52ed-45cd-a543-6660573bef81&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
+JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Venta, line 1: ReferenceError: setIframeListeners is not defined
+JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Venta, line 1: ReferenceError: setIframeListeners is not defined
+JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Venta, line 1: ReferenceError: setIframeListeners is not defined
+JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Venta, line 1: ReferenceError: setIframeListeners is not defined
 JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
 JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
 JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Consultas, line 1: ReferenceError: setIframeListeners is not defined
 JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Consultas, line 1: ReferenceError: setIframeListeners is not defined
-1643313769778	Marionette	INFO	Stopped listening on port 57719
+1643320029950	Marionette	INFO	Stopped listening on port 60378
+Extension error: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: moz-extension://9c0dd00d-034b-489a-936f-3cdf437065da/main.js :: connect :: line 12066"  data: no] undefined 12066
+[[Exception stack
+connect@moz-extension://9c0dd00d-034b-489a-936f-3cdf437065da/main.js:12066:23
+onPortDisconnected@moz-extension://9c0dd00d-034b-489a-936f-3cdf437065da/main.js:20316:30
+makeConnection/channel<@moz-extension://9c0dd00d-034b-489a-936f-3cdf437065da/main.js:20289:136
+handleDisconnect@moz-extension://9c0dd00d-034b-489a-936f-3cdf437065da/main.js:12172:14
+connect/</<@moz-extension://9c0dd00d-034b-489a-936f-3cdf437065da/main.js:12052:63
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:606:13
+addListener/asyncWithoutClone/<@resource://gre/modules/ExtensionCommon.jsm:2443:39
+]]
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 

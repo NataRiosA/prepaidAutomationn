@@ -6,7 +6,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.WebDriver;
 
-@DefaultUrl("http://10.69.60.77:8180/tigo-pos-web/menu.jsf")
+@DefaultUrl("http://10.69.60.77:8180/tigo-pos-web/logistica/entradaMasiva/index.jsf")
 public class MerchandiseEntryPage extends PageObject {
     public MerchandiseEntryPage(WebDriver driver) {
             super(driver);
@@ -65,6 +65,13 @@ public class MerchandiseEntryPage extends PageObject {
 
     @FindBy(xpath = "/html/body[2]/form[2]/div/table[1]/tbody/tr/td/dl/dt/span[2]")
     WebElementFacade compare2;
+
+    @FindBy (xpath= "//table[@id='form1:errorGrid']/tbody/tr/td/dl/dt/span[@class='rich-messages-label']")
+    WebElementFacade ResultLoad;
+
+    public WebElementFacade getResultLoad() {
+        return ResultLoad;
+    }
 
     public WebElementFacade getInventory() {
         return inventory;
