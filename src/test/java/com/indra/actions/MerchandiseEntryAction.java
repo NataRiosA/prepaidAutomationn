@@ -32,7 +32,7 @@ public class MerchandiseEntryAction extends MerchandiseEntryPage {
         channelDropDown.selectByValue("4");
         //getStoreChannel().click();
         getReason().click();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         Select reasonDropDown = new Select(getDriver().findElement(By.id("form1:idMotivo")));
         reasonDropDown.selectByValue("266");
         //getReasonMerchandiseEntry().click();
@@ -42,7 +42,7 @@ public class MerchandiseEntryAction extends MerchandiseEntryPage {
         //getPointSaleStore().click();
         //compare();
         getSelectReason().click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
     public void merchandiseEntryInventory() throws InterruptedException {

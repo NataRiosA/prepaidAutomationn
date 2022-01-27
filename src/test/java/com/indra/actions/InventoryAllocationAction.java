@@ -78,13 +78,12 @@ public class InventoryAllocationAction extends InventoryAllocationPage {
         getBtnAccept().click();
         getBtnAcceptInventory().click();
     }
-    public void leaveSesion(){
 
+    public void leaveSesion(){
             Actions actions = new Actions(getDriver());
             WebElement leave = getDriver().findElement(By.id("menu:formMenu:j_id32_span"));
             actions.moveToElement(leave).build().perform();
             getBtnLeave().click();
-
     }
 
 }

@@ -24,8 +24,8 @@ public class SanitySteps{
     @Managed
     WebDriver driver;
 
-    UninstallCBSServices uninstallCBSServices = new UninstallCBSServices();
-    DatabaseConnection databaseConnection = new DatabaseConnection();
+    //UninstallCBSServices uninstallCBSServices = new UninstallCBSServices();
+    //DatabaseConnection databaseConnection = new DatabaseConnection();
     DataExcel dataExcel = new DataExcel();
     LoginEposPage loginPage = new LoginEposPage(driver);
     ResourceEnlistment enlistment = new ResourceEnlistment();
@@ -34,13 +34,14 @@ public class SanitySteps{
     InventoryAllocationAction inventoryAllocationAction = new InventoryAllocationAction(driver);
     LoginPortalCRMAction loginPortalCRMAction = new LoginPortalCRMAction(driver);
     InventoryActivationAction activationAction = new InventoryActivationAction();
+    PrepaidActivationActions prepaidActivationActions = new PrepaidActivationActions(driver);
     int Activation =0;
 
 
 //-----------<Primer escenario>----------------
     @Given("^Se ejecutan procedimientos en bd y soapUi$")
     public void seEjecutanProcedimientosEnBdYSoapUi() throws SQLException {
-        //enlistment.executeAllProcedures();
+        enlistment.executeAllProcedures();
     }
 
     @When("^Se ingresa a la plataforma epos para cargue de inventario$")
@@ -98,11 +99,16 @@ public class SanitySteps{
     }
 
     @When("^Se hace activacion de una linea en prepago$")
-    public void seHaceActivacionDeUnaLineaEnPrepago() {
+    public void seHaceActivacionDeUnaLineaEnPrepago() throws InterruptedException {
+        prepaidActivationActions.initialRute();
+        prepaidActivationActions.customerInformation();
+        prepaidActivationActions.activationInformation();
+        prepaidActivationActions.demographicInformation();
     }
 
     @Then("^Se deberia ver en pantalla unica la linea activa en prepago$")
     public void seDeberiaVerEnPantallaUnicaLaLineaActivaEnPrepago() {
+
     }
 
 }

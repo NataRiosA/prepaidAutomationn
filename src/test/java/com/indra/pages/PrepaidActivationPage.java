@@ -7,7 +7,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.WebDriver;
 
 
-@DefaultUrl("http://10.69.60.85:8280/portal/login?initialURI=%2Fportal%")
+@DefaultUrl("http://10.69.60.85:8280/portal/CRMPortal/Venta")
 public class PrepaidActivationPage extends PageObject{
 
     public PrepaidActivationPage(WebDriver driver) {
@@ -17,10 +17,10 @@ public class PrepaidActivationPage extends PageObject{
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div/ul/li[2]/span/a")
     WebElementFacade sale;
 
-    @FindBy(id = "pbG1dfca009_2d52ed_2d45cd_2da543_2d6660573bef81:_viewRoot:j_id4:j_id10:j_id11:0::j_id12:handle:img:expanded")
+    @FindBy(id = "pbG1dfca009_2d52ed_2d45cd_2da543_2d6660573bef81:_viewRoot:j_id4:j_id10:j_id11:0::j_id12:handle:img:collapsed")//"pbG1dfca009_2d52ed_2d45cd_2da543_2d6660573bef81:_viewRoot:j_id4:j_id10:j_id11:0::j_id12:handle:img:expanded")
     WebElementFacade unfold;
 
-    @FindBy(id = "pbG1dfca009_2d52ed_2d45cd_2da543_2d6660573bef81:_viewRoot:j_id4:j_id10:j_id11:0:29::j_id14:handle:img:expanded")
+    @FindBy(id = "pbG1dfca009_2d52ed_2d45cd_2da543_2d6660573bef81:_viewRoot:j_id4:j_id10:j_id11:0:29::j_id14:handle:img:collapsed")//"pbG1dfca009_2d52ed_2d45cd_2da543_2d6660573bef81:_viewRoot:j_id4:j_id10:j_id11:0:29::j_id14:handle:img:expanded")
     WebElementFacade payment;
 
     @FindBy(id = "pbG1dfca009_2d52ed_2d45cd_2da543_2d6660573bef81:_viewRoot:j_id4:j_id10:j_id11:0:29:31::j_id17")
@@ -47,8 +47,8 @@ public class PrepaidActivationPage extends PageObject{
     @FindBy(xpath = "//input[contains(@id,'ActivacionesForm:idExpedicion')]")
     WebElementFacade documentExpedicion;
 
-    @FindBy(xpath = "//input[contains(@id,'ActivacionesForm:btnContinuar')]")
-    WebElementFacade continuee;
+    @FindBy(id = "ActivacionesForm:btnContinuar")
+    WebElementFacade btnContinue;
 
     @FindBy(xpath = "//input[contains(@id,'ActivacionesForm:idImsi')]")
     WebElementFacade imsi;
@@ -57,15 +57,15 @@ public class PrepaidActivationPage extends PageObject{
     WebElementFacade msisdn;
 
     @FindBy(xpath = "(//span[contains(@class,'rf-sel-btn-arrow')])[2]")
-    WebElementFacade paymentType;
+    WebElementFacade typeOfSaleArrow;
 
-    @FindBy(xpath = "(//span[contains(@class,'rf-sel-btn-arrow')])[2]")
+    @FindBy(xpath = "//div[@id='ActivacionesForm:tipoVentaItem0']")
     WebElementFacade justSim;
 
-    @FindBy(xpath = "//input[contains(@id,'ActivacionesForm:btnContinuarActivacionVenta')]")
+    @FindBy(id = "ActivacionesForm:btnContinuarActivacionVenta")
     WebElementFacade continueActivation;
 
-    @FindBy(xpath = "//input[contains(@id,'ActivacionesForm:btnContinuarTarifas')]")
+    @FindBy(id = "ActivacionesForm:btnContinuarTarifas")
     WebElementFacade continueTarife;
 
     @FindBy(xpath = "(//span[contains(@class,'rf-sel-btn-arrow')])[3]")
@@ -92,6 +92,11 @@ public class PrepaidActivationPage extends PageObject{
     @FindBy(xpath = "//input[contains(@id,'popupConfirmacionDatos:confirmarDatos')]")
     WebElementFacade confirm;
 
+    @FindBy (className = "rf-cp-lbl-exp")
+    WebElementFacade ActivationDetails;
+
+
+
     @FindBy(xpath = "//a[@class='TabIcon DefaultPageIcon'][contains(.,'Consultas')]")
     WebElementFacade consult;
 
@@ -109,6 +114,12 @@ public class PrepaidActivationPage extends PageObject{
 
     @FindBy(id = "j_id15:j_id27")
     WebElementFacade searchButton;
+
+
+
+    public WebElementFacade getActivationDetails() {
+        return ActivationDetails;
+    }
 
     public WebElementFacade getSale() {
         return sale;
@@ -154,8 +165,8 @@ public class PrepaidActivationPage extends PageObject{
         return documentExpedicion;
     }
 
-    public WebElementFacade getContinuee() {
-        return continuee;
+    public WebElementFacade getBtnContinue() {
+        return btnContinue;
     }
 
     public WebElementFacade getImsi() {
@@ -166,8 +177,8 @@ public class PrepaidActivationPage extends PageObject{
         return msisdn;
     }
 
-    public WebElementFacade getPaymentType() {
-        return paymentType;
+    public WebElementFacade getTypeOfSaleArrow() {
+        return typeOfSaleArrow;
     }
 
     public WebElementFacade getJustSim() {

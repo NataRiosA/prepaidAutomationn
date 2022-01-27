@@ -36,7 +36,7 @@ public class DatabaseConnection extends DataExcel {
                 CallableStatement cs3 = conn.prepareCall(query);//"{call "+sp+" (?)}"
                 cs3.setString(1,msisdn);
                 cs3.execute();
-                System.out.println("se ejecuta correctamente");
+                System.out.println("se ejecuta correctamente DB Activator");
             }
             //Close the result set, statement, and the connection
             finally{
@@ -64,7 +64,7 @@ public class DatabaseConnection extends DataExcel {
                 cs3.setString(2,msisdn);
                 cs3.setString(3,"1");
                 cs3.execute();
-                System.out.println("se ejecuta correctamente");
+                System.out.println("se ejecuta correctamente  DB EPOS");
             }
             //Close the result set, statement, and the connection
             finally{
@@ -92,7 +92,7 @@ public class DatabaseConnection extends DataExcel {
                 cs3.setString(1, msi);
                 cs3.setString(2,msisdn);
                 cs3.execute();
-                System.out.println("se ejecuta correctamente");
+                System.out.println("se ejecuta correctamente DB Siebel");
             }
             //Close the result set, statement, and the connection
             finally{
@@ -118,7 +118,7 @@ public class DatabaseConnection extends DataExcel {
                 CallableStatement cs3 = conn.prepareCall(query);//"{call "+sp+" (?)}"
                 cs3.setString(1,msisdn);
                 cs3.execute();
-                System.out.println("se ejecuta correctamente");
+                System.out.println("se ejecuta correctamente DB Postale");
             }
             //Close the result set, statement, and the connection
             finally{
