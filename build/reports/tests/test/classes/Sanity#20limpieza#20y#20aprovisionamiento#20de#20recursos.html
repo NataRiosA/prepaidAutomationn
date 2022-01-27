@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">51.085s</div>
+<div class="counter">13.890s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,13 +79,13 @@
 <a name="se requiere realizar una activacion de una linea en prepago"></a>
 <h3 class="failures">se requiere realizar una activacion de una linea en prepago</h3>
 <span class="code">
-<pre>java.lang.AssertionError: La activacion fue exitosa
-Expected: &quot;ACTIVACION EXITOSA!&quot;
-     but: was &quot;ACTIVACION EXITOSA&quot;
+<pre>java.lang.AssertionError: el plan es prepago
+Expected: a string containing &quot;debe fallar&quot;
+     but: was &quot;Plan Tigo Prepago Tarifa Plana 3&quot;
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at com.indra.actions.PrepaidActivationActions.demographicInformation(PrepaidActivationActions.java:61)
-	at com.indra.steps_definitions.SanitySteps.seHaceActivacionDeUnaLineaEnPrepago(SanitySteps.java:106)
-	at ✽.Se hace activacion de una linea en prepago(src/test/resources/features/execute.feature:36)
+	at com.indra.actions.PrepaidActivationActions.consultSingleScreen(PrepaidActivationActions.java:73)
+	at com.indra.steps_definitions.SanitySteps.seDeberiaVerEnPantallaUnicaLaLineaActivaEnPrepago(SanitySteps.java:111)
+	at ✽.Se deberia ver en pantalla unica la linea activa en prepago(src/test/resources/features/execute.feature:37)
 </pre>
 </span>
 </div>
@@ -102,7 +102,7 @@ Expected: &quot;ACTIVACION EXITOSA!&quot;
 </thead>
 <tr>
 <td class="failures">se requiere realizar una activacion de una linea en prepago</td>
-<td class="failures">51.085s</td>
+<td class="failures">13.890s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -110,15 +110,15 @@ Expected: &quot;ACTIVACION EXITOSA!&quot;
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>14:46:07.363 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
-14:46:07.363 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
-14:46:13.979 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Opening darkroom
-14:46:13.980 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line starting up
-14:46:14.145 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\eb5662727f933fd0a4acd45e9af08ec62cba17041b7b3bf67bbf1c84f5d1374f.png
-14:46:54.526 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\7d4e17379a01a12f50d332c0852120a995bd4af77f38e964f9c887d437bf98b2.png
-14:46:54.527 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-3700559032503820567
-14:46:54.528 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\7d4e17379a01a12f50d332c0852120a995bd4af77f38e964f9c887d437bf98b2.png
-14:46:57.513 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91m
+<pre>15:02:39.523 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+15:02:39.524 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
+15:02:45.875 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Opening darkroom
+15:02:45.876 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line starting up
+15:02:46.058 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\eb5662727f933fd0a4acd45e9af08ec62cba17041b7b3bf67bbf1c84f5d1374f.png
+15:02:49.600 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\fcfb1e62324377e83c061649d3a5b82e42040bb8ace929c731a6d2d42382fdce.png
+15:02:49.602 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-6938534684692629490
+15:02:49.602 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\fcfb1e62324377e83c061649d3a5b82e42040bb8ace929c731a6d2d42382fdce.png
+15:02:52.478 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91m
            __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
   _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
  (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
@@ -128,58 +128,39 @@ Expected: &quot;ACTIVACION EXITOSA!&quot;
 
 TEST FAILED: se requiere realizar una activacion de una linea en prepago
 --------------------------------------------------------------------------?[0m
-14:46:57.517 [Test worker] DEBUG net.thucydides.core.steps.ConsoleLoggingListener - RELATED ISSUES: 
-14:46:57.566 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91mTEST FAILED AT STEP When Se hace activacion de una linea en prepago?[0m
-14:46:57.566 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - La activacion fue exitosaExpected: &quot;ACTIVACION EXITOSA!&quot; but: was &quot;ACTIVACION EXITOSA&quot;
+15:02:52.482 [Test worker] DEBUG net.thucydides.core.steps.ConsoleLoggingListener - RELATED ISSUES: 
+15:02:52.534 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91mTEST FAILED AT STEP Then Se deberia ver en pantalla unica la linea activa en prepago?[0m
+15:02:52.534 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - el plan es prepagoExpected: a string containing &quot;debe fallar&quot; but: was &quot;Plan Tigo Prepago Tarifa Plana 3&quot;
 </pre>
 </span>
 </div>
 <div id="tab3" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>ene 27, 2022 2:46:07 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+<pre>ene 27, 2022 3:02:39 PM org.openqa.selenium.remote.DesiredCapabilities firefox
 INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-ene 27, 2022 2:46:07 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+ene 27, 2022 3:02:39 PM org.openqa.selenium.remote.DesiredCapabilities firefox
 INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-1643312768029	geckodriver	INFO	Listening on 127.0.0.1:30897
-1643312768537	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;--marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\PROJEC~1\\AppData\\Local\\Temp\\rust_mozprofileuTdGNM&quot;
-1643312769061	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
-1643312769082	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1643312769082	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1643312769082	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1643312769083	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1643313760214	geckodriver	INFO	Listening on 127.0.0.1:39299
+1643313760736	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;--marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\PROJEC~1\\AppData\\Local\\Temp\\rust_mozprofilenxE4fG&quot;
+1643313761222	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1643313761244	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1643313761244	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1643313761244	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1643313761244	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1643312770438	Marionette	INFO	Listening on port 57119
-1643312770811	Marionette	WARN	TLS certificate errors will be ignored for this session
-ene 27, 2022 2:46:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1643313762628	Marionette	INFO	Listening on port 57719
+1643313762845	Marionette	WARN	TLS certificate errors will be ignored for this session
+ene 27, 2022 3:02:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
-JavaScript error: http://10.69.60.85:8280/portal/scripts/3.8.16.Final-redhat-1/SHARED/bootstrap-min.js, line 7: Error: Script error for: SHARED/jquery
-http://requirejs.org/docs/errors.html#scripterror
-JavaScript error: http://10.69.60.85:8280/portal/scripts/3.8.16.Final-redhat-1/SHARED/bootstrap-min.js, line 7: Error: Script error for: SHARED/base
-http://requirejs.org/docs/errors.html#scripterror
-JavaScript error: http://10.69.60.85:8280/portal/scripts/3.8.16.Final-redhat-1/SHARED/bootstrap-min.js, line 7: Error: Script error for: SHARED/navigation
-http://requirejs.org/docs/errors.html#scripterror
 JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&amp;portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&amp;portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&amp;portal:cacheLevel=PAGE&amp;portal:type=resource&amp;portal:portletMode=view, line 10431: unreachable code after return statement
 JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&amp;portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&amp;portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&amp;portal:cacheLevel=PAGE&amp;portal:type=resource&amp;portal:portletMode=view, line 10431: unreachable code after return statement
 JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Consultas, line 1: ReferenceError: setIframeListeners is not defined
-JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Venta?portal:windowState=normal&amp;portal:componentId=gtn1dfca009-52ed-45cd-a543-6660573bef81&amp;portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&amp;portal:cacheLevel=PAGE&amp;portal:type=resource&amp;portal:portletMode=view, line 10431: unreachable code after return statement
-JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Venta?portal:windowState=normal&amp;portal:componentId=gtn1dfca009-52ed-45cd-a543-6660573bef81&amp;portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&amp;portal:cacheLevel=PAGE&amp;portal:type=resource&amp;portal:portletMode=view, line 10431: unreachable code after return statement
-JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Venta, line 1: ReferenceError: setIframeListeners is not defined
-JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Venta, line 1: ReferenceError: setIframeListeners is not defined
-JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Venta, line 1: ReferenceError: setIframeListeners is not defined
-JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Venta, line 1: ReferenceError: setIframeListeners is not defined
-1643312814800	Marionette	INFO	Stopped listening on port 57119
-Extension error: [Exception... &quot;Component not initialized&quot;  nsresult: &quot;0xc1f30001 (NS_ERROR_NOT_INITIALIZED)&quot;  location: &quot;JS frame :: moz-extension://d6af5365-cbc1-49b9-8d27-3527f94e839e/main.js :: connect :: line 12066&quot;  data: no] undefined 12066
-[[Exception stack
-connect@moz-extension://d6af5365-cbc1-49b9-8d27-3527f94e839e/main.js:12066:23
-onPortDisconnected@moz-extension://d6af5365-cbc1-49b9-8d27-3527f94e839e/main.js:20316:30
-makeConnection/channel&lt;@moz-extension://d6af5365-cbc1-49b9-8d27-3527f94e839e/main.js:20289:136
-handleDisconnect@moz-extension://d6af5365-cbc1-49b9-8d27-3527f94e839e/main.js:12172:14
-connect/&lt;/&lt;@moz-extension://d6af5365-cbc1-49b9-8d27-3527f94e839e/main.js:12052:63
-Current stack
-applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:606:13
-addListener/asyncWithoutClone/&lt;@resource://gre/modules/ExtensionCommon.jsm:2443:39
-]]
+JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&amp;portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&amp;portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&amp;portal:cacheLevel=PAGE&amp;portal:type=resource&amp;portal:portletMode=view, line 10431: unreachable code after return statement
+JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&amp;portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&amp;portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&amp;portal:cacheLevel=PAGE&amp;portal:type=resource&amp;portal:portletMode=view, line 10431: unreachable code after return statement
+JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Consultas, line 1: ReferenceError: setIframeListeners is not defined
+JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Consultas, line 1: ReferenceError: setIframeListeners is not defined
+1643313769778	Marionette	INFO	Stopped listening on port 57719
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
@@ -197,7 +178,7 @@ addListener/asyncWithoutClone/&lt;@resource://gre/modules/ExtensionCommon.jsm:24
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at 27/01/2022 02:46:58 PM</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at 27/01/2022 03:02:53 PM</p>
 </div>
 </div>
 </body>

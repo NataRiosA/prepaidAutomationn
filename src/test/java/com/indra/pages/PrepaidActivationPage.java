@@ -100,14 +100,14 @@ public class PrepaidActivationPage extends PageObject{
     @FindBy(xpath = "//a[@class='TabIcon DefaultPageIcon'][contains(.,'Consultas')]")
     WebElementFacade consult;
 
-    @FindBy(xpath = "//img[contains(@id,'pbGc323725e_2d6efe_2d4037_2d9f93_2d1bc06edfa941:_viewRoot:j_id4:j_id10:j_id11:13::j_id12:handle:img:expanded')]")
+    @FindBy(xpath = "//img[contains(@id,'pbGc323725e_2d6efe_2d4037_2d9f93_2d1bc06edfa941:_viewRoot:j_id4:j_id10:j_id11:13::j_id12:handle:img:collapsed')]")
     WebElementFacade consultPos;
 
     @FindBy(xpath = "//img[contains(@id,'pbGc323725e_2d6efe_2d4037_2d9f93_2d1bc06edfa941:_viewRoot:j_id4:j_id10:j_id11:13:14::j_id14:handle:img:collapsed')]")
     WebElementFacade consultIntegral;
 
     @FindBy(xpath = "//a[@href='#'][contains(@id,'id17')][contains(.,'Nueva Pantalla Unica Clientes')]")
-    WebElementFacade consultClient;
+    WebElementFacade cosultaPantallaUnica;
 
     @FindBy(id = "j_id15:j_id26")
     WebElementFacade msisdn2;
@@ -115,7 +115,13 @@ public class PrepaidActivationPage extends PageObject{
     @FindBy(id = "j_id15:j_id27")
     WebElementFacade searchButton;
 
+    @FindBy (id = "j_id135:j_id138")
+    WebElementFacade generalCustomerInformation;
 
+
+    public WebElementFacade getGeneralCustomerInformation() {
+        return generalCustomerInformation;
+    }
 
     public WebElementFacade getActivationDetails() {
         return ActivationDetails;
@@ -237,8 +243,8 @@ public class PrepaidActivationPage extends PageObject{
         return consultIntegral;
     }
 
-    public WebElementFacade getConsultClient() {
-        return consultClient;
+    public WebElementFacade getCosultaPantallaUnica() {
+        return cosultaPantallaUnica;
     }
 
     public WebElementFacade getMsisdn2() {

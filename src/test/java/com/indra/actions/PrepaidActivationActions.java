@@ -1,12 +1,9 @@
 package com.indra.actions;
 
-import com.indra.models.PrepaidActivationModels;
 import com.indra.pages.PrepaidActivationPage;
-import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -59,6 +56,23 @@ public class PrepaidActivationActions extends PrepaidActivationPage {
 
         WebElement title = getDriver().findElement(By.className("tituloPagina"));
         MatcherAssert.assertThat("La activacion fue exitosa",title.getText(), Matchers.equalTo("ACTIVACION EXITOSA"));
+    }
+
+    public void consultSingleScreen(){
+        getConsult().click();
+        getConsultPos().click();
+        getConsultIntegral().click();
+        getCosultaPantallaUnica().click();
+        WebElement iframe = getDriver().findElement(By.id("iframe"));
+        getDriver().switchTo().frame(iframe);
+        enter("3016875982").into(getMsisdn2());
+        getSearchButton().click();
+        getGeneralCustomerInformation().waitUntilPresent();
+        WebElement plan = getDriver().findElement(By.id("j_id135:j_id157"));
+
+        MatcherAssert.assertThat("el plan es prepago",
+                plan.getText(),Matchers.containsString("Plan Tigo Prepago") );
+
 
     }
 

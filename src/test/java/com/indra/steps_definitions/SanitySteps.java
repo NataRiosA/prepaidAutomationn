@@ -108,6 +108,7 @@ public class SanitySteps{
 
     @Then("^Se deberia ver en pantalla unica la linea activa en prepago$")
     public void seDeberiaVerEnPantallaUnicaLaLineaActivaEnPrepago() {
+        prepaidActivationActions.consultSingleScreen();
 
     }
 
