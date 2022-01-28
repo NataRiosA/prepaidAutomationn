@@ -4,6 +4,7 @@ import com.indra.pages.PrepaidActivationPage;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -38,7 +39,12 @@ public class PrepaidActivationActions extends PrepaidActivationPage {
         enter("3016875893").into(getMsisdn());
         getTypeOfSaleArrow().click();
         getJustSim().click();
-        WebElement continuar = getDriver().findElement(By.id("ActivacionesForm:btnContinuarActivacionVenta"));
+        getDriver().switchTo().defaultContent();
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("window.scrollBy(0,420)"); //Scroll vertically down by 1000 pixels
+        WebElement iframe = getDriver().findElement(By.id("iframe"));
+        getDriver().switchTo().frame(iframe);
+        WebElement continuar = getDriver().findElement(By.name("ActivacionesForm:btnContinuarActivacionVenta"));
         continuar.click();
         getContinueTarife().click();
     }
