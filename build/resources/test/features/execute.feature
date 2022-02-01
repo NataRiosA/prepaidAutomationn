@@ -9,7 +9,7 @@ Feature: Sanity limpieza y aprovisionamiento de recursos
     Given Se ejecutan procedimientos en bd y soapUi
     When Se ingresa a la plataforma epos para cargue de inventario
       | user       | password   |
-      | CQ10960370 | Tigo.2018* |
+      | CQ10960370 | Tigo.2022* |
     And Se ingresa a entrada masiva de mercancia
     Then Se completa datos para cargar mercancia
 
@@ -17,7 +17,7 @@ Feature: Sanity limpieza y aprovisionamiento de recursos
   Scenario: realizar el cargue de inventario
     Given Se ingresa a la plataforma epos para cargue de inventario
       | user       | password   |
-      | CQ10960370 | Tigo.2018* |
+      | CQ10960370 | Tigo.2022* |
     When  Se ingresa a cargue de inventario
     Then Deberia poder realizar el cargue de inventario
 
@@ -25,7 +25,7 @@ Feature: Sanity limpieza y aprovisionamiento de recursos
   Scenario: realizar la confirmacion de inventario
     Given se ingresa a la plataforma epos windex
       | user       | password   |rutaWinWap|
-      | CQ10960370 | Tigo.2018* |C:\Program Files (x86)\Winwap Technologies\WinWAP for Windows 4.2\WinWAP4.exe|
+      | CQ10960370 | Tigo.2022* |C:\Program Files (x86)\Winwap Technologies\WinWAP for Windows 4.2\WinWAP4.exe|
     Then se deberia poder ver mensaje de confimacion exitosa
 
   @portal

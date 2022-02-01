@@ -28,7 +28,7 @@ public class InventoryActivationActions extends ReadFileXLSXActions {
 
     public void confirmInventory(String user, String password) throws AWTException, InterruptedException {
         Robot robot=new Robot();
-
+        Thread.sleep(2000);
         for (int i = 0; i<3; i++){
             robot.keyPress(KeyEvent.VK_TAB);
             robot.keyRelease(KeyEvent.VK_TAB);
