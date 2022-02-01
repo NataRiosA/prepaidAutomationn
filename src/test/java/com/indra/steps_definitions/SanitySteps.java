@@ -96,14 +96,15 @@ public class SanitySteps{
     @When("^Se hace activacion de una linea en prepago$")
     public void seHaceActivacionDeUnaLineaEnPrepago() throws InterruptedException {
         prepaidActivationActions.initialRute();
-        prepaidActivationActions.customerInformation();
-        prepaidActivationActions.activationInformation();
+        prepaidActivationActions.customerInformation(dataExcelModels.getVendedorPrepago()
+                , dataExcelModels.getCedulaClientePrepago());
+        prepaidActivationActions.activationInformation(dataExcelModels.getMsisdnPrepago(),dataExcelModels.getMsiPrepago());
         prepaidActivationActions.demographicInformation();
     }
 
     @Then("^Se deberia ver en pantalla unica la linea activa en prepago$")
     public void seDeberiaVerEnPantallaUnicaLaLineaActivaEnPrepago() {
-        prepaidActivationActions.consultSingleScreen();
+        prepaidActivationActions.consultSingleScreen(dataExcelModels.getMsisdnPrepago());
     }
 
 }

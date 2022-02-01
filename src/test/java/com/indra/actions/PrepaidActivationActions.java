@@ -1,5 +1,6 @@
 package com.indra.actions;
 
+import com.indra.models.DataExcelModels;
 import com.indra.pages.PrepaidActivationPage;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
@@ -9,7 +10,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class PrepaidActivationActions extends PrepaidActivationPage {
-
 
     public PrepaidActivationActions(WebDriver driver) {
         super(driver);
@@ -26,18 +26,24 @@ public class PrepaidActivationActions extends PrepaidActivationPage {
         getPrepaid().click();
     }
 
-    public void customerInformation()  {
-        enter("10960370").into(getVendor());
+    public void customerInformation(String vendedor,String cliente)  {
+        //enter("10960370").into(getVendor());
+        enter(vendedor).into(getVendor());
         getButtonId().click();
         getDocumentType().click();
-        enter("667299000").into(getDocumentCC());
+        //enter("667299000").into(getDocumentCC());
+        enter(cliente).into(getDocumentCC());
         enter("2000").into(getDocumentExpedicion());
         getBtnContinue().click();
     }
 
-    public void activationInformation(){
-        enter("732111198172290").into(getImsi());
-        enter("3016875893").into(getMsisdn());
+    public void activationInformation(String msisdn,String imsi){
+        //enter("732111198172290").into(getImsi());
+        //enter("3016875893").into(getMsisdn());
+
+        enter(imsi).into(getImsi());
+        enter(msisdn).into(getMsisdn());
+
         getTypeOfSaleArrow().click();
         getJustSim().click();
         getDriver().switchTo().defaultContent();
@@ -66,7 +72,7 @@ public class PrepaidActivationActions extends PrepaidActivationPage {
         MatcherAssert.assertThat("La activacion fue exitosa",title.getText(), Matchers.equalTo("ACTIVACION EXITOSA"));
     }
 
-    public void consultSingleScreen(){
+    public void consultSingleScreen(String msisdn){
         getDriver().switchTo().defaultContent();
         getConsult().click();
         getConsultPos().click();
@@ -74,7 +80,8 @@ public class PrepaidActivationActions extends PrepaidActivationPage {
         getCosultaPantallaUnica().click();
         WebElement iframe = getDriver().findElement(By.id("iframe"));
         getDriver().switchTo().frame(iframe);
-        enter("3016875893").into(getMsisdn2());
+        //enter("3016875893").into(getMsisdn2());
+        enter(msisdn).into(getMsisdn2());
         getSearchButton().click();
         getGeneralCustomerInformation().waitUntilPresent();
         WebElement plan = getDriver().findElement(By.id("j_id135:j_id157"));

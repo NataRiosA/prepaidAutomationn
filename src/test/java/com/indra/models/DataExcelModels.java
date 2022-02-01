@@ -29,6 +29,64 @@ public class DataExcelModels {
     String passwordP;
     String port;
 
+    String vendedorPrepago;
+    String cedulaClientePrepago;
+    String msisdnPrepago;
+    String msiPrepago;
+
+    String VendedorPostpago;
+    String CedulaClientePostpago;
+    String msisdnPostpago;
+    String msiPostpago;
+
+    public String getVendedorPrepago() {
+        fileXLSX.readFileExcel();
+        vendedorPrepago = fileXLSX.excelArray.get(10).get(0);
+        return vendedorPrepago;
+    }
+
+    public String getCedulaClientePrepago() {
+        fileXLSX.readFileExcel();
+        cedulaClientePrepago = fileXLSX.excelArray.get(10).get(1);
+        return cedulaClientePrepago;
+    }
+
+    public String getMsisdnPrepago() {
+        fileXLSX.readFileExcel();
+        msisdnPrepago = fileXLSX.excelArray.get(10).get(2);
+        return msisdnPrepago;
+    }
+
+    public String getMsiPrepago() {
+        fileXLSX.readFileExcel();
+        msiPrepago = fileXLSX.excelArray.get(10).get(3);
+        return msiPrepago;
+    }
+
+    public String getVendedorPostpago() {
+        fileXLSX.readFileExcel();
+        VendedorPostpago = fileXLSX.excelArray.get(11).get(0);
+        return VendedorPostpago;
+    }
+
+    public String getCedulaClientePostpago() {
+        fileXLSX.readFileExcel();
+        CedulaClientePostpago = fileXLSX.excelArray.get(11).get(1);
+        return CedulaClientePostpago;
+    }
+
+    public String getMsisdnPostpago() {
+        fileXLSX.readFileExcel();
+        msisdnPostpago = fileXLSX.excelArray.get(11).get(2);
+        return msisdnPostpago;
+    }
+
+    public String getMsiPostpago() {
+        fileXLSX.readFileExcel();
+        msiPostpago = fileXLSX.excelArray.get(11).get(3);
+        return msiPostpago;
+    }
+
     ReadFileXLSXActions fileXLSX = new ReadFileXLSXActions();
 
     public String getUrlEpos() {
