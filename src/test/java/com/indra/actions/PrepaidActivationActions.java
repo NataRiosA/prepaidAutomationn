@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 
 public class PrepaidActivationActions extends PrepaidActivationPage {
 
+
     public PrepaidActivationActions(WebDriver driver) {
         super(driver);
     }

@@ -38,7 +38,7 @@ public class MerchandiseEntryAction extends MerchandiseEntryPage {
         //getReasonMerchandiseEntry().click();
         getPointSale().click();
         Select pointSaleDropDown = new Select(getDriver().findElement(By.id("form1:idPdv")));
-        pointSaleDropDown.selectByValue("865");
+        pointSaleDropDown.selectByVisibleText(getPuntoDeVenta().getText());//selectByValue("865");
         //getPointSaleStore().click();
         //compare();
         getSelectReason().click();

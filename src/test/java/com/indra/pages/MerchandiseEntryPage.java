@@ -69,6 +69,13 @@ public class MerchandiseEntryPage extends PageObject {
     @FindBy (xpath= "//table[@id='form1:errorGrid']/tbody/tr/td/dl/dt/span[@class='rich-messages-label']")
     WebElementFacade ResultLoad;
 
+    @FindBy(xpath = "(//table[@class='mystyle']/tbody/tr/td[2]/span)[1]")
+    WebElementFacade puntoDeVenta;
+
+    public WebElementFacade getPuntoDeVenta() {
+        return puntoDeVenta;
+    }
+
     public WebElementFacade getResultLoad() {
         return ResultLoad;
     }
