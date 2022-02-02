@@ -155,6 +155,10 @@ public class ControlActivationPage extends PageObject{
     @FindBy (id = "j_id135:j_id138")
     WebElementFacade generalCustomerInformation;
 
+
+    @FindBy (className = "rf-cp-lbl-exp")
+    WebElementFacade ActivationDetails;
+
     public WebElementFacade getSale() {
         return sale;
     }
@@ -341,5 +345,9 @@ public class ControlActivationPage extends PageObject{
 
     public  WebElementFacade getAcceptRenew1(){
         return acceptRenew1;
+    }
+
+    public  WebElementFacade getActivationDetails(){
+        return ActivationDetails;
     }
 }
