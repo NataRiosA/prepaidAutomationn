@@ -131,7 +131,7 @@ public class ControlActivationPage extends PageObject{
     @FindBy(xpath = "//input[contains(@id,'ActivacionesForm:btnContinuarActivacionClausulas')]")
     WebElementFacade continueSale;
 
-    @FindBy(xpath = "//input[contains(@id,'popupConfirmacionDatos:confirmarDatos')]")
+    @FindBy(xpath = "//input[@id='popupConfirmacionDatos:confirmarDatos]")
     WebElementFacade continueSalePopUp;
 
     @FindBy(xpath = "//a[@class='TabIcon DefaultPageIcon'][contains(.,'Consultas')]")

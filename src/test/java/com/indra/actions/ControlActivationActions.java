@@ -23,6 +23,7 @@ public class ControlActivationActions extends ControlActivationPage {
         getActivator().click();
         WebElement iframe = getDriver().findElement(By.id("iframe"));
         getDriver().switchTo().frame(iframe);
+        getDropdownActivator().waitUntilVisible();
         getDropdownActivator().click();
         getControl().click();
     }
@@ -47,6 +48,7 @@ public class ControlActivationActions extends ControlActivationPage {
         enter(msisdn).into(getMsisdn());
         getTypeSale().click();
         getJustSim().click();
+        getPlan().waitUntilClickable();
         getPlan().click();
         getPlan740().click();
         getDriver().switchTo().defaultContent();
@@ -102,8 +104,8 @@ public class ControlActivationActions extends ControlActivationPage {
         getGeneralCustomerInformation().waitUntilPresent();
         WebElement plan = getDriver().findElement(By.id("j_id135:j_id157"));
 
-        MatcherAssert.assertThat("el plan es prepago",
-                plan.getText(),Matchers.containsString("Pospago 5.1") );
+        MatcherAssert.assertThat("el plan es pospago",
+                plan.getText(),Matchers.containsString("Pospago 5.") );
     }
 
 }

@@ -54,15 +54,19 @@ public class CesionPortalCRMActions extends CesionPortalCRMPage {
     public void postSaleClick(){
         getPostSale().click();
     }
+
     public void transactionClick(){
         getTransaction().click();
     }
+
     public void lineModificationClick(){
         getLineModification().click();
     }
+
     public void ContractAssignmentClick(){
         getContractAssignment().click();
     }
+
     public void writePhoneNumber(){
         enter("3016875982").into(getPhoneNumber());
         getPhoneNumber().sendKeys(Keys.TAB);
