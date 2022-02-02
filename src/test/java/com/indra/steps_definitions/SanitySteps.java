@@ -31,6 +31,7 @@ public class SanitySteps{
     LoginPortalCRMActions loginPortalCRMActions = new LoginPortalCRMActions(driver);
     InventoryActivationActions activationAction = new InventoryActivationActions();
     PrepaidActivationActions prepaidActivationActions = new PrepaidActivationActions(driver);
+    CesionPortalCRMActions cesionActions = new CesionPortalCRMActions(driver);
     int Activation =0;
     ControlActivationActions controlActivationActions = new ControlActivationActions(driver);
 
@@ -107,6 +108,21 @@ public class SanitySteps{
     public void seDeberiaVerEnPantallaUnicaLaLineaActivaEnPrepago() {
         prepaidActivationActions.consultSingleScreen(dataExcelModels.getMsisdnPrepago());
     }
+    //-----------<escenario>----------------
+
+    @When("^Se hace la cesion de contrato de una linea$")
+    public void seHaceLaCesionDeContratoDeUnaLinea() throws InterruptedException, AWTException {
+        cesionActions.initialRute();
+        cesionActions.executeContractAssignment();
+
+    }
+
+
+    @Then("^Se deberia ver en pantalla unica la linea cedida$")
+    public void seDeberiaVerEnPantallaUnicaLaLineaCedida() {
+        prepaidActivationActions.consultSingleScreen2(dataExcelModels.getMsisdnPrepago());
+    }
+
 
     //-----------<Quinto escenario>----------------
 

@@ -36,6 +36,7 @@ Feature: Sanity limpieza y aprovisionamiento de recursos
     When Se hace activacion de una linea en prepago
     Then Se deberia ver en pantalla unica la linea activa en prepago
 
+
   @portalControl
   Scenario: se requiere realizar una activacion de una linea en control
     Given Se ingresa al portal CRM para activacion

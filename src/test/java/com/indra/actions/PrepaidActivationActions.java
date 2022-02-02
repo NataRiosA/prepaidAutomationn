@@ -90,4 +90,21 @@ public class PrepaidActivationActions extends PrepaidActivationPage {
                 plan.getText(),Matchers.containsString("Plan Tigo Prepago") );
     }
 
+    public void consultSingleScreen2(String msisdn){
+        getDriver().switchTo().defaultContent();
+        getConsult().click();
+        getConsultPos().click();
+        getConsultIntegral().click();
+        getCosultaPantallaUnica().click();
+        WebElement iframe = getDriver().findElement(By.id("iframe"));
+        getDriver().switchTo().frame(iframe);
+        enter(msisdn).into(getMsisdn2());
+        getSearchButton().click();
+        getGeneralCustomerInformation().waitUntilPresent();
+        WebElement plan = getDriver().findElement(By.id("j_id135:j_id157"));
+
+        MatcherAssert.assertThat("el plan es prepago",
+                plan.getText(),Matchers.containsString("Postpago") );
+    }
+
 }
