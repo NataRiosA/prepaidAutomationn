@@ -1,124 +1,218 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Sanity limpieza y aprovisionamiento de recursos" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-01T16:03:35" hostname="22LAP5CD1195R94" time="60.495">
+<testsuite name="Sanity limpieza y aprovisionamiento de recursos" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-02-01T20:46:14" hostname="22LAP5CG0525FBR" time="125.467">
   <properties/>
-  <testcase name="se requiere realizar una activacion de una linea en prepago" classname="Sanity limpieza y aprovisionamiento de recursos" time="60.495"/>
-  <system-out><![CDATA[11:03:36.750 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
-11:03:36.750 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
-11:03:40.770 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Opening darkroom
-11:03:40.771 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line starting up
-11:03:40.873 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\8a6c552499fef698e1b57ab10a498f752a43ff0b2becb28712565b39c41ecb96.png
-11:03:41.354 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\d1f7553147769a75b87043926a8b3b0bf936fafaf394c13940c8b35f79332bae.png
-11:03:43.254 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\ffd0038e680477c311b483d355d44380ff8a8747c6d028d7ed6579cd4f8969cd.png
-11:03:44.248 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\54ea2e5ed7c1e896d5c617a2fb89f87e212040804ee5c07d331a21fcf9d91c94.png
-11:03:44.729 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\91605013f341491f3643a7126e040c6cc629212983148f5cf889013776184e32.png
-11:03:45.247 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\f742e8aaac70f4e33efa1805fdef69b1c6b5585d295b4a6fc529d32b13ac7fa3.png
-11:03:45.708 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\38779ae71b7671053baa49cc0d473eee4514da797a2d3f784b0668d9abd15650.png
-11:03:46.743 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\8f202f40bf59bec1d80e2658384df695f75430c238e419cb4f317ea68fd8c667.png
-11:03:47.631 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\dc3b403b20fc4b39557a0993ea579f4c37f8fd398ea3a698db0fa749cb770466.png
-11:03:48.042 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\1135697c11241c7749ca59c7567b71ba3eccd1eb72825e04e2357ded2f3d3ec8.png
-11:03:48.043 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-4004782479388567325
-11:03:48.043 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\1135697c11241c7749ca59c7567b71ba3eccd1eb72825e04e2357ded2f3d3ec8.png
-11:03:48.527 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\b68e157d7f7e59526192554201192a7da4e38a056543894a61606369bfcc4610.png
-11:03:48.528 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-5610076552164413926
-11:03:48.529 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\b68e157d7f7e59526192554201192a7da4e38a056543894a61606369bfcc4610.png
-11:03:49.043 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\0a1c1cda4422b5af7be39809f95b1d9d25141d2adf19b5bff033de877c254166.png
-11:03:49.045 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-400889079912425448
-11:03:49.046 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\0a1c1cda4422b5af7be39809f95b1d9d25141d2adf19b5bff033de877c254166.png
-11:03:49.380 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\14101298e13c6cfac1a0c38f3b3de287fc6540245d288c4193418e0166eb76fc.png
-11:03:49.381 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-2999406425313113652
-11:03:49.381 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\14101298e13c6cfac1a0c38f3b3de287fc6540245d288c4193418e0166eb76fc.png
-11:03:49.693 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\f393e4550c790f347e1d2cd6f7533492e32f2f6a34d68ff401247d10cd69be79.png
-11:03:49.694 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-7368333663587801882
-11:03:49.695 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\f393e4550c790f347e1d2cd6f7533492e32f2f6a34d68ff401247d10cd69be79.png
-11:03:50.216 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\edbf26ecf1f4f1a66e4457268444a580ae60e31770d962aba528a923ed5b8dde.png
-11:03:50.217 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-9215558096593916992
-11:03:50.217 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\edbf26ecf1f4f1a66e4457268444a580ae60e31770d962aba528a923ed5b8dde.png
-11:03:50.809 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\7431848a8482e563ac752857e23d84206ff547cb895eff311b28e04acbd60335.png
-11:03:50.811 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-9018549163235279228
-11:03:50.811 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\7431848a8482e563ac752857e23d84206ff547cb895eff311b28e04acbd60335.png
-11:03:51.131 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\e3eb91e118627cf2645c56e1384c5670e54709139a2cd38b2696748a67772ef7.png
-11:03:51.133 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-1924484629232846574
-11:03:51.133 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\e3eb91e118627cf2645c56e1384c5670e54709139a2cd38b2696748a67772ef7.png
-11:03:51.593 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\c04f50e245756bee72a0663a5c32b0918d9acc031e55ab1c9880394068fea1c7.png
-11:03:51.594 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-7434048676359105864
-11:03:51.594 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\c04f50e245756bee72a0663a5c32b0918d9acc031e55ab1c9880394068fea1c7.png
-11:03:52.059 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\c04f50e245756bee72a0663a5c32b0918d9acc031e55ab1c9880394068fea1c7.png
-11:03:57.621 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\71e18cf5d4ad3a99cd4c2fc6aa6b6f5f39b830df830a7d5436a03a4103e7ad0a.png
-11:03:57.626 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-8472077512336835470
-11:03:57.626 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\71e18cf5d4ad3a99cd4c2fc6aa6b6f5f39b830df830a7d5436a03a4103e7ad0a.png
-11:04:01.091 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\2e1c854bcb9bf70803cec66bca88d84646c74368904dc71205fefbdf92cb103b.png
-11:04:01.091 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-2305015162089018854
-11:04:01.091 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\2e1c854bcb9bf70803cec66bca88d84646c74368904dc71205fefbdf92cb103b.png
-11:04:01.577 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\aebb0eb3771bcf5f47a306e05aaca00cde34892c8e60ca5942671919b1cb6639.png
-11:04:01.577 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-1033474652868601397
-11:04:01.577 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\aebb0eb3771bcf5f47a306e05aaca00cde34892c8e60ca5942671919b1cb6639.png
-11:04:02.062 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\aebb0eb3771bcf5f47a306e05aaca00cde34892c8e60ca5942671919b1cb6639.png
-11:04:02.525 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\aebb0eb3771bcf5f47a306e05aaca00cde34892c8e60ca5942671919b1cb6639.png
-11:04:03.010 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\5d10d84c406b8b153db132ac48302c56fad7f9e8af35c2f9ae5001c10c24ea2f.png
-11:04:03.026 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-5184144733834003959
-11:04:03.026 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\5d10d84c406b8b153db132ac48302c56fad7f9e8af35c2f9ae5001c10c24ea2f.png
-11:04:03.348 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\aebb0eb3771bcf5f47a306e05aaca00cde34892c8e60ca5942671919b1cb6639.png
-11:04:03.865 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\7c1e64ad8048be3c22eaf5d60a8a1246d31d939d7af99ddd424218f65c1cdd25.png
-11:04:03.865 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-5477117322013325391
-11:04:03.865 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\7c1e64ad8048be3c22eaf5d60a8a1246d31d939d7af99ddd424218f65c1cdd25.png
-11:04:04.366 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\4fe66112e07f9a319d2fb6059edce2c0212b7e0be21ea54e06a1a00c3bca61ce.png
-11:04:04.366 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-6848870088052254644
-11:04:04.366 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\4fe66112e07f9a319d2fb6059edce2c0212b7e0be21ea54e06a1a00c3bca61ce.png
-11:04:29.721 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\254e8f6184a4e9124c98dafbe2358c1194bc93ea00a13eb4aaebd48861a2ed9b.png
-11:04:29.721 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-7568294093736081569
-11:04:29.721 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\254e8f6184a4e9124c98dafbe2358c1194bc93ea00a13eb4aaebd48861a2ed9b.png
-11:04:30.442 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\ffd0038e680477c311b483d355d44380ff8a8747c6d028d7ed6579cd4f8969cd.png
-11:04:30.923 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\d30c51231d228201154427931f01ec730e1118687a6a2c1d74d5dd5616607bc2.png
-11:04:30.923 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-7733220040854203357
-11:04:30.923 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\d30c51231d228201154427931f01ec730e1118687a6a2c1d74d5dd5616607bc2.png
-11:04:31.372 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\8474d37fe4c56875d683168cbac6260915955737dcc1398c0a48dce158b1cbe7.png
-11:04:31.377 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-6948606762374553381
-11:04:31.377 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\8474d37fe4c56875d683168cbac6260915955737dcc1398c0a48dce158b1cbe7.png
-11:04:31.830 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\9e7a5acfd472e517ee3e80d84fda5b54a7a59be6d8d8414579ea7a3f4163ec3b.png
-11:04:31.830 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-3617785051117642472
-11:04:31.830 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\9e7a5acfd472e517ee3e80d84fda5b54a7a59be6d8d8414579ea7a3f4163ec3b.png
-11:04:32.499 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\7e947f341d1f003fef936bb780c414d224786b46293e0f8af2f78ca1e9aed58b.png
-11:04:32.500 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-1202740100254532236
-11:04:32.501 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\7e947f341d1f003fef936bb780c414d224786b46293e0f8af2f78ca1e9aed58b.png
-11:04:33.011 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\0c061f46de9dbb330fca0a57fd698d956ca12db0e29e8eed7ff7bf7bc6f9b045.png
-11:04:33.026 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-2189836676715815164
-11:04:33.026 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\0c061f46de9dbb330fca0a57fd698d956ca12db0e29e8eed7ff7bf7bc6f9b045.png
-11:04:33.279 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\f9274f50931a168d7ce4005ca422e905120e70f33257b47b4fc1aabab69005b7.png
-11:04:33.291 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-8614240786314114960
-11:04:33.292 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Sanity Ambientes\PrepaidAutomation\target\site\serenity\f9274f50931a168d7ce4005ca422e905120e70f33257b47b4fc1aabab69005b7.png
-11:04:36.410 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[92m
-        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
-  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
- (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
-  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
- (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
-        /_/                                                                
+  <testcase name="se requiere realizar una activacion de una linea en control" classname="Sanity limpieza y aprovisionamiento de recursos" time="125.467">
+    <failure message="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException: Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException: Expected enabled element was not enabled
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilEnabled(WebElementFacadeImpl.java:1149)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:954)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1229)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.annotations.locators.AbstractSingleItemHandler.invoke(AbstractSingleItemHandler.java:45)
+	at com.sun.proxy.$Proxy27.click(Unknown Source)
+	at com.indra.actions.ControlActivationActions.demographicInformation(ControlActivationActions.java:79)
+	at com.indra.steps_definitions.SanitySteps.seHaceActivacionDeUnaLineaEnControl(SanitySteps.java:119)
+	at ✽.Se hace activacion de una linea en control(src/test/resources/features/execute.feature:44)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for ControlActivationPage.continueSale to be enabled (tried for 10 second(s) with 100 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilEnabled(WebElementFacadeImpl.java:1146)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:954)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1229)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.annotations.locators.AbstractSingleItemHandler.invoke(AbstractSingleItemHandler.java:45)
+	at com.sun.proxy.$Proxy27.click(Unknown Source)
+	at com.indra.actions.ControlActivationActions.demographicInformation(ControlActivationActions.java:79)
+	at com.indra.steps_definitions.SanitySteps.seHaceActivacionDeUnaLineaEnControl(SanitySteps.java:119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:31)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:25)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:37)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:40)
+	at cucumber.api.TestStep.executeStep(TestStep.java:102)
+	at cucumber.api.TestStep.run(TestStep.java:83)
+	at cucumber.api.TestCase.run(TestCase.java:58)
+	at cucumber.runner.Runner.runPickle(Runner.java:80)
+	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:140)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:118)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:56)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:127)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.openqa.selenium.NoSuchElementException: Timed out after 25 seconds. Element not found
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: '22LAP5CG0525FBR', ip: '10.183.116.40', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'
+Driver info: driver.version: unknown
+	at net.thucydides.core.annotations.locators.SmartAjaxElementLocator.ajaxFindElement(SmartAjaxElementLocator.java:166)
+	at net.thucydides.core.annotations.locators.SmartAjaxElementLocator.findElement(SmartAjaxElementLocator.java:118)
+	at net.serenitybdd.core.pages.WebElementResolverByElementLocator.resolveForDriver(WebElementResolverByElementLocator.java:30)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:221)
+	at net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:63)
+	at net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:55)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 74 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[15:46:16.177 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+15:46:16.177 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
+15:46:23.670 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Opening darkroom
+15:46:23.684 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line starting up
+15:46:23.899 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\5bf4c11b5d8e75a58cb69ca9319669a9f83aab32741a794292fee75f917dacde.png
+15:46:24.588 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\9e075f75088cc8be698270e4eba3a4acd10bc444f09e435fe7a5b64c5b7be9ca.png
+15:46:28.160 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\50ba390cc9c52495f731c65f736e90d00d01cda4eb9d25814933b6e8d100f689.png
+15:46:28.368 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\50ba390cc9c52495f731c65f736e90d00d01cda4eb9d25814933b6e8d100f689.png
+15:46:30.127 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\c7da859225b7209729e7c2be5cbbd731e093f138c09d0a1c15ffb7a21bd35b99.png
+15:46:30.828 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\82f9bfacac8f56f8660ac8ea176975e513b9a11049d6720d711740c2bae663bc.png
+15:46:31.548 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\a445b2470f7d9e9d822c65a2e7d37ada1b9fc44b05e9da4ab1038dad16067e36.png
+15:46:32.231 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\74cd80fc3b24e9cd55a9332f32d067bd4cc1cf48e44d9a11a3ba3b49fa7795c2.png
+15:46:34.510 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\46a6efc7c6e3ccc314f24f930e9b2656994f03ec735919b86360c504521a6859.png
+15:46:37.028 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\7a49613d670b18067ae7061fd2d8f119bbd4848a007e6e6f3d40569dd7cd5ca1.png
+15:46:37.796 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\59786190b9327de30dc6272378cca09a7a6bbf88d2051efe537ad79e390b1bfa.png
+15:46:39.131 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\04449530b4570f2b107334c69be7d63fc53f1d0d8752f1eb72e34827d8361162.png
+15:46:39.847 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\b76061a604f7f110450e86fe013d0c82103d2140015c9ab81f67dcf61ff56229.png
+15:46:40.492 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\b76061a604f7f110450e86fe013d0c82103d2140015c9ab81f67dcf61ff56229.png
+15:46:41.106 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\98b7884982f6521e539f85bf277705ffaba49e04b88068b1425eff8bd07ec6d7.png
+15:46:41.895 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\b01910f9f9903cf664f5b4a03a700b897f2a86b62541ce845262e47880b6d9bc.png
+15:46:41.895 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-550870437661024531
+15:46:41.895 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\b01910f9f9903cf664f5b4a03a700b897f2a86b62541ce845262e47880b6d9bc.png
+15:46:43.489 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\b045185a6f1871d984afc054cd52259ee428b081663e02b5c8cb011151c62e96.png
+15:46:44.238 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\2beb91e6df10728b4af46390edea4dab96151bef7f8bc4702092bd24d02f6e49.png
+15:46:44.841 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\caeb389377cd3ce46009e40f54eba9a19f871eb05ca9055a782fbfa3d9b6fec8.png
+15:46:45.476 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\7beb55f14a8cddf47342d8c8412a46bf082e7ebb8598db6cea19849a27026e44.png
+15:46:46.156 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\8b480be77b140ae810624471537518424e12b39ef70ae3aad0d9da835e545161.png
+15:46:46.827 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\8b480be77b140ae810624471537518424e12b39ef70ae3aad0d9da835e545161.png
+15:46:47.542 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\8b480be77b140ae810624471537518424e12b39ef70ae3aad0d9da835e545161.png
+15:46:48.280 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\bb9cb22a59ad76eb2ca45d5b338a8e64172a62762e75302c8b6e67dcd5c844f0.png
+15:46:48.280 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-3832345793981105787
+15:46:48.280 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\bb9cb22a59ad76eb2ca45d5b338a8e64172a62762e75302c8b6e67dcd5c844f0.png
+15:46:59.035 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\ba6cae00bd72c50b047398afffbbf8615ec45d3a02c4b015be4fd2e7dab20ab6.png
+15:46:59.035 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-3481411497393675061
+15:46:59.035 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\ba6cae00bd72c50b047398afffbbf8615ec45d3a02c4b015be4fd2e7dab20ab6.png
+15:46:59.703 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\ba6cae00bd72c50b047398afffbbf8615ec45d3a02c4b015be4fd2e7dab20ab6.png
+15:47:00.388 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\6bfa97a2439add0ad1efbd7cde2d2fb83d6c971400f5983126f03e33c1fca706.png
+15:47:00.388 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-6050617913118913052
+15:47:00.388 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\6bfa97a2439add0ad1efbd7cde2d2fb83d6c971400f5983126f03e33c1fca706.png
+15:47:01.121 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\6bfa97a2439add0ad1efbd7cde2d2fb83d6c971400f5983126f03e33c1fca706.png
+15:47:01.821 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\9f777bb4c0f25a9689ef87bd7fc9f2559a3a1aed882ba883f07340b4b08c3ea7.png
+15:47:01.821 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-2111207426047808877
+15:47:01.821 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\9f777bb4c0f25a9689ef87bd7fc9f2559a3a1aed882ba883f07340b4b08c3ea7.png
+15:47:02.456 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\9f777bb4c0f25a9689ef87bd7fc9f2559a3a1aed882ba883f07340b4b08c3ea7.png
+15:47:03.123 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\9f777bb4c0f25a9689ef87bd7fc9f2559a3a1aed882ba883f07340b4b08c3ea7.png
+15:47:03.787 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\4495bb5b5090b122cbdc7d642c7ca50aadb700dd1fa8f1d44704db576dc04816.png
+15:47:03.803 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-3470254553767581889
+15:47:03.803 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\4495bb5b5090b122cbdc7d642c7ca50aadb700dd1fa8f1d44704db576dc04816.png
+15:47:04.537 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\301e59e19ff37c99887e7b3dccc2a340191e4e1750e2bf76a51ea4aeb58976b0.png
+15:47:04.537 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-4874745676958877908
+15:47:04.537 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\301e59e19ff37c99887e7b3dccc2a340191e4e1750e2bf76a51ea4aeb58976b0.png
+15:47:25.696 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\8bf75985be7109159f71f68659ca701dcd6115f3abb8ffedc45bb1859737d759.png
+15:47:25.705 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-2859734552692352648
+15:47:25.705 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\8bf75985be7109159f71f68659ca701dcd6115f3abb8ffedc45bb1859737d759.png
+15:47:34.242 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\5e08a1a0b4f5e216e3034d8145226bf12185175531cb8f84186b64599d799f54.png
+15:47:34.242 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-6534248086279734918
+15:47:34.242 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\5e08a1a0b4f5e216e3034d8145226bf12185175531cb8f84186b64599d799f54.png
+15:47:36.483 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\5e08a1a0b4f5e216e3034d8145226bf12185175531cb8f84186b64599d799f54.png
+15:47:37.164 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\5e08a1a0b4f5e216e3034d8145226bf12185175531cb8f84186b64599d799f54.png
+15:47:37.881 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\10630b694581f9e6996537fd8257629e21fb75ca566ba038dbd9b70144e52b26.png
+15:47:37.886 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-7005303066453494696
+15:47:37.886 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\10630b694581f9e6996537fd8257629e21fb75ca566ba038dbd9b70144e52b26.png
+15:47:38.565 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\e22609fb873b8c38b1002393ca66a047a662bc1688669c3ed92cb8e3d7dafea9.png
+15:47:38.581 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-318780248026883158
+15:47:38.581 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\PrepaidAutomation\target\site\serenity\e22609fb873b8c38b1002393ca66a047a662bc1688669c3ed92cb8e3d7dafea9.png
+15:47:39.351 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\e22609fb873b8c38b1002393ca66a047a662bc1688669c3ed92cb8e3d7dafea9.png
+15:47:40.607 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\PrepaidAutomation\target\site\serenity\e22609fb873b8c38b1002393ca66a047a662bc1688669c3ed92cb8e3d7dafea9.png
+15:48:20.132 [Test worker] WARN net.thucydides.core.webdriver.WebDriverFacade - Error while quitting the driver (Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: '22LAP5CG0525FBR', ip: '10.183.116.40', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 23004, moz:profile: C:\Users\nriosa\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 400566da-82c4-4c49-b480-2b569778a967)
+15:48:20.132 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91m
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
 
-TEST PASSED: se requiere realizar una activacion de una linea en prepago
-----------------------------------------------------------------------------?[0m
+TEST FAILED: se requiere realizar una activacion de una linea en control
+--------------------------------------------------------------------------?[0m
+15:48:20.132 [Test worker] DEBUG net.thucydides.core.steps.ConsoleLoggingListener - RELATED ISSUES: 
+15:48:20.216 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91mTEST FAILED AT STEP When Se hace activacion de una linea en control?[0m
+15:48:20.216 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Expected enabled element was not enabledBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'System info: host: '22LAP5CG0525FBR', ip: '10.183.116.40', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'Driver info: driver.version: unknown
 ]]></system-out>
-  <system-err><![CDATA[feb 01, 2022 11:03:36 AM org.openqa.selenium.remote.DesiredCapabilities firefox
+  <system-err><![CDATA[feb 01, 2022 3:46:15 PM org.openqa.selenium.remote.DesiredCapabilities firefox
 INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-feb 01, 2022 11:03:36 AM org.openqa.selenium.remote.DesiredCapabilities firefox
+feb 01, 2022 3:46:15 PM org.openqa.selenium.remote.DesiredCapabilities firefox
 INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-1643731417382	geckodriver	INFO	Listening on 127.0.0.1:4689
-1643731417922	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PROJEC~1\\AppData\\Local\\Temp\\rust_mozprofilejPsPbE"
-1643731418390	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
-1643731418409	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1643731418410	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1643731418410	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1643731418410	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1643748377198	geckodriver	INFO	Listening on 127.0.0.1:32013
+1643748377733	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\nriosa\\AppData\\Local\\Temp\\rust_mozprofileRb7eTi"
+1643748378783	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1643748378813	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1643748378813	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1643748378813	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1643748378813	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1643731419812	Marionette	INFO	Listening on port 54097
-1643731420008	Marionette	WARN	TLS certificate errors will be ignored for this session
-feb 01, 2022 11:03:40 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+1643748381852	Marionette	INFO	Listening on port 57175
+1643748381991	Marionette	WARN	TLS certificate errors will be ignored for this session
+feb 01, 2022 3:46:22 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
-JavaScript error: http://10.69.60.85:8280/portal/scripts/3.8.16.Final-redhat-1/SHARED/bootstrap-min.js, line 7: Error: Script error for: SHARED/base
-http://requirejs.org/docs/errors.html#scripterror
-JavaScript error: http://10.69.60.85:8280/portal/scripts/3.8.16.Final-redhat-1/SHARED/bootstrap-min.js, line 7: Error: Script error for: SHARED/navigation
-http://requirejs.org/docs/errors.html#scripterror
-JavaScript error: http://10.69.60.85:8280/portal/scripts/3.8.16.Final-redhat-1/SHARED/bootstrap-min.js, line 7: Error: Script error for: SHARED/jquery
-http://requirejs.org/docs/errors.html#scripterror
+1643748382838	addons.xpi	WARN	failed to set lastModifiedTime on C:\Users\nriosa\AppData\Local\Temp\rust_mozprofileRb7eTi\extensions\firefoxhpsureclicksecurebrowsing@bromium.com.xpi: [Exception... "Component returned failure code: 0x8052000e (NS_ERROR_FILE_IS_LOCKED) [nsIFile.lastModifiedTime]"  nsresult: "0x8052000e (NS_ERROR_FILE_IS_LOCKED)"  location: "JS frame :: resource://gre/modules/addons/XPIInstall.jsm :: installAddon :: line 3239"  data: no] Stack trace: installAddon()@resource://gre/modules/addons/XPIInstall.jsm:3239
+install()@resource://gre/modules/addons/XPIInstall.jsm:1767
+startInstall/this._startupPromise<()@resource://gre/modules/addons/XPIInstall.jsm:1833
+startInstall()@resource://gre/modules/addons/XPIInstall.jsm:1839
 JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
 JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
 JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Consultas, line 1: ReferenceError: setIframeListeners is not defined
@@ -127,23 +221,24 @@ JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Venta?portal:window
 JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Venta, line 1: ReferenceError: setIframeListeners is not defined
 JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Venta, line 1: ReferenceError: setIframeListeners is not defined
 JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Venta, line 1: ReferenceError: setIframeListeners is not defined
+1643748398690	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:237:64
+1643748460253	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:237:64
 JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Venta, line 1: ReferenceError: setIframeListeners is not defined
-JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
-JavaScript warning: http://10.69.60.85:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
-JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Consultas, line 1: ReferenceError: setIframeListeners is not defined
-JavaScript error: http://10.69.60.85:8280/portal/CRMPortal/Consultas, line 1: ReferenceError: setIframeListeners is not defined
-1643731473394	Marionette	INFO	Stopped listening on port 54097
-Extension error: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: moz-extension://6d44e6d8-cf12-4071-afda-5647239ba162/main.js :: connect :: line 12066"  data: no] undefined 12066
+1643748470624	Marionette	ERROR	[27] No reply from Marionette:Register
+Extension error: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: moz-extension://b36db396-c1c2-46a5-8ab9-ec91425f3d4f/main.js :: connect :: line 12066"  data: no] undefined 12066
 [[Exception stack
-connect@moz-extension://6d44e6d8-cf12-4071-afda-5647239ba162/main.js:12066:23
-onPortDisconnected@moz-extension://6d44e6d8-cf12-4071-afda-5647239ba162/main.js:20316:30
-makeConnection/channel<@moz-extension://6d44e6d8-cf12-4071-afda-5647239ba162/main.js:20289:136
-handleDisconnect@moz-extension://6d44e6d8-cf12-4071-afda-5647239ba162/main.js:12172:14
-connect/</<@moz-extension://6d44e6d8-cf12-4071-afda-5647239ba162/main.js:12052:63
+connect@moz-extension://b36db396-c1c2-46a5-8ab9-ec91425f3d4f/main.js:12066:23
+onPortDisconnected@moz-extension://b36db396-c1c2-46a5-8ab9-ec91425f3d4f/main.js:20316:30
+makeConnection/channel<@moz-extension://b36db396-c1c2-46a5-8ab9-ec91425f3d4f/main.js:20289:136
+handleDisconnect@moz-extension://b36db396-c1c2-46a5-8ab9-ec91425f3d4f/main.js:12172:14
+connect/</<@moz-extension://b36db396-c1c2-46a5-8ab9-ec91425f3d4f/main.js:12052:63
 Current stack
 applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:606:13
 addListener/asyncWithoutClone/<@resource://gre/modules/ExtensionCommon.jsm:2443:39
 ]]
+1643748471652	Marionette	INFO	Stopped listening on port 57175
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 

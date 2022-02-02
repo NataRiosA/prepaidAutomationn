@@ -49,7 +49,7 @@ public class InventoryActivationActions extends ReadFileXLSXActions {
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
 
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
         for (int i = 0; i<8; i++){
             robot.keyPress(KeyEvent.VK_TAB);
@@ -64,6 +64,7 @@ public class InventoryActivationActions extends ReadFileXLSXActions {
         for (int i = 0; i<2; i++){
             robot.keyPress(KeyEvent.VK_TAB);
             robot.keyRelease(KeyEvent.VK_TAB);
+            Thread.sleep(500);
         }
 
         robot.keyPress(KeyEvent.VK_ENTER);

@@ -32,6 +32,7 @@ public class SanitySteps{
     InventoryActivationActions activationAction = new InventoryActivationActions();
     PrepaidActivationActions prepaidActivationActions = new PrepaidActivationActions(driver);
     int Activation =0;
+    ControlActivationActions controlActivationActions = new ControlActivationActions(driver);
 
 //-----------<Primer escenario>----------------
     @Given("^Se ejecutan procedimientos en bd y soapUi$")
@@ -87,8 +88,8 @@ public class SanitySteps{
 
     //-----------<Cuarto escenario>----------------
 
-    @Given("^Se ingresa al portal CRM para activacion prepago$")
-    public void seIngresaAlPortalCRMParaActivacionPrepago(List<LoginPortalCRMModels> loginPortalCRMModels) {
+    @Given("^Se ingresa al portal CRM para activacion$")
+    public void seIngresaAlPortalCRMParaActivacion(List<LoginPortalCRMModels> loginPortalCRMModels) {
         driver.get(dataExcelModels.getUrlCRM());
         loginPortalCRMActions.clickOnLogin(loginPortalCRMModels.get(0));
     }
@@ -105,6 +106,22 @@ public class SanitySteps{
     @Then("^Se deberia ver en pantalla unica la linea activa en prepago$")
     public void seDeberiaVerEnPantallaUnicaLaLineaActivaEnPrepago() {
         prepaidActivationActions.consultSingleScreen(dataExcelModels.getMsisdnPrepago());
+    }
+
+    //-----------<Quinto escenario>----------------
+
+    @When("^Se hace activacion de una linea en control$")
+    public void seHaceActivacionDeUnaLineaEnControl() throws InterruptedException {
+        controlActivationActions.initialRute();
+        controlActivationActions.customerInformation(dataExcelModels.getVendedorPostpago()
+                , dataExcelModels.getCedulaClientePostpago());
+        controlActivationActions.activationInformation(dataExcelModels.getMsisdnPostpago(),dataExcelModels.getMsiPostpago());
+        controlActivationActions.demographicInformation();
+    }
+
+    @Then("^Se deberia ver en pantalla unica la linea activa en control$")
+    public void seDeberiaVerEnPantallaUnicaLaLineaActivaEnControl() {
+        controlActivationActions.consultSingleScreen(dataExcelModels.getMsisdnPostpago());
     }
 
 }

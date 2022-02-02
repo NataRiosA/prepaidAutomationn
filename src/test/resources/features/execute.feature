@@ -28,11 +28,19 @@ Feature: Sanity limpieza y aprovisionamiento de recursos
       | CQ10960370 | Tigo.2022* |C:\Program Files (x86)\Winwap Technologies\WinWAP for Windows 4.2\WinWAP4.exe|
     Then se deberia poder ver mensaje de confimacion exitosa
 
-  @portal
+  @portalPrepaid
   Scenario: se requiere realizar una activacion de una linea en prepago
-    Given Se ingresa al portal CRM para activacion prepago
+    Given Se ingresa al portal CRM para activacion
       | user       | password   |
       | CQ10960370 | Tigo.2022* |
     When Se hace activacion de una linea en prepago
     Then Se deberia ver en pantalla unica la linea activa en prepago
+
+  @portalControl
+  Scenario: se requiere realizar una activacion de una linea en control
+    Given Se ingresa al portal CRM para activacion
+      | user       | password   |
+      | CQ10960370 | Tigo.2022* |
+    When Se hace activacion de una linea en control
+    Then Se deberia ver en pantalla unica la linea activa en control
 
