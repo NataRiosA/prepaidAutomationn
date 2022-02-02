@@ -83,8 +83,8 @@ public class ControlActivationActions extends ControlActivationPage {
         getElectronicBill().click();
         getContinueDemo().click();
         getContinueSale().click();
-        waitABit(500);
-        getContinueSalePopUp().click();
+        waitABit(2000);
+        getConfirm().click();
         getActivationDetails().waitUntilPresent();
         WebElement title = getDriver().findElement(By.className("tituloPagina"));
         MatcherAssert.assertThat("La activacion fue exitosa",title.getText(), Matchers.equalTo("ACTIVACION EXITOSA"));
