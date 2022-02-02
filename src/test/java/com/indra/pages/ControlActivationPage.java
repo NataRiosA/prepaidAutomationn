@@ -104,22 +104,22 @@ public class ControlActivationPage extends PageObject{
     @FindBy(xpath = "//img[contains(@id,'ActivacionesForm:idFechaPopupButton')]")
     WebElementFacade date;
 
-    @FindBy(xpath = "//div[contains(@class,'rf-cal-tl-btn rf-cal-tl-btn-hov')]")
+    @FindBy(xpath = "/html/body/form[1]/div/div/div[6]/div[2]/table/tbody/tr[2]/td/table/tbody/tr[2]/td[5]/div/div/div/table[1]/tbody/tr[1]/td/table/tbody/tr/td[3]/div")
     WebElementFacade chooseDate;
 
-    @FindBy(xpath = "//div[contains(@id,'ActivacionesForm:idFechaDateEditorLayoutM9')]")
+    @FindBy(id = "ActivacionesForm:idFechaDateEditorLayoutM9")
     WebElementFacade month;
 
-    @FindBy(xpath = "//div[@class='rf-cal-edtr-btn rf-cal-edtr-tl-over'][contains(.,'<')]")
+    @FindBy(xpath = "/html/body/form[1]/div/div/div[6]/div[2]/table/tbody/tr[2]/td/table/tbody/tr[2]/td[5]/div/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[1]/td[3]/div")
     WebElementFacade chooseYear;
 
-    @FindBy(xpath = "//div[contains(@id,'ActivacionesForm:idFechaDateEditorLayoutY1')]")
+    @FindBy(id = "ActivacionesForm:idFechaDateEditorLayoutY1")
     WebElementFacade year;
 
-    @FindBy(xpath = "//span[contains(.,'OK')]")
+    @FindBy(id = "ActivacionesForm:idFechaDateEditorButtonOk")
     WebElementFacade dateOk;
 
-    @FindBy(xpath = "//td[contains(@id,'ActivacionesForm:idFechaDayCell11')]")
+    @FindBy(id = "ActivacionesForm:idFechaDayCell17")
     WebElementFacade day;
 
     @FindBy(xpath = "//input[contains(@id,'ActivacionesForm:idTipofactura:1')]")
@@ -133,10 +133,6 @@ public class ControlActivationPage extends PageObject{
 
     @FindBy(xpath = "//input[contains(@id,'popupConfirmacionDatos:confirmarDatos')]")
     WebElementFacade continueSalePopUp;
-
-
-
-
 
     @FindBy(xpath = "//a[@class='TabIcon DefaultPageIcon'][contains(.,'Consultas')]")
     WebElementFacade consult;

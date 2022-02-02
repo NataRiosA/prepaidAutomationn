@@ -54,6 +54,7 @@ public class ControlActivationActions extends ControlActivationPage {
         js.executeScript("window.scrollBy(0,420)"); //Scroll vertically down by 1000 pixels
         WebElement iframe = getDriver().findElement(By.id("iframe"));
         getDriver().switchTo().frame(iframe);
+        waitABit(500);
         WebElement continuar = getDriver().findElement(By.name("ActivacionesForm:btnContinuarActivacionVenta"));
         continuar.click();
     }
@@ -71,17 +72,20 @@ public class ControlActivationActions extends ControlActivationPage {
         getChooseDate().click();
         getMonth().click();
         getChooseYear().click();
+        getChooseYear().click();
         getYear().click();
         getDateOk().click();
         getDay().click();
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("window.scrollBy(0,420)"); //Scroll vertically down by 1000 pixels
         getElectronicBill().click();
         getContinueDemo().click();
         getContinueSale().click();
+        waitABit(500);
         getContinueSalePopUp().click();
         WebElement title = getDriver().findElement(By.className("tituloPagina"));
         MatcherAssert.assertThat("La activacion fue exitosa",title.getText(), Matchers.equalTo("ACTIVACION EXITOSA"));
     }
-
 
     public void consultSingleScreen(String msisdn){
         getDriver().switchTo().defaultContent();
