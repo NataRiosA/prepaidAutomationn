@@ -46,7 +46,7 @@ Feature: Sanity limpieza y aprovisionamiento de recursos
     Then Se deberia ver en pantalla unica la linea activa en control
 
   @portalCesion
-  Scenario: se requiere realizar una activacion de una linea en prepago
+  Scenario: se requiere realizar la cesion de una linea
     Given Se ingresa al portal CRM para activacion
       | user       | password   |
       | CQ10960370 | Tigo.2022* |

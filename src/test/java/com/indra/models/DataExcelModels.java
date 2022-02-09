@@ -2,7 +2,11 @@ package com.indra.models;
 
 import com.indra.actions.ReadFileXLSXActions;
 
-public class DataExcelModels {
+public class DataExcelModels{
+
+    ReadFileXLSXActions fileXLSX = new ReadFileXLSXActions();
+    int sheet;
+
     String urlEpos;
     String urlCRM;
     String urlComfirmador;
@@ -87,9 +91,9 @@ public class DataExcelModels {
         return msiPostpago;
     }
 
-    ReadFileXLSXActions fileXLSX = new ReadFileXLSXActions();
-
     public String getUrlEpos() {
+        fileXLSX.readFileExcel();
+        urlEpos = fileXLSX.excelArray.get(1).get(0);
         return urlEpos;
     }
 
@@ -100,6 +104,8 @@ public class DataExcelModels {
     }
 
     public String getUrlComfirmador() {
+        fileXLSX.readFileExcel();
+        urlComfirmador = fileXLSX.excelArray.get(1).get(2);
         return urlComfirmador;
     }
 
@@ -127,10 +133,6 @@ public class DataExcelModels {
 
     public String getSerial() {
         return Serial;
-    }
-
-    public ReadFileXLSXActions getFileXLSX() {
-        return fileXLSX;
     }
 
     public String getUrlDBA() {
@@ -232,5 +234,13 @@ public class DataExcelModels {
     public String getPort() {
         port = "1521";
         return port;
+    }
+
+    public void setSheet(int sheet) {
+        this.sheet = sheet;
+    }
+
+    public int getSheet() {
+        return sheet;
     }
 }

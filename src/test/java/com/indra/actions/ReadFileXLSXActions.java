@@ -12,13 +12,13 @@ import java.util.Iterator;
 
 public class ReadFileXLSXActions {
     public ArrayList<ArrayList<String>> excelArray = new ArrayList<>();
-
+    public int sheet;
     public void readFileExcel(){
         try {
             FileInputStream f = new FileInputStream("src/test/resources/config_data/data.xlsx");
 
             XSSFWorkbook libro = new XSSFWorkbook(f);
-            XSSFSheet hoja = libro.getSheetAt(0);
+            XSSFSheet hoja = libro.getSheetAt(sheet);
             Iterator<Row> filas = hoja.iterator();
             Iterator<Cell> celdas;
             Row fila;
@@ -32,7 +32,13 @@ public class ReadFileXLSXActions {
 
                     switch (celda.getCellType()) {
                         case STRING:
-                            temporaryData.add(celda.getStringCellValue());
+
+                            if(celda.getStringCellValue().getBytes().equals(" ")){
+
+                            }
+                            else{
+                                temporaryData.add(celda.getStringCellValue());
+                            }
                             //System.out.print(celda.getStringCellValue()+"  |  ");
                             break;
                         case NUMERIC:

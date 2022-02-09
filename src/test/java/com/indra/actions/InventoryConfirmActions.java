@@ -1,12 +1,13 @@
 package com.indra.actions;
 
+import com.indra.models.DataExcelModels;
 import com.indra.models.WindexModels;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 
-public class InventoryActivationActions extends ReadFileXLSXActions {
+public class InventoryConfirmActions extends DataExcelModels {
 
     public String resultExecuteActivation(int resultActivation)  {
         if(resultActivation==1){
@@ -20,15 +21,22 @@ public class InventoryActivationActions extends ReadFileXLSXActions {
 
         Process proceso = Runtime.getRuntime().exec(windexModels.getRutaWinWap());
         Thread.sleep(2000);
-        confirmInventory(windexModels.getUser(), windexModels.getPassword());
+        confirmInventory(windexModels.getUser(), windexModels.getPassword(), getUrlComfirmador());
         proceso.destroy();
         proceso.waitFor();
         return proceso.exitValue();
     }
 
-    public void confirmInventory(String user, String password) throws AWTException, InterruptedException {
+    public void confirmInventory(String user, String password, String url) throws AWTException, InterruptedException {
         Robot robot=new Robot();
-        Thread.sleep(2000);
+
+        Thread.sleep(5000);
+
+        write(url);
+
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
         for (int i = 0; i<3; i++){
             robot.keyPress(KeyEvent.VK_TAB);
             robot.keyRelease(KeyEvent.VK_TAB);
@@ -72,6 +80,7 @@ public class InventoryActivationActions extends ReadFileXLSXActions {
         robot.keyRelease(KeyEvent.VK_ENTER);
         Thread.sleep(2000);
     }
+    
 
     public static void write(String texto) {
         try {
@@ -94,6 +103,52 @@ public class InventoryActivationActions extends ReadFileXLSXActions {
                             robot.keyPress(32);
                         }
                         break;
+
+                    case 58 :
+                        if (letra.equals(":")) {
+                            robot.keyPress(18);
+
+                            for (k = 3; k >= 0; --k) {
+                                numpad_kc = 58 / (int) Math.pow(10.0D,
+                                        (double) k) % 10 + 96;
+                                robot.keyPress(numpad_kc);
+                                robot.keyRelease(numpad_kc);
+                            }
+
+                            robot.keyRelease(18);
+                        }
+                        break;
+                    case 47 :
+                        if (letra.equals("/")) {
+                            robot.keyPress(18);
+
+                            for (k = 3; k >= 0; --k) {
+                                numpad_kc = 47 / (int) Math.pow(10.0D,
+                                        (double) k) % 10 + 96;
+                                robot.keyPress(numpad_kc);
+                                robot.keyRelease(numpad_kc);
+                            }
+
+                            robot.keyRelease(18);
+                        }
+                        break;
+
+                    case 45 :
+                        if (letra.equals("-")) {
+                            robot.keyPress(18);
+
+                            for (k = 3; k >= 0; --k) {
+                                numpad_kc = 45 / (int) Math.pow(10.0D,
+                                        (double) k) % 10 + 96;
+                                robot.keyPress(numpad_kc);
+                                robot.keyRelease(numpad_kc);
+                            }
+
+                            robot.keyRelease(18);
+                        }
+                        break;
+
+
                     case 46 :
                         if (letra.equals(".")) {
                             robot.keyPress(18);

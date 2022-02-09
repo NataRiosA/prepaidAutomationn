@@ -20,12 +20,12 @@ public class CesionPortalCRMActions extends CesionPortalCRMPage {
         ContractAssignmentClick();
     }
 
-    public void executeContractAssignment() throws InterruptedException, AWTException {
+    public void executeContractAssignment(String phonenumber, String idClient) throws InterruptedException, AWTException {
         switchToIframe();
-        writePhoneNumber();
+        writePhoneNumber(phonenumber);
         getVendedor().waitUntilPresent();
         selectAnnualRenewal();
-        writeNewClientNumber();
+        writeNewClientNumber(idClient);
         consultClick();
         getEmail().waitUntilPresent();
         writeVendorNumber();
@@ -50,7 +50,6 @@ public class CesionPortalCRMActions extends CesionPortalCRMPage {
 
     }
 
-
     public void postSaleClick(){
         getPostSale().click();
     }
@@ -67,8 +66,8 @@ public class CesionPortalCRMActions extends CesionPortalCRMPage {
         getContractAssignment().click();
     }
 
-    public void writePhoneNumber(){
-        enter("3016875982").into(getPhoneNumber());
+    public void writePhoneNumber(String phonumber){
+        enter(phonumber).into(getPhoneNumber());
         getPhoneNumber().sendKeys(Keys.TAB);
     }
 
@@ -86,8 +85,8 @@ public class CesionPortalCRMActions extends CesionPortalCRMPage {
         enter("10960370").into(getVendedor());
     }
 
-    public void writeNewClientNumber(){
-        enter("318927596").into(getNewSudId());
+    public void writeNewClientNumber(String idClient){
+        enter(idClient).into(getNewSudId());
     }
 
     public void consultClick(){
@@ -112,6 +111,7 @@ public class CesionPortalCRMActions extends CesionPortalCRMPage {
         Select dropDownBillingDepartment= new Select(getDriver().findElement(By.xpath("//select[@name='cesionContratoForm:ciudadField:j_id216']")));
         dropDownBillingDepartment.selectByValue("1241");
     }
+
     public void addressBillingClick(){
         getDireccionFacturacion().click();
     }
@@ -129,6 +129,7 @@ public class CesionPortalCRMActions extends CesionPortalCRMPage {
     public void writeAddress2(){
         enter("16").into(getCallenumero2());
     }
+
     public void writeWithAddress(){
         enter("36").into(getWithAddress());
     }

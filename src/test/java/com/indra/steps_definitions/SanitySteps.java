@@ -24,26 +24,31 @@ public class SanitySteps{
     WebDriver driver;
 
     DataExcelModels dataExcelModels = new DataExcelModels();
+    ReadFileXLSXActions readFileXLSXActions = new ReadFileXLSXActions();
     ResourceEnlistmentActions enlistment = new ResourceEnlistmentActions();
     LoginEposPageActions loginPageAction = new LoginEposPageActions(driver);
     MerchandiseEntryAction merchandiseEntryAction = new MerchandiseEntryAction(driver);
     InventoryAllocationActions inventoryAllocationActions = new InventoryAllocationActions(driver);
     LoginPortalCRMActions loginPortalCRMActions = new LoginPortalCRMActions(driver);
-    InventoryActivationActions activationAction = new InventoryActivationActions();
+    InventoryConfirmActions activationAction = new InventoryConfirmActions();
     PrepaidActivationActions prepaidActivationActions = new PrepaidActivationActions(driver);
     CesionPortalCRMActions cesionActions = new CesionPortalCRMActions(driver);
     int Activation =0;
     ControlActivationActions controlActivationActions = new ControlActivationActions(driver);
 
+
+
 //-----------<Primer escenario>----------------
     @Given("^Se ejecutan procedimientos en bd y soapUi$")
     public void seEjecutanProcedimientosEnBdYSoapUi() throws SQLException {
-        enlistment.executeAllProcedures();
+        readFileXLSXActions.sheet=0;
+                enlistment.executeAllProcedures();
     }
 
     @When("^Se ingresa a la plataforma epos para cargue de inventario$")
     public void seIngresaALaPlataformaEposParaCargueDeInventario(List<LoginEposModels> loginPageModels) {
-        loginPageAction.open();
+        //loginPageAction.open();
+        driver.get(dataExcelModels.getUrlEpos());
         loginPageAction.clickOnLogin(loginPageModels.get(0));
     }
 
@@ -113,16 +118,14 @@ public class SanitySteps{
     @When("^Se hace la cesion de contrato de una linea$")
     public void seHaceLaCesionDeContratoDeUnaLinea() throws InterruptedException, AWTException {
         cesionActions.initialRute();
-        cesionActions.executeContractAssignment();
+        cesionActions.executeContractAssignment(dataExcelModels.getMsisdnPostpago(),dataExcelModels.getCedulaClientePostpago());
 
     }
-
 
     @Then("^Se deberia ver en pantalla unica la linea cedida$")
     public void seDeberiaVerEnPantallaUnicaLaLineaCedida() {
-        prepaidActivationActions.consultSingleScreen2(dataExcelModels.getMsisdnPrepago());
+        prepaidActivationActions.consultSingleScreen2(dataExcelModels.getMsisdnPostpago());
     }
-
 
     //-----------<Quinto escenario>----------------
 

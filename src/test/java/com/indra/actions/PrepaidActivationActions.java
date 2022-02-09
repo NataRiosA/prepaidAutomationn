@@ -1,7 +1,7 @@
 package com.indra.actions;
 
-import com.indra.models.DataExcelModels;
 import com.indra.pages.PrepaidActivationPage;
+import net.serenitybdd.core.Serenity;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
@@ -22,28 +22,23 @@ public class PrepaidActivationActions extends PrepaidActivationPage {
         getActivator().click();
         WebElement iframe = getDriver().findElement(By.id("iframe"));
         getDriver().switchTo().frame(iframe);
+        getPaymentActivator().waitUntilClickable();
         getPaymentActivator().click();
         getPrepaid().click();
     }
 
     public void customerInformation(String vendedor,String cliente)  {
-        //enter("10960370").into(getVendor());
         enter(vendedor).into(getVendor());
         getButtonId().click();
         getDocumentType().click();
-        //enter("667299000").into(getDocumentCC());
         enter(cliente).into(getDocumentCC());
         enter("2000").into(getDocumentExpedicion());
         getBtnContinue().click();
     }
 
     public void activationInformation(String msisdn,String imsi){
-        //enter("732111198172290").into(getImsi());
-        //enter("3016875893").into(getMsisdn());
-
         enter(imsi).into(getImsi());
         enter(msisdn).into(getMsisdn());
-
         getTypeOfSaleArrow().click();
         getJustSim().click();
         getDriver().switchTo().defaultContent();
@@ -63,6 +58,7 @@ public class PrepaidActivationActions extends PrepaidActivationPage {
         getCity().click();
         getValidate().click();
         enter("3222345678").into(getPhone());
+        getContinueActivationDemo().waitUntilClickable();
         getContinueActivationDemo().click();
         getConfirm().click();
 
@@ -80,11 +76,11 @@ public class PrepaidActivationActions extends PrepaidActivationPage {
         getCosultaPantallaUnica().click();
         WebElement iframe = getDriver().findElement(By.id("iframe"));
         getDriver().switchTo().frame(iframe);
-        //enter("3016875893").into(getMsisdn2());
         enter(msisdn).into(getMsisdn2());
         getSearchButton().click();
         getGeneralCustomerInformation().waitUntilPresent();
         WebElement plan = getDriver().findElement(By.id("j_id135:j_id157"));
+        Serenity.takeScreenshot();
 
         MatcherAssert.assertThat("el plan es prepago",
                 plan.getText(),Matchers.containsString("Plan Tigo Prepago") );
