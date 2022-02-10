@@ -12,8 +12,8 @@ public class ResourceEnlistmentActions extends DataExcelModels {
     List<String> listMsi = new ArrayList<>();
     /**  Este metodo retorna una lista de los valores de la columna especificada, la columna de excel donde estan ya sea
      * los msisdn o los msi */
-    public void enlistment(){
-        fileXLSX.readFileExcel();
+    public void enlistment(int sheet){
+        fileXLSX.readFileExcel(sheet);
         List<ArrayList<String>> dataTest = new ArrayList<>();
         dataTest = fileXLSX.excelArray.subList(10,fileXLSX.excelArray.size());
         for (int i = 0 ; i< dataTest.size(); i++){
@@ -27,14 +27,14 @@ public class ResourceEnlistmentActions extends DataExcelModels {
         //System.out.println(listCol);
     }
     /** ejemplo del metodo que ejecutaria los dos procesos para cada linea tanto los servicios del SOAP como los SP */
-    public void executeAllProcedures() throws SQLException {
-        enlistment();
+    public void executeAllProcedures(int sheet) throws SQLException {
+        enlistment(sheet);
         int total = listMsisdn.size();
         int i = 0;
         while(!(i ==total)) {
-            uninstallCBSServicesActions.performLineCleaning(getUrlGatewayCBS(), getUrlGatewayMG(), listMsisdn.get(i));
+            uninstallCBSServicesActions.performLineCleaning(getUrlGatewayCBS(sheet), getUrlGatewayMG(sheet), listMsisdn.get(i));
             //colocar metodo de base de datos
-            databaseConnectionActions.executeAllProcedures(listMsi.get(i), listMsisdn.get(i));
+            databaseConnectionActions.executeAllProcedures(listMsi.get(i), listMsisdn.get(i), sheet);
             i++;
         }
     }

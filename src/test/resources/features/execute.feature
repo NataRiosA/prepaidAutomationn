@@ -54,3 +54,11 @@ Feature: Sanity limpieza y aprovisionamiento de recursos
     Then Se deberia ver en pantalla unica la linea cedida
 
 
+  @semilla4
+  Scenario: se requiere realizar el sanity de ambientes
+    Given Se requiere realizar el sanity de semilla 4
+    When Se ejecutan procedimientos en bd y soapUi
+    And Se ingresa a la plataforma epos para cargue de inventario
+    And Se ingresa a la plataforma epos para cargue de mercancia
+    And Se realizar la confirmacion de inventario
+    Then Se deberia ver en pantalla unica la linea cedida

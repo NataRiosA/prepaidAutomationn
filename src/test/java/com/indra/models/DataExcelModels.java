@@ -5,7 +5,6 @@ import com.indra.actions.ReadFileXLSXActions;
 public class DataExcelModels{
 
     ReadFileXLSXActions fileXLSX = new ReadFileXLSXActions();
-    int sheet;
 
     String urlEpos;
     String urlCRM;
@@ -43,190 +42,190 @@ public class DataExcelModels{
     String msisdnPostpago;
     String msiPostpago;
 
-    public String getVendedorPrepago() {
-        fileXLSX.readFileExcel();
+    public String getVendedorPrepago(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         vendedorPrepago = fileXLSX.excelArray.get(10).get(0);
         return vendedorPrepago;
     }
 
-    public String getCedulaClientePrepago() {
-        fileXLSX.readFileExcel();
+    public String getCedulaClientePrepago(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         cedulaClientePrepago = fileXLSX.excelArray.get(10).get(1);
         return cedulaClientePrepago;
     }
 
-    public String getMsisdnPrepago() {
-        fileXLSX.readFileExcel();
+    public String getMsisdnPrepago(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         msisdnPrepago = fileXLSX.excelArray.get(10).get(2);
         return msisdnPrepago;
     }
 
-    public String getMsiPrepago() {
-        fileXLSX.readFileExcel();
+    public String getMsiPrepago(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         msiPrepago = fileXLSX.excelArray.get(10).get(3);
         return msiPrepago;
     }
 
-    public String getVendedorPostpago() {
-        fileXLSX.readFileExcel();
+    public String getVendedorPostpago(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         VendedorPostpago = fileXLSX.excelArray.get(11).get(0);
         return VendedorPostpago;
     }
 
-    public String getCedulaClientePostpago() {
-        fileXLSX.readFileExcel();
+    public String getCedulaClientePostpago(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         CedulaClientePostpago = fileXLSX.excelArray.get(11).get(1);
         return CedulaClientePostpago;
     }
 
-    public String getMsisdnPostpago() {
-        fileXLSX.readFileExcel();
+    public String getMsisdnPostpago(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         msisdnPostpago = fileXLSX.excelArray.get(11).get(2);
         return msisdnPostpago;
     }
 
-    public String getMsiPostpago() {
-        fileXLSX.readFileExcel();
+    public String getMsiPostpago(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         msiPostpago = fileXLSX.excelArray.get(11).get(3);
         return msiPostpago;
     }
 
-    public String getUrlEpos() {
-        fileXLSX.readFileExcel();
+    public String getUrlEpos(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         urlEpos = fileXLSX.excelArray.get(1).get(0);
         return urlEpos;
     }
 
-    public String getUrlCRM() {
-        fileXLSX.readFileExcel();
+    public String getUrlCRM(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         urlCRM = fileXLSX.excelArray.get(1).get(1);
         return urlCRM;
     }
 
-    public String getUrlComfirmador() {
-        fileXLSX.readFileExcel();
+    public String getUrlComfirmador(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         urlComfirmador = fileXLSX.excelArray.get(1).get(2);
         return urlComfirmador;
     }
 
-    public String getUrlGatewayCBS() {
-        fileXLSX.readFileExcel();
+    public String getUrlGatewayCBS(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         urlGatewayCBS = fileXLSX.excelArray.get(1).get(3);
         return urlGatewayCBS;
     }
 
-    public String getUrlGatewayMG() {
-        fileXLSX.readFileExcel();
+    public String getUrlGatewayMG(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         urlGatewayMG = fileXLSX.excelArray.get(1).get(4);
         return urlGatewayMG;
     }
 
-    public String getMSISDN() {
-        fileXLSX.readFileExcel();
+    public String getMSISDN(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         MSISDN = fileXLSX.excelArray.get(10).get(2);
         return MSISDN;
     }
 
-    public String getPlu() {
+    public String getPlu(int sheet) {
         return Plu;
     }
 
-    public String getSerial() {
+    public String getSerial(int sheet) {
         return Serial;
     }
 
-    public String getUrlDBA() {
-        fileXLSX.readFileExcel();
+    public String getUrlDBA(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         urlDBA = fileXLSX.excelArray.get(3).get(0);
         return urlDBA;
     }
 
-    public String getServiceA() {
-        fileXLSX.readFileExcel();
+    public String getServiceA(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         serviceA = fileXLSX.excelArray.get(3).get(1);
         return serviceA;
     }
 
-    public String getUserA() {
-        fileXLSX.readFileExcel();
+    public String getUserA(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         userA = fileXLSX.excelArray.get(3).get(2);
         return userA;
     }
 
-    public String getPasswordA() {
-        fileXLSX.readFileExcel();
+    public String getPasswordA(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         passwordA = fileXLSX.excelArray.get(3).get(3);
         return passwordA;
     }
 
-    public String getUrlDBE() {
-        fileXLSX.readFileExcel();
+    public String getUrlDBE(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         urlDBE = fileXLSX.excelArray.get(4).get(0);
         return urlDBE;
     }
 
-    public String getServiceE() {
-        fileXLSX.readFileExcel();
+    public String getServiceE(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         serviceE = fileXLSX.excelArray.get(4).get(1);
         return serviceE;
     }
 
-    public String getUserE() {
-        fileXLSX.readFileExcel();
+    public String getUserE(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         userE = fileXLSX.excelArray.get(4).get(2);
         return userE;
     }
 
-    public String getPasswordE() {
-        fileXLSX.readFileExcel();
+    public String getPasswordE(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         passwordE = fileXLSX.excelArray.get(4).get(3);
         return passwordE;
     }
 
-    public String getUrlDBS() {
-        fileXLSX.readFileExcel();
+    public String getUrlDBS(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         urlDBS = fileXLSX.excelArray.get(6).get(0);
         return urlDBS;
     }
 
-    public String getServiceS() {
-        fileXLSX.readFileExcel();
+    public String getServiceS(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         serviceS = fileXLSX.excelArray.get(6).get(1);
         return serviceS;
     }
 
-    public String getUserS() {
-        fileXLSX.readFileExcel();
+    public String getUserS(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         userS = fileXLSX.excelArray.get(6).get(2);
         return userS;
     }
 
-    public String getPasswordS() {
-        fileXLSX.readFileExcel();
+    public String getPasswordS(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         passwordS = fileXLSX.excelArray.get(6).get(3);
         return passwordS;
     }
 
-    public String getUrlDBP() {
-        fileXLSX.readFileExcel();
+    public String getUrlDBP(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         urlDBP = fileXLSX.excelArray.get(5).get(0);
         return urlDBP;
     }
 
-    public String getServiceP() {
-        fileXLSX.readFileExcel();
+    public String getServiceP(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         serviceP = fileXLSX.excelArray.get(5).get(1);
         return serviceP;
     }
 
-    public String getUserP() {
-        fileXLSX.readFileExcel();
+    public String getUserP(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         userP = fileXLSX.excelArray.get(5).get(2);
         return userP;
     }
 
-    public String getPasswordP() {
-        fileXLSX.readFileExcel();
+    public String getPasswordP(int sheet) {
+        fileXLSX.readFileExcel(sheet);
         passwordP = fileXLSX.excelArray.get(5).get(3);
         return passwordP;
     }
@@ -236,11 +235,5 @@ public class DataExcelModels{
         return port;
     }
 
-    public void setSheet(int sheet) {
-        this.sheet = sheet;
-    }
-
-    public int getSheet() {
-        return sheet;
-    }
+    
 }

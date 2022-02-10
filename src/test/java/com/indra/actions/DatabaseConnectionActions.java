@@ -7,14 +7,14 @@ import java.sql.*;
 
 public class DatabaseConnectionActions extends DataExcelModels {
 
-        public void executeAllProcedures(String msi, String msisdn) throws SQLException {
-            databaseConnectionActivator(getUrlDBA(),getPort(),getServiceA(),getUserA(),getPasswordA()
+        public void executeAllProcedures(String msi, String msisdn, int sheet) throws SQLException {
+            databaseConnectionActivator(getUrlDBA(sheet),getPort(),getServiceA(sheet),getUserA(sheet),getPasswordA(sheet)
                     ,"AL_RE_ACTIVADOR", msisdn);
-            databaseConnectionEpos(getUrlDBE(), getPort(), getServiceE(),getUserE(),getPasswordE()
+            databaseConnectionEpos(getUrlDBE(sheet), getPort(), getServiceE(sheet),getUserE(sheet),getPasswordE(sheet)
                     ,"ali_re_epos_crm_siebel", msi, msisdn);
-            databaseConnectionSiebel(getUrlDBS(), getPort(), getServiceS(),getUserS(),getPasswordS()
+            databaseConnectionSiebel(getUrlDBS(sheet), getPort(), getServiceS(sheet),getUserS(sheet),getPasswordS(sheet)
                     ,"alistamiento_recursos_siebel", msi, msisdn);
-            databaseConnectionPostsale(getUrlDBP(), getPort(), getServiceP(),getUserP(),getPasswordP()
+            databaseConnectionPostsale(getUrlDBP(sheet), getPort(), getServiceP(sheet),getUserP(sheet),getPasswordP(sheet)
                     ,"alistamiento_recursos_postsale", msisdn);
         }
 

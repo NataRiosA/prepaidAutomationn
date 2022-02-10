@@ -1,5 +1,7 @@
 package com.indra.actions;
 
+import com.indra.models.DataExcelModels;
+import com.indra.models.WindexModels;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -12,9 +14,10 @@ import java.util.Iterator;
 
 public class ReadFileXLSXActions {
     public ArrayList<ArrayList<String>> excelArray = new ArrayList<>();
-    public int sheet;
-    public void readFileExcel(){
+
+    public void readFileExcel(int sheet){
         try {
+
             FileInputStream f = new FileInputStream("src/test/resources/config_data/data.xlsx");
 
             XSSFWorkbook libro = new XSSFWorkbook(f);

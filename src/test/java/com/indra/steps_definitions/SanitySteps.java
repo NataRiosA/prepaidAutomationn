@@ -35,20 +35,19 @@ public class SanitySteps{
     CesionPortalCRMActions cesionActions = new CesionPortalCRMActions(driver);
     int Activation =0;
     ControlActivationActions controlActivationActions = new ControlActivationActions(driver);
-
+    int hoja = 2;
 
 
 //-----------<Primer escenario>----------------
     @Given("^Se ejecutan procedimientos en bd y soapUi$")
     public void seEjecutanProcedimientosEnBdYSoapUi() throws SQLException {
-        readFileXLSXActions.sheet=0;
-                enlistment.executeAllProcedures();
+        enlistment.executeAllProcedures(hoja);
     }
 
     @When("^Se ingresa a la plataforma epos para cargue de inventario$")
     public void seIngresaALaPlataformaEposParaCargueDeInventario(List<LoginEposModels> loginPageModels) {
         //loginPageAction.open();
-        driver.get(dataExcelModels.getUrlEpos());
+        driver.get(dataExcelModels.getUrlEpos(hoja));
         loginPageAction.clickOnLogin(loginPageModels.get(0));
     }
 
@@ -84,7 +83,7 @@ public class SanitySteps{
 
     @Given("^se ingresa a la plataforma epos windex$")
     public void seIngresaALaPlataformaEposWindex(List<WindexModels> windexModels) throws IOException, InterruptedException, AWTException, IOException, AWTException {
-        Activation= activationAction.executeStepsActivation(windexModels.get(0));
+        Activation= activationAction.executeStepsActivation(windexModels.get(0),hoja);
     }
 
     @Then("^se deberia poder ver mensaje de confimacion exitosa$")
@@ -96,35 +95,35 @@ public class SanitySteps{
 
     @Given("^Se ingresa al portal CRM para activacion$")
     public void seIngresaAlPortalCRMParaActivacion(List<LoginPortalCRMModels> loginPortalCRMModels) {
-        driver.get(dataExcelModels.getUrlCRM());
+        driver.get(dataExcelModels.getUrlCRM(hoja));
         loginPortalCRMActions.clickOnLogin(loginPortalCRMModels.get(0));
     }
 
     @When("^Se hace activacion de una linea en prepago$")
     public void seHaceActivacionDeUnaLineaEnPrepago() throws InterruptedException {
         prepaidActivationActions.initialRute();
-        prepaidActivationActions.customerInformation(dataExcelModels.getVendedorPrepago()
-                , dataExcelModels.getCedulaClientePrepago());
-        prepaidActivationActions.activationInformation(dataExcelModels.getMsisdnPrepago(),dataExcelModels.getMsiPrepago());
+        prepaidActivationActions.customerInformation(dataExcelModels.getVendedorPrepago(hoja)
+                , dataExcelModels.getCedulaClientePrepago(hoja));
+        prepaidActivationActions.activationInformation(dataExcelModels.getMsisdnPrepago(hoja),dataExcelModels.getMsiPrepago(hoja));
         prepaidActivationActions.demographicInformation();
     }
 
     @Then("^Se deberia ver en pantalla unica la linea activa en prepago$")
     public void seDeberiaVerEnPantallaUnicaLaLineaActivaEnPrepago() {
-        prepaidActivationActions.consultSingleScreen(dataExcelModels.getMsisdnPrepago());
+        prepaidActivationActions.consultSingleScreen(dataExcelModels.getMsisdnPrepago(hoja));
     }
     //-----------<escenario>----------------
 
     @When("^Se hace la cesion de contrato de una linea$")
     public void seHaceLaCesionDeContratoDeUnaLinea() throws InterruptedException, AWTException {
         cesionActions.initialRute();
-        cesionActions.executeContractAssignment(dataExcelModels.getMsisdnPostpago(),dataExcelModels.getCedulaClientePostpago());
+        cesionActions.executeContractAssignment(dataExcelModels.getMsisdnPostpago(hoja),dataExcelModels.getCedulaClientePostpago(hoja));
 
     }
 
     @Then("^Se deberia ver en pantalla unica la linea cedida$")
     public void seDeberiaVerEnPantallaUnicaLaLineaCedida() {
-        prepaidActivationActions.consultSingleScreen2(dataExcelModels.getMsisdnPostpago());
+        prepaidActivationActions.consultSingleScreen2(dataExcelModels.getMsisdnPostpago(hoja));
     }
 
     //-----------<Quinto escenario>----------------
@@ -132,15 +131,32 @@ public class SanitySteps{
     @When("^Se hace activacion de una linea en control$")
     public void seHaceActivacionDeUnaLineaEnControl() throws InterruptedException {
         controlActivationActions.initialRute();
-        controlActivationActions.customerInformation(dataExcelModels.getVendedorPostpago()
-                , dataExcelModels.getCedulaClientePostpago());
-        controlActivationActions.activationInformation(dataExcelModels.getMsisdnPostpago(),dataExcelModels.getMsiPostpago());
+        controlActivationActions.customerInformation(dataExcelModels.getVendedorPostpago(hoja)
+                , dataExcelModels.getCedulaClientePostpago(hoja));
+        controlActivationActions.activationInformation(dataExcelModels.getMsisdnPostpago(hoja),dataExcelModels.getMsiPostpago(hoja));
         controlActivationActions.demographicInformation();
     }
 
     @Then("^Se deberia ver en pantalla unica la linea activa en control$")
     public void seDeberiaVerEnPantallaUnicaLaLineaActivaEnControl() {
-        controlActivationActions.consultSingleScreen(dataExcelModels.getMsisdnPostpago());
+        controlActivationActions.consultSingleScreen(dataExcelModels.getMsisdnPostpago(hoja));
+    }
+
+
+    @Given("^Se requiere realizar el sanity de semilla (\\d+)$")
+    public void seRequiereRealizarElSanityDeSemilla(int sheet) {
+       
+    }
+
+
+    @When("^Se ingresa a la plataforma epos para cargue de mercancia$")
+    public void seIngresaALaPlataformaEposParaCargueDeMercancia() {
+
+    }
+
+    @When("^Se realizar la confirmacion de inventario$")
+    public void seRealizarLaConfirmacionDeInventario() {
+
     }
 
 }
