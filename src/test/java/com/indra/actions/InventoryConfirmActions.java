@@ -16,12 +16,12 @@ public class InventoryConfirmActions extends DataExcelModels {
         return "Activacion Fallida";
     }
 
-    public int executeStepsActivation(WindexModels windexModels, int sheet)
+    public int executeStepsActivation(int sheet)
             throws InterruptedException, IOException, AWTException {
 
-        Process proceso = Runtime.getRuntime().exec(windexModels.getRutaWinWap());
+        Process proceso = Runtime.getRuntime().exec(getWinwap(sheet));
         Thread.sleep(2000);
-        confirmInventory(windexModels.getUser(), windexModels.getPassword(), getUrlComfirmador(sheet));
+        confirmInventory(getUser(sheet), getPassword(sheet), getUrlComfirmador(sheet));
         proceso.destroy();
         proceso.waitFor();
         return proceso.exitValue();

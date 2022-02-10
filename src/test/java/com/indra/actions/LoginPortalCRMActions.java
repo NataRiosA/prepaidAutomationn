@@ -1,5 +1,6 @@
 package com.indra.actions;
 
+import com.indra.models.DataExcelModels;
 import com.indra.models.LoginPortalCRMModels;
 import com.indra.pages.LoginPortalCRMPage;
 import org.openqa.selenium.WebDriver;
@@ -12,13 +13,13 @@ public class LoginPortalCRMActions extends LoginPortalCRMPage {
         super(driver);
     }
 
-    public void fillLogin(LoginPortalCRMModels signIn)  {
-        enter(signIn.getUser()).into(getUser());
-        enter(signIn.getPassword()).into(getPassword());
+    public void fillLogin(DataExcelModels dataExcelModels, int sheet)  {
+        enter(dataExcelModels.getUser(sheet)).into(getUser());
+        enter(dataExcelModels.getPassword(sheet)).into(getPassword());
     }
 
-    public void clickOnLogin(LoginPortalCRMModels signIn){
-        fillLogin(signIn);
+    public void clickOnLogin(DataExcelModels dataExcelModels, int sheet){
+        fillLogin(dataExcelModels,sheet);
         login();
     }
 

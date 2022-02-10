@@ -1,5 +1,6 @@
 package com.indra.actions;
 
+import com.indra.models.DataExcelModels;
 import com.indra.models.LoginEposModels;
 import com.indra.pages.LoginEposPage;
 import org.openqa.selenium.By;
@@ -15,13 +16,13 @@ public class LoginEposPageActions extends LoginEposPage {
         super(driver);
     }
 
-    public void fillLogin(LoginEposModels signIn)  {
-        enter(signIn.getUser()).into(getUser());
-        enter(signIn.getPassword()).into(getPassword());
+    public void fillLogin(DataExcelModels dataExcelModels, int sheet)  {
+        enter(dataExcelModels.getUser(sheet)).into(getUser());
+        enter(dataExcelModels.getPassword(sheet)).into(getPassword());
     }
 
-    public void clickOnLogin(LoginEposModels signIn){
-        fillLogin(signIn);
+    public void clickOnLogin(DataExcelModels dataExcelModels, int sheet){
+        fillLogin(dataExcelModels,sheet);
         login();
     }
 

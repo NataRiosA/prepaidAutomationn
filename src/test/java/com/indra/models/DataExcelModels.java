@@ -42,6 +42,11 @@ public class DataExcelModels{
     String msisdnPostpago;
     String msiPostpago;
 
+    String Winwap;
+    String user;
+    String password;
+
+
     public String getVendedorPrepago(int sheet) {
         fileXLSX.readFileExcel(sheet);
         vendedorPrepago = fileXLSX.excelArray.get(8).get(0);
@@ -235,5 +240,22 @@ public class DataExcelModels{
         return port;
     }
 
-    
+
+    public String getWinwap(int sheet) {
+        fileXLSX.readFileExcel(sheet);
+        Winwap = fileXLSX.excelArray.get(1).get(7);
+        return Winwap;
+    }
+
+    public String getUser(int sheet) {
+        fileXLSX.readFileExcel(sheet);
+        user = fileXLSX.excelArray.get(1).get(5);
+        return user;
+    }
+
+    public String getPassword(int sheet) {
+        fileXLSX.readFileExcel(sheet);
+        password = fileXLSX.excelArray.get(1).get(6);
+        return password;
+    }
 }

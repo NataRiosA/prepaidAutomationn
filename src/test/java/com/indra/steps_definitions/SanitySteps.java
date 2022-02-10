@@ -45,10 +45,10 @@ public class SanitySteps{
     }
 
     @When("^Se ingresa a la plataforma epos para cargue de inventario$")
-    public void seIngresaALaPlataformaEposParaCargueDeInventario(List<LoginEposModels> loginPageModels) {
+    public void seIngresaALaPlataformaEposParaCargueDeInventario() {
         //loginPageAction.open();
         driver.get(dataExcelModels.getUrlEpos(hoja));
-        loginPageAction.clickOnLogin(loginPageModels.get(0));
+        loginPageAction.clickOnLogin(dataExcelModels,hoja);
     }
 
 
@@ -69,6 +69,7 @@ public class SanitySteps{
 
     @When("^Se ingresa a cargue de inventario$")
     public void seIngresaACargueDeInventario() throws InterruptedException {
+        seIngresaALaPlataformaEposParaCargueDeInventario();
         inventoryAllocationActions.loadInventory();
         Thread.sleep(2000);
         inventoryAllocationActions.leaveSesion();
@@ -82,8 +83,8 @@ public class SanitySteps{
     //-----------<Tercer escenario>----------------
 
     @Given("^se ingresa a la plataforma epos windex$")
-    public void seIngresaALaPlataformaEposWindex(List<WindexModels> windexModels) throws IOException, InterruptedException, AWTException, IOException, AWTException {
-        Activation= activationAction.executeStepsActivation(windexModels.get(0),hoja);
+    public void seIngresaALaPlataformaEposWindex() throws IOException, InterruptedException, AWTException {
+        Activation= activationAction.executeStepsActivation(hoja);
     }
 
     @Then("^se deberia poder ver mensaje de confimacion exitosa$")
@@ -94,13 +95,13 @@ public class SanitySteps{
     //-----------<Cuarto escenario>----------------
 
     @Given("^Se ingresa al portal CRM para activacion$")
-    public void seIngresaAlPortalCRMParaActivacion(List<LoginPortalCRMModels> loginPortalCRMModels) {
+    public void seIngresaAlPortalCRMParaActivacion() {
         driver.get(dataExcelModels.getUrlCRM(hoja));
-        loginPortalCRMActions.clickOnLogin(loginPortalCRMModels.get(0));
+        loginPortalCRMActions.clickOnLogin(dataExcelModels, hoja);
     }
 
     @When("^Se hace activacion de una linea en prepago$")
-    public void seHaceActivacionDeUnaLineaEnPrepago() throws InterruptedException {
+    public void seHaceActivacionDeUnaLineaEnPrepago(){
         prepaidActivationActions.initialRute();
         prepaidActivationActions.customerInformation(dataExcelModels.getVendedorPrepago(hoja)
                 , dataExcelModels.getCedulaClientePrepago(hoja));
@@ -112,7 +113,7 @@ public class SanitySteps{
     public void seDeberiaVerEnPantallaUnicaLaLineaActivaEnPrepago() {
         prepaidActivationActions.consultSingleScreen(dataExcelModels.getMsisdnPrepago(hoja));
     }
-    //-----------<escenario>----------------
+    //-----------<Quinto escenario>>----------------
 
     @When("^Se hace la cesion de contrato de una linea$")
     public void seHaceLaCesionDeContratoDeUnaLinea() throws InterruptedException, AWTException {
@@ -126,7 +127,7 @@ public class SanitySteps{
         prepaidActivationActions.consultSingleScreen2(dataExcelModels.getMsisdnPostpago(hoja));
     }
 
-    //-----------<Quinto escenario>----------------
+    //-----------<Sexto escenario>----------------
 
     @When("^Se hace activacion de una linea en control$")
     public void seHaceActivacionDeUnaLineaEnControl() throws InterruptedException {
@@ -142,8 +143,8 @@ public class SanitySteps{
         controlActivationActions.consultSingleScreen(dataExcelModels.getMsisdnPostpago(hoja));
     }
 
-
-    // caso full ******************************************************************
+    // *************************************************************++***** //
+    // **************************Sanity Semilla 4************************** //
 
     @Given("^Se requiere realizar el sanity de semilla (\\d+)$")
     public void seRequiereRealizarElSanityDeSemilla(int numSemilla)  {
@@ -152,32 +153,35 @@ public class SanitySteps{
 
     }
 
-
     @When("^Se ejecutan los procedimientos en bd - soapUi$")
     public void seEjecutanLosProcedimientosEnBdSoapUi() throws SQLException {
         seEjecutanProcedimientosEnBdYSoapUi();
     }
 
     @When("^Se ingresa a la plataforma epos para el cargue de inventario$")
-    public void seIngresaALaPlataformaEposParaElCargueDeInventario(List<LoginEposModels> loginPageModels) throws InterruptedException {
-        seIngresaALaPlataformaEposParaCargueDeInventario(loginPageModels);
+    public void seIngresaALaPlataformaEposParaElCargueDeInventario() throws InterruptedException {
+        seIngresaALaPlataformaEposParaCargueDeInventario();
         seIngresaAEntradaMasivaDeMercancia();
         seCompletaDatosParaCargarMercancia();
     }
 
     @When("^Se ingresa a la plataforma epos para el cargue de mercancia$")
-    public void seIngresaALaPlataformaEposParaElCargueDeMercancia() {
+    public void seIngresaALaPlataformaEposParaElCargueDeMercancia() throws InterruptedException {
+        seIngresaACargueDeInventario();
 
     }
 
     @When("^Se ingresa a windex a la confirmacion de inventario$")
-    public void seIngresaAWindexALaConfirmacionDeInventario() {
-
+    public void seIngresaAWindexALaConfirmacionDeInventario() throws IOException, InterruptedException, AWTException {
+        seIngresaALaPlataformaEposWindex();
+        seDeberiaPoderVerMensajeDeConfimacionExitosa();
     }
 
     @Then("^se realiza la activacion prepago$")
     public void seRealizaLaActivacionPrepago() {
-
+        seIngresaAlPortalCRMParaActivacion();
+        seHaceActivacionDeUnaLineaEnPrepago();
+        seDeberiaVerEnPantallaUnicaLaLineaActivaEnPrepago();
     }
 
     @Then("^Se realiza la activacion avengers$")
@@ -199,8 +203,6 @@ public class SanitySteps{
     public void laCesionDeContrato() {
 
     }
-
-
 
 }
 
