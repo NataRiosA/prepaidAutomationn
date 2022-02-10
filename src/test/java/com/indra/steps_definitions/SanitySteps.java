@@ -148,14 +148,13 @@ public class SanitySteps{
     @Given("^Se requiere realizar el sanity de semilla (\\d+)$")
     public void seRequiereRealizarElSanityDeSemilla(int numSemilla)  {
         hoja= enlistment.selectionSheet(numSemilla);
-
+        System.out.println("Se ejecutaran los datos de la hoja "+hoja);
 
     }
 
 
     @When("^Se ejecutan los procedimientos en bd - soapUi$")
     public void seEjecutanLosProcedimientosEnBdSoapUi() throws SQLException {
-        //System.out.println(hoja);
         seEjecutanProcedimientosEnBdYSoapUi();
     }
 

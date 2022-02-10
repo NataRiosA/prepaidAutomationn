@@ -66,3 +66,16 @@ Feature: Sanity limpieza y aprovisionamiento de recursos
     And se realiza la activacion nintendo
     And la cesion de contrato pre a pos
     And la cesion de contrato
+
+  @semilla13
+  Scenario: se requiere realizar el sanity de ambientes
+    Given Se requiere realizar el sanity de semilla 13
+    When Se ejecutan los procedimientos en bd - soapUi
+    And Se ingresa a la plataforma epos para el cargue de inventario
+    And Se ingresa a la plataforma epos para el cargue de mercancia
+    And Se ingresa a windex a la confirmacion de inventario
+    Then se realiza la activacion prepago
+    And Se realiza la activacion avengers
+    And se realiza la activacion nintendo
+    And la cesion de contrato pre a pos
+    And la cesion de contrato
