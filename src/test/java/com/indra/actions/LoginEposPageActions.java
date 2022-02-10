@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class LoginEposPageActions extends LoginEposPage {
 
-    public String contraseniaInicial;
+    //public String contraseniaInicial;
 
     public LoginEposPageActions(WebDriver driver) {
         super(driver);

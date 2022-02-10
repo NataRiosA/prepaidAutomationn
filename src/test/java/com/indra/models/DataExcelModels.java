@@ -44,49 +44,49 @@ public class DataExcelModels{
 
     public String getVendedorPrepago(int sheet) {
         fileXLSX.readFileExcel(sheet);
-        vendedorPrepago = fileXLSX.excelArray.get(10).get(0);
+        vendedorPrepago = fileXLSX.excelArray.get(8).get(0);
         return vendedorPrepago;
     }
 
     public String getCedulaClientePrepago(int sheet) {
         fileXLSX.readFileExcel(sheet);
-        cedulaClientePrepago = fileXLSX.excelArray.get(10).get(1);
+        cedulaClientePrepago = fileXLSX.excelArray.get(8).get(1);
         return cedulaClientePrepago;
     }
 
     public String getMsisdnPrepago(int sheet) {
         fileXLSX.readFileExcel(sheet);
-        msisdnPrepago = fileXLSX.excelArray.get(10).get(2);
+        msisdnPrepago = fileXLSX.excelArray.get(8).get(2);
         return msisdnPrepago;
     }
 
     public String getMsiPrepago(int sheet) {
         fileXLSX.readFileExcel(sheet);
-        msiPrepago = fileXLSX.excelArray.get(10).get(3);
+        msiPrepago = fileXLSX.excelArray.get(8).get(3);
         return msiPrepago;
     }
 
     public String getVendedorPostpago(int sheet) {
         fileXLSX.readFileExcel(sheet);
-        VendedorPostpago = fileXLSX.excelArray.get(11).get(0);
+        VendedorPostpago = fileXLSX.excelArray.get(9).get(0);
         return VendedorPostpago;
     }
 
     public String getCedulaClientePostpago(int sheet) {
         fileXLSX.readFileExcel(sheet);
-        CedulaClientePostpago = fileXLSX.excelArray.get(11).get(1);
+        CedulaClientePostpago = fileXLSX.excelArray.get(9).get(1);
         return CedulaClientePostpago;
     }
 
     public String getMsisdnPostpago(int sheet) {
         fileXLSX.readFileExcel(sheet);
-        msisdnPostpago = fileXLSX.excelArray.get(11).get(2);
+        msisdnPostpago = fileXLSX.excelArray.get(9).get(2);
         return msisdnPostpago;
     }
 
     public String getMsiPostpago(int sheet) {
         fileXLSX.readFileExcel(sheet);
-        msiPostpago = fileXLSX.excelArray.get(11).get(3);
+        msiPostpago = fileXLSX.excelArray.get(9).get(3);
         return msiPostpago;
     }
 

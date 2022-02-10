@@ -35,7 +35,7 @@ public class SanitySteps{
     CesionPortalCRMActions cesionActions = new CesionPortalCRMActions(driver);
     int Activation =0;
     ControlActivationActions controlActivationActions = new ControlActivationActions(driver);
-    int hoja = 2;
+    int hoja = 0;
 
 
 //-----------<Primer escenario>----------------
@@ -143,21 +143,65 @@ public class SanitySteps{
     }
 
 
+    // caso full ******************************************************************
+
     @Given("^Se requiere realizar el sanity de semilla (\\d+)$")
-    public void seRequiereRealizarElSanityDeSemilla(int sheet) {
-       
+    public void seRequiereRealizarElSanityDeSemilla(int numSemilla)  {
+        hoja= enlistment.selectionSheet(numSemilla);
+
+
     }
 
 
-    @When("^Se ingresa a la plataforma epos para cargue de mercancia$")
-    public void seIngresaALaPlataformaEposParaCargueDeMercancia() {
+    @When("^Se ejecutan los procedimientos en bd - soapUi$")
+    public void seEjecutanLosProcedimientosEnBdSoapUi() throws SQLException {
+        //System.out.println(hoja);
+        seEjecutanProcedimientosEnBdYSoapUi();
+    }
+
+    @When("^Se ingresa a la plataforma epos para el cargue de inventario$")
+    public void seIngresaALaPlataformaEposParaElCargueDeInventario(List<LoginEposModels> loginPageModels) throws InterruptedException {
+        seIngresaALaPlataformaEposParaCargueDeInventario(loginPageModels);
+        seIngresaAEntradaMasivaDeMercancia();
+        seCompletaDatosParaCargarMercancia();
+    }
+
+    @When("^Se ingresa a la plataforma epos para el cargue de mercancia$")
+    public void seIngresaALaPlataformaEposParaElCargueDeMercancia() {
 
     }
 
-    @When("^Se realizar la confirmacion de inventario$")
-    public void seRealizarLaConfirmacionDeInventario() {
+    @When("^Se ingresa a windex a la confirmacion de inventario$")
+    public void seIngresaAWindexALaConfirmacionDeInventario() {
 
     }
+
+    @Then("^se realiza la activacion prepago$")
+    public void seRealizaLaActivacionPrepago() {
+
+    }
+
+    @Then("^Se realiza la activacion avengers$")
+    public void seRealizaLaActivacionAvengers() {
+
+    }
+
+    @Then("^se realiza la activacion nintendo$")
+    public void seRealizaLaActivacionNintendo() {
+
+    }
+
+    @Then("^la cesion de contrato pre a pos$")
+    public void laCesionDeContratoPreAPos() {
+
+    }
+
+    @Then("^la cesion de contrato$")
+    public void laCesionDeContrato() {
+
+    }
+
+
 
 }
 

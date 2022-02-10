@@ -57,8 +57,12 @@ Feature: Sanity limpieza y aprovisionamiento de recursos
   @semilla4
   Scenario: se requiere realizar el sanity de ambientes
     Given Se requiere realizar el sanity de semilla 4
-    When Se ejecutan procedimientos en bd y soapUi
-    And Se ingresa a la plataforma epos para cargue de inventario
-    And Se ingresa a la plataforma epos para cargue de mercancia
-    And Se realizar la confirmacion de inventario
-    Then Se deberia ver en pantalla unica la linea cedida
+    When Se ejecutan los procedimientos en bd - soapUi
+    And Se ingresa a la plataforma epos para el cargue de inventario
+    And Se ingresa a la plataforma epos para el cargue de mercancia
+    And Se ingresa a windex a la confirmacion de inventario
+    Then se realiza la activacion prepago
+    And Se realiza la activacion avengers
+    And se realiza la activacion nintendo
+    And la cesion de contrato pre a pos
+    And la cesion de contrato

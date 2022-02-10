@@ -15,7 +15,7 @@ public class ResourceEnlistmentActions extends DataExcelModels {
     public void enlistment(int sheet){
         fileXLSX.readFileExcel(sheet);
         List<ArrayList<String>> dataTest = new ArrayList<>();
-        dataTest = fileXLSX.excelArray.subList(10,fileXLSX.excelArray.size());
+        dataTest = fileXLSX.excelArray.subList(8,fileXLSX.excelArray.size());
         for (int i = 0 ; i< dataTest.size(); i++){
             String dato;
             dato= String.valueOf(dataTest.get(i));
@@ -37,5 +37,25 @@ public class ResourceEnlistmentActions extends DataExcelModels {
             databaseConnectionActions.executeAllProcedures(listMsi.get(i), listMsisdn.get(i), sheet);
             i++;
         }
+    }
+
+    public int selectionSheet(int semilla){
+        int sheet=0;
+        if(semilla==2){
+            sheet=0;
+        }
+        else if (semilla==13){
+            sheet=1;
+        }
+        else if (semilla==4){
+            sheet=2;
+        }
+        else if (semilla==5){
+            sheet=3;
+        }
+        else if (semilla==6){
+            sheet=4;
+        }
+        return sheet;
     }
 }
