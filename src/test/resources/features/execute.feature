@@ -31,19 +31,20 @@ Feature: Sanity limpieza y aprovisionamiento de recursos
   @portalControl
   Scenario: se requiere realizar una activacion de una linea en control
     Given Se ingresa al portal CRM para activacion
-      | user       | password   |
-      | CQ10960370 | Tigo.2022* |
     When Se hace activacion de una linea en control
     Then Se deberia ver en pantalla unica la linea activa en control
 
   @portalCesion
   Scenario: se requiere realizar la cesion de una linea
     Given Se ingresa al portal CRM para activacion
-      | user       | password   |
-      | CQ10960370 | Tigo.2022* |
     When Se hace la cesion de contrato de una linea
     Then Se deberia ver en pantalla unica la linea cedida
 
+  @portalCesionSCP
+  Scenario: se requiere realizar la cesion de una linea sin cambio de plan
+    Given Se ingresa al portal CRM para activacion
+    When Se hace la cesion de contrato de una linea sin cambio de plan
+    Then Se deberia ver en pantalla unica la linea cedida
 
   @semilla4
   Scenario: se requiere realizar el sanity de ambientes

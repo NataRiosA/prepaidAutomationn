@@ -35,7 +35,7 @@ public class SanitySteps{
     CesionPortalCRMActions cesionActions = new CesionPortalCRMActions(driver);
     int Activation =0;
     ControlActivationActions controlActivationActions = new ControlActivationActions(driver);
-    int hoja = 0;
+    int hoja = 2;
 
 
 //-----------<Primer escenario>----------------
@@ -113,21 +113,8 @@ public class SanitySteps{
     public void seDeberiaVerEnPantallaUnicaLaLineaActivaEnPrepago() {
         prepaidActivationActions.consultSingleScreen(dataExcelModels.getMsisdnPrepago(hoja));
     }
-    //-----------<Quinto escenario>>----------------
 
-    @When("^Se hace la cesion de contrato de una linea$")
-    public void seHaceLaCesionDeContratoDeUnaLinea() throws InterruptedException, AWTException {
-        cesionActions.initialRute();
-        cesionActions.executeContractAssignment(dataExcelModels.getMsisdnPostpago(hoja),dataExcelModels.getCedulaClientePostpago(hoja));
-
-    }
-
-    @Then("^Se deberia ver en pantalla unica la linea cedida$")
-    public void seDeberiaVerEnPantallaUnicaLaLineaCedida() {
-        prepaidActivationActions.consultSingleScreen2(dataExcelModels.getMsisdnPostpago(hoja));
-    }
-
-    //-----------<Sexto escenario>----------------
+    //-----------<Quinto escenario>----------------
 
     @When("^Se hace activacion de una linea en control$")
     public void seHaceActivacionDeUnaLineaEnControl() throws InterruptedException {
@@ -143,8 +130,31 @@ public class SanitySteps{
         controlActivationActions.consultSingleScreen(dataExcelModels.getMsisdnPostpago(hoja));
     }
 
+    //-----------<Sexto escenario>>----------------
+
+    @When("^Se hace la cesion de contrato de una linea$")
+    public void seHaceLaCesionDeContratoDeUnaLinea() throws InterruptedException, AWTException {
+        cesionActions.initialRute();
+        cesionActions.executeContractAssignment(dataExcelModels.getMsisdnPostpago(hoja),dataExcelModels.getCedulaClientePostpago(hoja));
+
+    }
+
+    @Then("^Se deberia ver en pantalla unica la linea cedida$")
+    public void seDeberiaVerEnPantallaUnicaLaLineaCedida() {
+        prepaidActivationActions.consultSingleScreen2(dataExcelModels.getMsisdnPostpago(hoja));
+    }
+
+    //-----------<Septimo escenario>>----------------
+
+    @When("^Se hace la cesion de contrato de una linea sin cambio de plan$")
+    public void seHaceLaCesionDeContratoDeUnaLineaSinCambioDePlan() throws InterruptedException, AWTException {
+        cesionActions.initialRute();
+        cesionActions.executeContractAssignment(dataExcelModels.getMsisdnPrepago(hoja),dataExcelModels.getCedulaClientePostpago(hoja));
+
+    }
+
     // *************************************************************++***** //
-    // **************************Sanity Semilla 4************************** //
+    // **************************Sanity Semillas************************** //
 
     @Given("^Se requiere realizar el sanity de semilla (\\d+)$")
     public void seRequiereRealizarElSanityDeSemilla(int numSemilla)  {
@@ -190,18 +200,24 @@ public class SanitySteps{
     }
 
     @Then("^se realiza la activacion nintendo$")
-    public void seRealizaLaActivacionNintendo() {
+    public void seRealizaLaActivacionNintendo() throws InterruptedException {
+        //driver.get(dataExcelModels.getUrlCRM(hoja));
+        seHaceActivacionDeUnaLineaEnControl();
+        seDeberiaVerEnPantallaUnicaLaLineaActivaEnControl();
 
     }
 
     @Then("^la cesion de contrato pre a pos$")
-    public void laCesionDeContratoPreAPos() {
+    public void laCesionDeContratoPreAPos() throws InterruptedException, AWTException {
+        seHaceLaCesionDeContratoDeUnaLinea();
+        seDeberiaVerEnPantallaUnicaLaLineaCedida();
 
     }
 
     @Then("^la cesion de contrato$")
-    public void laCesionDeContrato() {
-
+    public void laCesionDeContrato() throws InterruptedException, AWTException {
+        seHaceLaCesionDeContratoDeUnaLineaSinCambioDePlan();
+        seDeberiaVerEnPantallaUnicaLaLineaCedida();
     }
 
 }
